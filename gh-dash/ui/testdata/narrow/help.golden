@@ -1,0 +1,23 @@
+‹ Mine(3) · Needs review(2) · Involved(2) ›
+────────┌──────────────────────────────────────────────────────────────┐────────
+┌─ is:op│gh-dash, rebuilt                                              │───────┐
+│       │                                                              │d      │
+│›   ✓  │moving                                                        │ merge…│
+│    ✓  │tab    next section                                           │Lead` …│
+│    ◐  │j/k    move                                                   │status…│
+│       │/      filter                                                 │       │
+│       │                                                              │th whi…│
+│       │the one you are on                                            │       │
+│       │c      show the checks instead of the body                    │e rows…│
+│       │space  mark it                                                │. Inde…│
+│       │                                                              │g a co…│
+│       │ordering                                                      │       │
+│       │s      sort by the next column                                │nge ma…│
+│       │S      reverse                                                │s laye…│
+│       │                                                              │t colu…│
+│       │everywhere                                                    │       │
+│       │?      this                                                   │       │
+│       │esc    back                                                   │       │
+│       │q      quit                                                   │ 12/12 │
+└───────└──────────────────────────────────────────────────────────────┘───────┘
+  tab section · c checks · space mark · s sort · ? keys · q quit

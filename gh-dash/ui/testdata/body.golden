@@ -1,0 +1,37 @@
+‹ Mine(3) · Needs review(2) · Involved(2) ›
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+┌─ is:open author:@me ────────────────────────────────────────────────────────┐ ┌─ tuikit#66 ──────────────────────────────────────┐
+│       REPO    TITLE                       AUTHOR                  ±  UPDATED│ │Row.Depth indents Row.Lead                        │
+│›   ✓  tuikit  Row.Depth indents Row.Lead  richarddavenport  +84/-12      40m│ │richarddavenport wants to merge row-fixed-column …│
+│    ✓  tuikit  comp.Sort: which column a…  richarddavenport  +402/-4       3h│ │`Row.Depth` indents `Row.Lead` along with the tex…│
+│    ◐  tuikit  Sparkline: a number over …  richarddavenport  +611/-9       5h│ │cannot have both a fixed status column and an ind…│
+│                                                                             │ │                                                  │
+│                                                                             │ │## Two tools hit this, both while being built     │
+│                                                                             │ │                                                  │
+│                                                                             │ │**lazygit** leads its file rows with git status l…│
+│                                                                             │ │tree indents the filename. Indented together, the…│
+│                                                                             │ │march right and stop being a column.              │
+│                                                                             │ │                                                  │
+│                                                                             │ │**dive** leads with a change mark and indents the…│
+│                                                                             │ │question is "what did this layer remove", which y…│
+│                                                                             │ │running your eye down that column.                │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                            12/12 │
+└─────────────────────────────────────────────────────────────────────────────┘ └──────────────────────────────────────────────────┘
+  tab section · c checks · space mark · s sort · ? keys · q quit

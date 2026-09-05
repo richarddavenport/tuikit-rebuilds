@@ -1,0 +1,37 @@
+‹ Mine(3) · Needs review(2) · Involved(2) ›
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+┌─ is:open author:@me ────────────────────────────────────────────────────────┐ ┌─ tuikit#66 ──────────────────────────────────────┐
+│       REPO    TITLE                       AUTHOR                  ±  UPDATED│ │Row.Depth indents Row.Lead                        │
+│›   ✓  tuikit  Row.Depth indents Row.Lead  richarddavenport  +84/-12      40m│ │richarddavenport wants to merge row-fixed-column …│
+│    ✓  tuikit  comp.Sort: which column a…  richarddavenport  +402/-4       3h│ │`Row.Depth` indents `Row.Lead` along with the tex…│
+│    ◐  tuikit  Sparkline: a number over …  richarddavenport  +611/-9       5h│ │cannot have both a fixed status column and an ind…│
+│                                                                             │ │                                                  │
+│                                 ┌──────────────────────────────────────────────────────────────┐this, both while being built     │
+│                                 │gh-dash, rebuilt                                              │                                 │
+│                                 │                                                              │ its file rows with git status l…│
+│                                 │moving                                                        │filename. Indented together, the…│
+│                                 │tab    next section                                           │top being a column.              │
+│                                 │j/k    move                                                   │                                 │
+│                                 │/      filter                                                 │th a change mark and indents the…│
+│                                 │                                                              │ did this layer remove", which y…│
+│                                 │the one you are on                                            │down that column.                │
+│                                 │c      show the checks instead of the body                    │                                 │
+│                                 │space  mark it                                                │                                 │
+│                                 │                                                              │                                 │
+│                                 │ordering                                                      │                                 │
+│                                 │s      sort by the next column                                │                                 │
+│                                 │S      reverse                                                │                                 │
+│                                 │                                                              │                                 │
+│                                 │everywhere                                                    │                                 │
+│                                 │?      this                                                   │                                 │
+│                                 │esc    back                                                   │                                 │
+│                                 │q      quit                                                   │                                 │
+│                                 └──────────────────────────────────────────────────────────────┘                                 │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                            12/12 │
+└─────────────────────────────────────────────────────────────────────────────┘ └──────────────────────────────────────────────────┘
+  tab section · c checks · space mark · s sort · ? keys · q quit

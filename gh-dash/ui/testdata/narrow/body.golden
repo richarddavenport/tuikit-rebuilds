@@ -1,0 +1,23 @@
+‹ Mine(3) · Needs review(2) · Involved(2) ›
+────────────────────────────────────────────────────────────────────────────────
+┌─ is:open author:@me ──────────────────────┐ ┌─ tuikit#66 ────────────────────┐
+│       REPO      AUTHOR                  ±  U│Row.Depth indents Row.Lead      │
+│›   ✓  tuikit    richarddavenport  +84/-12 │ │richarddavenport wants to merge…│
+│    ✓  tuikit    richarddavenport  +402/-4 │ │`Row.Depth` indents `Row.Lead` …│
+│    ◐  tuikit    richarddavenport  +611/-9 │ │cannot have both a fixed status…│
+│                                           │ │                                │
+│                                           │ │## Two tools hit this, both whi…│
+│                                           │ │                                │
+│                                           │ │**lazygit** leads its file rows…│
+│                                           │ │tree indents the filename. Inde…│
+│                                           │ │march right and stop being a co…│
+│                                           │ │                                │
+│                                           │ │**dive** leads with a change ma…│
+│                                           │ │question is "what did this laye…│
+│                                           │ │running your eye down that colu…│
+│                                           │ │                                │
+│                                           │ │                                │
+│                                           │ │                                │
+│                                           │ │                          12/12 │
+└───────────────────────────────────────────┘ └────────────────────────────────┘
+  tab section · c checks · space mark · s sort · ? keys · q quit

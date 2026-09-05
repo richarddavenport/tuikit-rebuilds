@@ -1,0 +1,37 @@
+‹ Mine(3) · Needs review(2) · Involved(2) ›
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+┌─ is:open review-requested:@me ──────────────────────────────────────────────┐ ┌─ swarmctl#129 ───────────────────────────────────┐
+│       REPO      TITLE                           AUTHOR            ±  UPDATED│ │Nodes and Stacks draw borders and no rows at 80x24│
+│›   ✗  swarmctl  Nodes and Stacks draw borders…  cruessler   +31/-44       1h│ │cruessler wants to merge narrow-panels  ·  1h     │
+│    ✓  pgctl     comp.Form: no multi-select      extrawurst  +190/-8      26h│ │At 80 columns the Nodes and Stacks panels draw th…│
+│                                                                             │ │nothing inside them.                              │
+│                                                                             │ │                                                  │
+│                                                                             │ │`comp.Layout` gives each a Min of 4, and `comp.Pa…│
+│                                                                             │ │those for its top and bottom edge. What is left i…│
+│                                                                             │ │the list spends one on its status.                │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                                  │
+│                                                                             │ │                                              6/6 │
+└─────────────────────────────────────────────────────────────────────────────┘ └──────────────────────────────────────────────────┘
+  tab section · c checks · space mark · s sort · ? keys · q quit
