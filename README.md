@@ -3,44 +3,86 @@
 Could [tuikit](https://github.com/richarddavenport/tuikit) build the terminal
 interfaces people actually use?
 
-Ten of them were read from source and worked out on paper. Each answer is a
-`STUDY.md`. Where the answer is yes, there is also a working program that draws
-the interface — against a fixture, not a real backend.
+Ten of them were read from source, worked out on paper, and then **built**.
+Each has a `STUDY.md` saying what the original does and what tuikit was missing,
+and a working program that draws its interface against a fixture.
 
 ![lazygit rebuilt](lazygit/docs/frames/range.svg)
 
-## The tools
+## The ten
 
-| | study | rebuilt | verdict |
-| --- | :---: | :---: | --- |
-| [lazygit](lazygit/) | ✓ | **✓** | Yes. Its three holes are now `comp.Tree`, `List.Range` and `comp.Viewer` |
-| [gcpeasy](gcpeasy/) | ✓ | **✓** | Yes, all of it — and [the rebuild is a real tool](https://github.com/richarddavenport/gcpeasy) |
-| [dive](dive/) | ✓ | | Yes. `comp.Tree` was the component it needed |
-| [gh-dash](gh-dash/) | ✓ | | Yes, apart from the PR body view |
-| [k9s](k9s/) | ✓ | | Close. Needs a selection set and `Viewer` |
-| [gitui](gitui/) | ✓ | | The same one thing short as lazygit, found independently |
-| [yazi](yazi/) | ✓ | | Nearly. One hole that matters: a selection set |
-| [termshark](termshark/) | ✓ | | No — `Viewer`, plus focus |
-| [fx](fx/) | ✓ | | No. It **is** the `Viewer` hole, undiluted |
-| [bottom](bottom/) | ✓ | | No. The charts are the tool |
+All ten are **built**. Each runs, is screenshotted, and has its screens held to
+a golden at two terminal sizes.
+
+| | run it | study | screens | verdict |
+| --- | --- | :---: | :---: | --- |
+| [lazygit](lazygit/) | `go run ./lazygit` | [✓](lazygit/STUDY.md) | [7](lazygit/docs/screens.md) | about even |
+| [gcpeasy](gcpeasy/) | `go run ./gcpeasy -fixture` | [✓](gcpeasy/STUDY.md) | [9](gcpeasy/docs/screens.md) | **tuikit, by the most** |
+| [k9s](k9s/) | `go run ./k9s` | [✓](k9s/STUDY.md) | [11](k9s/docs/screens.md) | **tuikit** |
+| [bottom](bottom/) | `go run ./bottom` | [✓](bottom/STUDY.md) | [8](bottom/docs/screens.md) | the original, on layout-as-data |
+| [gitui](gitui/) | `go run ./gitui` | [✓](gitui/STUDY.md) | [11](gitui/docs/screens.md) | **tuikit** |
+| [termshark](termshark/) | `go run ./termshark` | [✓](termshark/STUDY.md) | [9](termshark/docs/screens.md) | close, since `comp.Focus` |
+| [yazi](yazi/) | `go run ./yazi` | [✓](yazi/STUDY.md) | [10](yazi/docs/screens.md) | even — depends on your users |
+| [dive](dive/) | `go run ./dive` | [✓](dive/STUDY.md) | [7](dive/docs/screens.md) | **tuikit** |
+| [fx](fx/) | `go run ./fx` | [✓](fx/STUDY.md) | [7](fx/docs/screens.md) | the original, at scale |
+| [gh-dash](gh-dash/) | `go run ./gh-dash` | [✓](gh-dash/STUDY.md) | [9](gh-dash/docs/screens.md) | **tuikit, on `app`** |
+
+**88 screens**, all generated from fixtures. None is a screenshot anybody took,
+and none can go stale without a test failing first.
+
+**6,568 lines of interface across ten tools.** The largest single `view.go` is
+under 300.
+
+## What building them found
+
+Reading source finds gaps. Building finds different ones — six of these were
+invisible from the outside:
+
+| found by building | what happened |
+| --- | --- |
+| `Row.Lead` replaced `List.Marker`, so a status glyph cost you the cursor | fixed, [tuikit#64](https://github.com/richarddavenport/tuikit/issues/64) |
+| nothing held which pane had focus | `comp.Focus`, [#59](https://github.com/richarddavenport/tuikit/issues/59) |
+| the selection set, and two tools disagreed about its shape | `comp.Marks`, [#55](https://github.com/richarddavenport/tuikit/issues/55) |
+| no chart, and bottom had already said what one needs | `comp.Sparkline`, [#58](https://github.com/richarddavenport/tuikit/issues/58) |
+| no sort state | `comp.Sort`, [#61](https://github.com/richarddavenport/tuikit/issues/61) |
+| `Row.Depth` indents `Row.Lead`, so a status column and a tree indent cannot coexist | open, [#66](https://github.com/richarddavenport/tuikit/issues/66) |
+
+And three that are written down in the rebuild that hit them rather than filed,
+because one tool is an anecdote:
+
+- **`comp.Tree` cannot fold a closing bracket** (fx). A `}` sits at the *same*
+  depth as its `{`, so it is a sibling rather than a child. Not a gap in the
+  component — a tree of files or packets has no closing row — and the fix is six
+  lines in the tool.
+- **`Viewer.NoCursor` disables the range too** (termshark), so a *derived*
+  highlight cannot exist without a cursor to anchor it.
+- **There is no column equivalent of `List.Overhead`** (k9s), so a table header
+  aligned with List rows counts the marker width itself.
+
+One is a bug I made twice and the component's own doc warns about:
+
+- **A dragged range must be derived, not accumulated** (yazi). `List.Move` is
+  deferred, so a far end updated in a key handler is always one row behind what
+  the reader sees.
 
 ## Would it have been easier in tuikit?
 
 Each study ends with this, and it is a different question from "could tuikit
-draw it". **Three of the ten say no.**
+draw it". Three of the ten still come out against us, and two of those changed
+after the components they asked for were built.
 
 | | easier in tuikit? | because |
 | --- | --- | --- |
 | [gcpeasy](gcpeasy/) | **yes, by the most** | 291 lines of drawing against 624, and four tests stop being writable |
+| [gh-dash](gh-dash/) | **yes, on `app`** | its `Update` is 741 lines; the rebuild's is **32**, and a test says so |
 | [gitui](gitui/) | **yes** | 32 popup files, and the generic half of them is four components |
 | [dive](dive/) | **yes** | its interface is one tree, one list, a detail pane and a filter |
-| [gh-dash](gh-dash/) | **yes, on `app`** | a single 741-line `Update` is what `app.Keys`/`Stack`/`Gen` are shaped like |
-| [k9s](k9s/) | yes, once #55 lands | the closest one-to-one component mapping in the survey |
-| [lazygit](lazygit/) | about even | saves a style system, costs a focus manager |
+| [k9s](k9s/) | **yes**, now `comp.Marks` exists | one key means "the marked ones" and "this one", with no branch |
+| [termshark](termshark/) | **close**, now `comp.Focus` exists | its study said no; three panes moved by region name is the answer |
+| [lazygit](lazygit/) | about even | saves a style system, and `Row.Depth` still fights a status column |
 | [yazi](yazi/) | even, depends on your users | quicker to write, and it loses the Lua its users extend |
-| [fx](fx/) | **no** | its linked-list tree is faster than `comp.Tree` at scale |
-| [termshark](termshark/) | **no** | gowid has a real focus system; tuikit has an open issue |
-| [bottom](bottom/) | **no** | the charts are the tool, and `comp` has none |
+| [bottom](bottom/) | **the original** | not the charts any more — its layout is a TOML file and ours is compiled in |
+| [fx](fx/) | **the original** | its linked-list tree is faster than `comp.Tree` at scale |
 
 Every verdict has four parts: what you would not write, what you would write
 anyway, where tuikit gets in the way, and **where the original is better**.
@@ -124,3 +166,66 @@ That tuikit could or could not draw this interface, and what was missing.
 
 **Not** that the original should have used tuikit. lazygit predates it by nine
 years, most of these are not written in Go, and every one of them works.
+
+## The verdict
+
+**Can tuikit build the terminal interfaces people use? Yes — ten out of ten,
+and the two it could not are now three components and a bug fix later.**
+
+That is the honest headline and it needs three qualifications, in order of how
+much they cost.
+
+### 1. The fixtures are doing real work
+
+Every rebuild draws against canned data. `comp` never had to cope with a
+1.4-million-line diff, a `kubectl` that hangs, a terminal that lies about its
+width, or ten years of bug reports. **fx's study says no for exactly this
+reason**, and the rebuild cannot disprove it: a 25-line fixture cannot show a
+problem that starts at a million nodes.
+
+So this survey answers *can the interface be drawn*. It does not answer *does it
+hold up*, and no repository of fixtures ever will.
+
+### 2. Most of any tool is not its interface
+
+The ten rebuilds are **6,568 lines of interface**. The originals are hundreds of
+thousands of lines, and almost all of that is the domain: git plumbing,
+Kubernetes clients, PDML parsing, `/proc` readers, GraphQL.
+
+`comp` and `app` never touch that, and the studies say so per tool under
+*theirs*. A framework that saves you the interface has saved you the smaller
+half. Worth saying plainly, because a repository like this makes it easy to
+forget.
+
+### 3. Three things the originals still do better
+
+Each names one, and they are not throwaway concessions:
+
+- **fx's tree is a linked list.** Folding is a pointer hop and drawing never
+  touches what is hidden. `comp.Tree` walks every node, every frame, with a map
+  lookup per row.
+- **bottom's and gh-dash's layouts are files their users write.** TOML and YAML
+  respectively. tuikit cannot load a layout from data, and for a dashboard
+  "the user arranges it" is a large part of the product
+  ([#60](https://github.com/richarddavenport/tuikit/issues/60)).
+- **yazi's whole main surface is replaceable Lua.** tuikit declined that bet on
+  purpose, because a surface drawn by a user's script cannot be checked by
+  reading the program — and the guards are the property tuikit exists for.
+  Both bets are defensible; 42k people like the other one.
+
+### What actually changed
+
+The survey started as a coverage test and turned into a development loop. Ten
+studies produced six components — `Tree`, `Viewer`, `List.Range`, `Focus`,
+`Marks`, `Sparkline`, `Sort` — and **every one of them came from evidence rather
+than from taste.** None was built because somebody thought it would be useful.
+
+Three claims made along the way turned out to be false and were withdrawn: yazi,
+superfile and ranger were each cited as needing a tree and none has one. That
+correction sharpened the claim rather than weakening it — *every file manager in
+the field chose Miller columns over a tree.*
+
+**The most useful single result** is not in any of the ten. It is that building
+one tool for real, against a live backend, found two gaps that reading nine
+others had not. Reading source tells you what people wrote. Building tells you
+what they could not.
