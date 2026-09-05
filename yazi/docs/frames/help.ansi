@@ -1,0 +1,37 @@
+/Users/richardd/Developer/richarddavenport/tuikit/app
+┌─ .. ──────────────────────┐┌─ . ──────────────────────────────────────┐┌─ app ───────────────────────────────────────────────────┐
+│› tuikit                   ││›   app                                   ││  the fixture stops here                                 │
+│  tuikit-rebuilds          ││    comp                                  ││                                                         │
+│  azctl                    ││    design                                ││                                                         │
+│  pgctl                    ││    docs                                  ││                                                         │
+│  swarmctl                 ││    gallery                               ││                                                         │
+│  docket                   ││    guard                                 ││                                                         │
+│                           ││    ┌──────────────────────────────────────────────────────────────┐                                 │
+│                           ││    │yazi, rebuilt                                                 │                                 │
+│                           ││    │                                                              │                                 │
+│                           ││    │moving                                                        │                                 │
+│                           ││    │j/k    move                                                   │                                 │
+│                           ││    │h      up a directory                                         │                                 │
+│                           ││    │l      into the directory                                     │                                 │
+│                           ││    │                                                              │                                 │
+│                           ││    │selecting                                                     │                                 │
+│                           ││    │space  mark this one                                          │                                 │
+│                           ││    │v      visual mode: drag a range                              │                                 │
+│                           ││    │esc    clear the marks                                        │                                 │
+│                           ││    │                                                              │                                 │
+│                           ││    │finding                                                       │                                 │
+│                           ││    │/      search                                                 │                                 │
+│                           ││    │                                                              │                                 │
+│                           ││    │everywhere                                                    │                                 │
+│                           ││    │?      this                                                   │                                 │
+│                           ││    │q      quit                                                   │                                 │
+│                           ││    └──────────────────────────────────────────────────────────────┘                                 │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+└───────────────────────────┘└──────────────────────────────────────────┘└─────────────────────────────────────────────────────────┘
+  drwxr-xr-x  3h ago                                                                                                           1/15 

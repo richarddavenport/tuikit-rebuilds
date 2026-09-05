@@ -1,0 +1,23 @@
+/Users/richardd/Developer/richarddavenport/tuikit                     2 selected
+┌─ .. ──────────┐┌─ . ────────────────────┐┌─ tuikit ──────────────────────────┐
+│› richarddaven…││›   tuikit              ││  app                              │
+│  teaching     ││    tuikit-re…          ││  comp                             │
+│  archive      ││    azctl               ││  design                           │
+│  BOARD.md     ││    pgctl               ││  docs                             │
+│  NOW.md       ││    swarmctl            ││  gallery                          │
+│  SESSIONS.md  ││    docket              ││  guard                            │
+│               ││                        ││  harness                          │
+│               ││                        ││  spec                             │
+│               ││                        ││  theme                            │
+│               ││                        ││  go.mod                           │
+│               ││                        ││  LICENSE                          │
+│               ││                        ││  Makefile                         │
+│               ││                        ││  README.md                        │
+│               ││                        ││  logo.png                         │
+│               ││                        ││  tuikit                           │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+└───────────────┘└────────────────────────┘└───────────────────────────────────┘
+  drwxr-xr-x  35m ago                                                       1/6 

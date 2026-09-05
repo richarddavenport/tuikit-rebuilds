@@ -1,0 +1,37 @@
+/Users/richardd/Developer/richarddavenport/tuikit/comp
+┌─ .. ──────────────────────┐┌─ . ──────────────────────────────────────┐┌─ comp ──────────────────────────────────────────────────┐
+│› tuikit                   ││    app                                   ││  canvas.go                                              │
+│  tuikit-rebuilds          ││›   comp                                  ││  focus.go                                               │
+│  azctl                    ││    design                                ││  list.go                                                │
+│  pgctl                    ││    docs                                  ││  marks.go                                               │
+│  swarmctl                 ││    gallery                               ││  sparkline.go                                           │
+│  docket                   ││    guard                                 ││  tree.go                                                │
+│                           ││    harness                               ││  viewer.go                                              │
+│                           ││    spec                                  ││                                                         │
+│                           ││    theme                                 ││                                                         │
+│                           ││    go.mod                           812 B││                                                         │
+│                           ││    LICENSE                         1.1 kB││                                                         │
+│                           ││    Makefile                        1.7 kB││                                                         │
+│                           ││    README.md                       7.2 kB││                                                         │
+│                           ││    logo.png                       44.9 kB││                                                         │
+│                           ││    tuikit                         14.9 MB││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+└───────────────────────────┘└──────────────────────────────────────────┘└─────────────────────────────────────────────────────────┘
+  drwxr-xr-x  35m ago                                                                                                          2/15 

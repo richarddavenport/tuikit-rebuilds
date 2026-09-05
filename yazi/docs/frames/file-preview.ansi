@@ -1,0 +1,37 @@
+/Users/richardd/Developer/richarddavenport/tuikit/README.md
+┌─ .. ──────────────────────┐┌─ . ──────────────────────────────────────┐┌─ README.md ─────────────────────────────────────────────┐
+│› tuikit                   ││    app                                   ││# tuikit                                                 │
+│  tuikit-rebuilds          ││    comp                                  ││                                                         │
+│  azctl                    ││    design                                ││### Build the tool, not the terminal.                    │
+│  pgctl                    ││    docs                                  ││                                                         │
+│  swarmctl                 ││    gallery                               ││A Go framework for terminal applications that **show you…│
+│  docket                   ││    guard                                 ││**and let you act on it** — a git client, a file manager…│
+│                           ││    harness                               ││cluster browser, a system monitor, an API client, a depl…│
+│                           ││    spec                                  ││                                                         │
+│                           ││    theme                                 ││Three things here that a widget library does not give yo…│
+│                           ││    go.mod                           812 B││                                                         │
+│                           ││    LICENSE                         1.1 kB││**Nothing is invented.** Every one of the 26 components …│
+│                           ││    Makefile                        1.7 kB││pulled out of tools that had already written it.         │
+│                           ││›   README.md                       7.2 kB││                                                         │
+│                           ││    logo.png                       44.9 kB││                                                         │
+│                           ││    tuikit                         14.9 MB││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                         │
+│                           ││                                          ││                                                   12/12 │
+└───────────────────────────┘└──────────────────────────────────────────┘└─────────────────────────────────────────────────────────┘
+  -rw-r--r--  4h ago                                                                                                          13/15 

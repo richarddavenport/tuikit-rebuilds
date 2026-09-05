@@ -1,0 +1,23 @@
+/Users/richardd/Developer/richarddavenport/tuikit/app
+┌─ .. ──┌──────────────────────────────────────────────────────────────┐───────┐
+│› tuiki│yazi, rebuilt                                                 │       │
+│  tuiki│                                                              │       │
+│  azctl│moving                                                        │       │
+│  pgctl│j/k    move                                                   │       │
+│  swarm│h      up a directory                                         │       │
+│  docke│l      into the directory                                     │       │
+│       │                                                              │       │
+│       │selecting                                                     │       │
+│       │space  mark this one                                          │       │
+│       │v      visual mode: drag a range                              │       │
+│       │esc    clear the marks                                        │       │
+│       │                                                              │       │
+│       │finding                                                       │       │
+│       │/      search                                                 │       │
+│       │                                                              │       │
+│       │everywhere                                                    │       │
+│       │?      this                                                   │       │
+│       │q      quit                                                   │       │
+│       └──────────────────────────────────────────────────────────────┘       │
+└───────────────┘└────────────────────────┘└───────────────────────────────────┘
+  drwxr-xr-x  3h ago                                                       1/15 

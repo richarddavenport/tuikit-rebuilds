@@ -1,0 +1,23 @@
+/Users/richardd/Developer/richarddavenport/tuikit/docs
+┌─ .. ──────────┐┌─ . ────────────────────┐┌─ docs ────────────────────────────┐
+│› tuikit       ││  ▪ app                 ││  the fixture stops here           │
+│  tuikit-rebui…││  ▪ comp                ││                                   │
+│  azctl        ││  ▪ design              ││                                   │
+│  pgctl        ││› ▪ docs                ││                                   │
+│  swarmctl     ││    gallery             ││                                   │
+│  docket       ││    guard               ││                                   │
+│               ││    harness             ││                                   │
+│               ││    spec                ││                                   │
+│               ││    theme               ││                                   │
+│               ││    go.mod         812 B││                                   │
+│               ││    LICENSE       1.1 kB││                                   │
+│               ││    Makefile      1.7 kB││                                   │
+│               ││    README.md     7.2 kB││                                   │
+│               ││    logo.png     44.9 kB││                                   │
+│               ││    tuikit       14.9 MB││                                   │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+└───────────────┘└────────────────────────┘└───────────────────────────────────┘
+  VISUAL — v commits the range, esc drops it

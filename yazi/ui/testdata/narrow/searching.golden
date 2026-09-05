@@ -1,0 +1,23 @@
+/Users/richardd/Developer/richarddavenport/tuikit/go.mod
+┌─ .. ──────────┐┌─ /go ──────────────────┐┌─ go.mod ──────────────────────────┐
+│› tuikit       ││›   go.mod         812 B││module github.com/richarddavenport…│
+│  tuikit-rebui…││    logo.png     44.9 kB││                                   │
+│  azctl        ││                        ││go 1.25.0                          │
+│  pgctl        ││                        ││                                   │
+│  swarmctl     ││                        ││require (                          │
+│  docket       ││                        ││    github.com/charmbracelet/bubbl…│
+│               ││                        ││    github.com/charmbracelet/lipgl…│
+│               ││                        ││    github.com/charmbracelet/x/ans…│
+│               ││                        ││    golang.org/x/sys v0.31.0       │
+│               ││                        ││)                                  │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+│               ││                        ││                             10/10 │
+└───────────────┘└────────────────────────┘└───────────────────────────────────┘
+  -rw-r--r--  30d ago                                                       1/2 

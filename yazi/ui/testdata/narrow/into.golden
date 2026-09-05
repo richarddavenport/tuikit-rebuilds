@@ -1,0 +1,23 @@
+/Users/richardd/Developer/richarddavenport/tuikit/comp/canvas.go
+┌─ .. ──────────┐┌─ . ────────────────────┐┌─ canvas.go ───────────────────────┐
+│  app          ││›   canvas.go    14.2 kB││  no preview for this file         │
+│› comp         ││    focus.go      3.9 kB││                                   │
+│  design       ││    list.go      21.9 kB││                                   │
+│  docs         ││    marks.go      5.1 kB││                                   │
+│  gallery      ││    sparkline…    4.4 kB││                                   │
+│  guard        ││    tree.go       5.0 kB││                                   │
+│  harness      ││    viewer.go    12.8 kB││                                   │
+│  spec         ││                        ││                                   │
+│  theme        ││                        ││                                   │
+│  go.mod       ││                        ││                                   │
+│  LICENSE      ││                        ││                                   │
+│  Makefile     ││                        ││                                   │
+│  README.md    ││                        ││                                   │
+│  logo.png     ││                        ││                                   │
+│  tuikit       ││                        ││                                   │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+│               ││                        ││                                   │
+└───────────────┘└────────────────────────┘└───────────────────────────────────┘
+  -rw-r--r--  26h ago                                                       1/7 
