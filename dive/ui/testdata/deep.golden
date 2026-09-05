@@ -1,0 +1,37 @@
+┌─ Layers ───────────────────────────────────────────────────────┐ ┌─ Current Layer Contents — attributes ─────────────────────────┐
+│·   FROM golang:1.25-alpine                             121.0 MB│ │    ▾ bin/                                      drwxr-xr-x  0 B│
+│    RUN apk add --no-cache git make                      18.4 MB│ │        busybox                              -rwxr-xr-x  833 kB│
+│    WORKDIR /src                                             0 B│ │  ~ ▾ root/                                     drwx------  0 B│
+│    COPY go.mod go.sum ./                                  91 kB│ │  -   ▾ .cache/                                 drwxr-xr-x  0 B│
+│  ! RUN go mod download                                  64.2 MB│ │  -     ▾ go-build/                             drwxr-xr-x  0 B│
+│  ! COPY . .                                              4.1 MB│ │› -       ▾ 00/                                 drwxr-xr-x  0 B│
+│    RUN make build                                       31.7 MB│ │  -           0a1f2b3c4d                     -rw-r--r--  2.4 MB│
+│    RUN rm -rf /root/.cache /src                           12 kB│ │  -       ▾ 3f/                                 drwxr-xr-x  0 B│
+│                                                                │ │  -           9c8b7a6f5e                     -rw-r--r--  1.9 MB│
+│                                                                │ │  - ▾ src/                                      drwxr-xr-x  0 B│
+│                                                                │ │  -   ▾ cmd/                                    drwxr-xr-x  0 B│
+│                                                                │ │  -       main.go                              -rw-r--r--  1 kB│
+│                                                                │ │  -     go.sum                                -rw-r--r--  84 kB│
+│                                                                │ │  ~ ▾ usr/                                      drwxr-xr-x  0 B│
+│                                                                │ │  ~   ▾ local/                                  drwxr-xr-x  0 B│
+│                                                                │ │  +     ▾ bin/                                  drwxr-xr-x  0 B│
+│                                                                │ │  +         gcpeasy                         -rwxr-xr-x  31.7 MB│
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+└────────────────────────────────────────────────────────────────┘ │                                                               │
+┌─ Layer details ────────────────────────────────────────────────┐ │                                                               │
+│id      3f4d90d1                                                │ │                                                               │
+│size    121.0 MB                                                │ │                                                               │
+│command FROM golang:1.25-alpine                                 │ │                                                               │
+│                                                                │ │                                                               │
+│image                                                           │ │                                                               │
+│  efficiency 62%                                                │ │                                                               │
+│  wasted     67.0 MB                                            │ │                                                               │
+└────────────────────────────────────────────────────────────────┘ └───────────────────────────────────────────────────────────────┘
+  tab pane · space fold · a attributes · ? keys · q quit

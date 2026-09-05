@@ -1,0 +1,23 @@
+┌─ Layers ─────────────────────────────┐ ┌─ Current Layer Contents ────────────┐
+│›   FROM golang:1.25-alpine   121.0 MB│ │·   ▾ bin/                           │
+│    RUN apk add --no-cache git 18.4 MB│ │        busybox                      │
+│    WORKDIR /src                   0 B│ │  ~ ▾ root/                          │
+│    COP┌──────────────────────────────────────────────────────────────┐       │
+│  ! RUN│dive, rebuilt                                                 │       │
+│  ! COP│                                                              │       │
+│    RUN│moving                                                        │       │
+│    RUN│tab    switch pane                                            │       │
+│       │j/k    move                                                   │       │
+│       │space  fold a directory                                       │       │
+│       │                                                              │       │
+└───────│showing                                                       │       │
+┌─ Layer│a      permissions and sizes                                  │       │
+│id     │                                                              │       │
+│size   │everywhere                                                    │       │
+│command│?      this                                                   │       │
+│       │q      quit                                                   │       │
+│image  └──────────────────────────────────────────────────────────────┘       │
+│  efficiency 62%                      │ │                                     │
+│  wasted     67.0 MB                  │ │                                     │
+└──────────────────────────────────────┘ └─────────────────────────────────────┘
+  tab pane · space fold · a attributes · ? keys · q quit

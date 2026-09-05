@@ -1,0 +1,37 @@
+┌─ Layers ───────────────────────────────────────────────────────┐ ┌─ Current Layer Contents ──────────────────────────────────────┐
+│·   FROM golang:1.25-alpine                             121.0 MB│ │    ▾ bin/                                                     │
+│    RUN apk add --no-cache git make                      18.4 MB│ │        busybox                                                │
+│    WORKDIR /src                                             0 B│ │› ~ ▸ root/                                                    │
+│    COPY go.mod go.sum ./                                  91 kB│ │  - ▾ src/                                                     │
+│  ! RUN go mod download                                  64.2 MB│ │  -   ▾ cmd/                                                   │
+│  ! COPY . .                                              4.1 MB│ │  -       main.go                                              │
+│    RUN make build                                       31.7 MB│ │  -     go.sum                                                 │
+│    RUN rm -rf /root/.cache /src                           12 kB│ │  ~ ▾ usr/                                                     │
+│                                                                │ │  ~   ▾ local/                                                 │
+│                                                                │ │  +     ▾ bin/                                                 │
+│                                                                │ │  +         gcpeasy                                            │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+└────────────────────────────────────────────────────────────────┘ │                                                               │
+┌─ Layer details ────────────────────────────────────────────────┐ │                                                               │
+│id      3f4d90d1                                                │ │                                                               │
+│size    121.0 MB                                                │ │                                                               │
+│command FROM golang:1.25-alpine                                 │ │                                                               │
+│                                                                │ │                                                               │
+│image                                                           │ │                                                               │
+│  efficiency 62%                                                │ │                                                               │
+│  wasted     67.0 MB                                            │ │                                                               │
+└────────────────────────────────────────────────────────────────┘ └───────────────────────────────────────────────────────────────┘
+  tab pane · space fold · a attributes · ? keys · q quit

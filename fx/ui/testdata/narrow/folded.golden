@@ -1,0 +1,23 @@
+fx  package-lock.json                                                   15 of 25
+────────────────────────────────────────────────────────────────────────────────
+1  ▾ {
+2      "name": "tuikit",
+3      "version": "0.1.0",
+4      "private": false,
+5    ▾ "engines": {
+6        "go": ">=1.25"
+7      },
+8    ▸ "dependencies": { … }
+9    ▾ "keywords": [
+10       "terminal",
+11       "tui",
+12       "go"
+13     ],
+14     "components": 24
+15   }
+
+
+
+
+                                                                          15/15
+  space fold · / search · ? keys · q quit

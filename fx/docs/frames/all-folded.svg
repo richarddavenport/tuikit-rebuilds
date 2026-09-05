@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1057.6" height="625.25" viewBox="0 0 1057.6 625.25" font-family="ui-monospace, &#39;SF Mono&#39;, SFMono-Regular, Menlo, Consolas, &#39;DejaVu Sans Mono&#39;, monospace" font-size="13" role="img">
+<title>terminal frame, 132 columns by 37 rows</title>
+<rect width="1057.6" height="625.25" rx="7" fill="#0c0c0e"/>
+<text x="14" y="24.68" textLength="1029.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">fx  package-lock.json                                                                                                        1 of 25</text>
+<text x="14" y="40.92" textLength="1029.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</text>
+<text x="14" y="57.17" textLength="70.2" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">1 ▸ { … }</text>
+<text x="14" y="593.42" textLength="1021.8" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">                                                                                                                                1/1</text>
+<text x="14" y="609.67" textLength="319.8" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  space fold · / search · ? keys · q quit</text>
+</svg>

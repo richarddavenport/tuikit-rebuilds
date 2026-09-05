@@ -1,0 +1,23 @@
+fx  package-lock.json                                                   25 of 25
+────────────────────────────────────────────────────────────────────────────────
+1  ▾ {
+2      "┌──────────────────────────────────────────────────────────────┐
+3      "│fx, rebuilt                                                   │
+4      "│                                                              │
+5    ▾ "│moving                                                        │
+6       │j/k    line                                                   │
+7      }│space  fold or unfold                                         │
+8    ▾ "│e      unfold everything                                      │
+9      ▾│E      fold everything                                        │
+10      │                                                              │
+11      │finding                                                       │
+12      │/      search                                                 │
+13      │n      next match                                             │
+14     ▾│                                                              │
+15      │everywhere                                                    │
+16      │?      this                                                   │
+17      │q      quit                                                   │
+18     }└──────────────────────────────────────────────────────────────┘
+19   ▾ "keywords": [
+                                                                          19/25
+  space fold · / search · ? keys · q quit

@@ -1,0 +1,37 @@
+fx  package-lock.json                                                                                                       25 of 25
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+1  ▾ {
+2      "name": "tuikit",
+3      "version": "0.1.0",
+4      "private": false,
+5    ▾ "engines": {
+6        "go": ">=1.25"
+7      },
+8    ▾ "dependencies": {
+9      ▾ "bubbletea": {
+10         "version": "1.3.10",
+11         "resolved": "https://proxy.golang.org/...",
+12         "integrity": "h1:8x/0Ol1S0J+CjHi3Vwx0ov/N/Qd8="
+13       },
+14     ▾ "lipgloss": {
+15         "version": "1.1.0",
+16         "deprecated": null
+17       }
+18     },
+19   ▾ "keywords": [
+20       "terminal",
+21       "tui",
+22       "go"
+23     ],
+24     "components": 24
+25   }
+
+
+
+
+
+
+
+
+                                                                                                                              25/25
+  space fold · / search · ? keys · q quit

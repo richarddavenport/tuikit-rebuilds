@@ -1,0 +1,37 @@
+┌─ Layers ───────────────────────────────────────────────────────┐ ┌─ Current Layer Contents ──────────────────────────────────────┐
+│    FROM golang:1.25-alpine                             121.0 MB│ │·   ▾ bin/                                                     │
+│    RUN apk add --no-cache git make                      18.4 MB│ │        busybox                                                │
+│    WORKDIR /src                                             0 B│ │  ~ ▾ root/                                                    │
+│    COPY go.mod go.sum ./                                  91 kB│ │  -   ▾ .cache/                                                │
+│› ! RUN go mod download                                  64.2 MB│ │  -     ▾ go-build/                                            │
+│  ! COPY . .                                              4.1 MB│ │  -       ▾ 00/                                                │
+│    RUN make build                                       31.7 MB│ │  -           0a1f2b3c4d                                       │
+│    RUN rm -rf /root/.cache /src                           12 kB│ │  -       ▾ 3f/                                                │
+│                                                                │ │  -           9c8b7a6f5e                                       │
+│                                                                │ │  - ▾ src/                                                     │
+│                                                                │ │  -   ▾ cmd/                                                   │
+│                                                                │ │  -       main.go                                              │
+│                                                                │ │  -     go.sum                                                 │
+│                                                                │ │  ~ ▾ usr/                                                     │
+│                                                                │ │  ~   ▾ local/                                                 │
+│                                                                │ │  +     ▾ bin/                                                 │
+│                                                                │ │  +         gcpeasy                                            │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+│                                                                │ │                                                               │
+└────────────────────────────────────────────────────────────────┘ │                                                               │
+┌─ Layer details ────────────────────────────────────────────────┐ │                                                               │
+│id      d1c88b04                                                │ │                                                               │
+│size    64.2 MB                                                 │ │                                                               │
+│command RUN go mod download                                     │ │                                                               │
+│wasted  64.2 MB                                                 │ │                                                               │
+│                                                                │ │                                                               │
+│image                                                           │ │                                                               │
+│  efficiency 62%                                                │ │                                                               │
+└────────────────────────────────────────────────────────────────┘ └───────────────────────────────────────────────────────────────┘
+  tab pane · space fold · a attributes · ? keys · q quit
