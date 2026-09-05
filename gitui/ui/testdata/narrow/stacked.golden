@@ -1,0 +1,23 @@
+‹ Status(8) · Log · Files · Stashing ›
+┌─ Unstaged ───────────────────┐ ┌─ Diff ──────────────────────────────────────┐
+│› M src/app.rs                │ │diff --git a/src/components/diff.rs b/src/co…│
+│  M src/key┌─ gitui ──────────────────────────────────────────────┐           │
+│  M asyncgi│>   type to search 10 commands                        │onent {    │
+│  M CHANGEL│──────────────────────────────────────────────────────│lection {  │
+│  D src/tab│ popups                         gitui has 32 of these │.selection…│
+│           │  branches                    b                       │tart, self…│
+│       ┌──────────────────────────────────────────────────────────────┐       │
+│       │gitui                                                         │lected…│
+│       │                                                              │       │
+└───────│branches                                                      │       │
+┌─ Stage│                                                              │on::Mu…│
+│› M src│enter this rebuild changes nothing · esc back                 │(self.…│
+│  M src└──────────────────────────────────────────────────────────────┘       │
+│  A src/pop│                                                 9/11 │           │
+│           │──────────────────────────────────────────────────────│nent {     │
+│           │                                                      │ {         │
+│           └──────────────────────────────────────────────────────┘ne;        │
+│                              │ │+        self.list.clear_range();            │
+│                              │ │                                       18/19 │
+└──────────────────────────────┘ └─────────────────────────────────────────────┘
+  esc close one of 2 · ? keys · q quit

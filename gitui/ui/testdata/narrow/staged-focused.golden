@@ -1,0 +1,23 @@
+‹ Status(8) · Log · Files · Stashing ›
+┌─ Unstaged ───────────────────┐ ┌─ Diff ──────────────────────────────────────┐
+│› M src/app.rs                │ │diff --git a/src/components/diff.rs b/src/co…│
+│  M src/keys/key_config.rs    │ │index 7c1a4f2..2b90e13 100644                │
+│  M asyncgit/src/sync/diff.rs │ │@@ -204,11 +204,9 @@ impl DiffComponent {    │
+│  M CHANGELOG.md              │ │     fn get_selection(&self) -> Selection {  │
+│  D src/tabs/revlog.rs        │ │-        if let Some(start) = self.selection…│
+│                              │ │-            Selection::Multiple(start, self…│
+│                              │ │-        } else {                            │
+│                              │ │-            Selection::Single(self.selected…│
+│                              │ │-        }                                   │
+└──────────────────────────────┘ │+        match self.list.range() {           │
+┌─ Staged ─────────────────────┐ │+            Some((lo, hi)) => Selection::Mu…│
+│› M src/components/diff.rs    │ │+            None => Selection::Single(self.…│
+│  M src/components/syntax_tex…│ │+        }                                   │
+│  A src/popups/goto_line.rs   │ │     }                                       │
+│                              │ │@@ -311,6 +309,4 @@ impl DiffComponent {     │
+│                              │ │     fn reset_selection(&mut self) {         │
+│                              │ │-        self.selection_start = None;        │
+│                              │ │+        self.list.clear_range();            │
+│                              │ │                                       18/19 │
+└──────────────────────────────┘ └─────────────────────────────────────────────┘
+  1-4 tab · space popups · v line select · ? keys · q quit

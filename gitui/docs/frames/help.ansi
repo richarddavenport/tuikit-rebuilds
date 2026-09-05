@@ -1,0 +1,37 @@
+‹ Status(8) · Log · Files · Stashing ›
+┌─ Unstaged ───────────────────────────────────────┐ ┌─ Diff ──────────────────────────────────────────────────────────────────────┐
+│› M src/app.rs                                    │ │diff --git a/src/components/diff.rs b/src/components/diff.rs                 │
+│  M src/keys/key_config.rs                        │ │index 7c1a4f2..2b90e13 100644                                                │
+│  M asyncgit/src/sync/diff.rs                     │ │@@ -204,11 +204,9 @@ impl DiffComponent {                                    │
+│  M CHANGELOG.md                                  │ │     fn get_selection(&self) -> Selection {                                  │
+│  D src/tabs/revlog.rs                            │ │-        if let Some(start) = self.selection_start {                         │
+│                                 ┌──────────────────────────────────────────────────────────────┐.selected_line)                  │
+│                                 │gitui, rebuilt                                                │                                 │
+│                                 │                                                              │_line)                           │
+│                                 │tabs                                                          │                                 │
+│                                 │1-4        jump to a tab                                      │                                 │
+│                                 │tab        next tab                                           │ltiple(lo, hi),                  │
+│                                 │                                                              │list.cursor()),                  │
+│                                 │status                                                        │                                 │
+│                                 │j/k        move                                               │                                 │
+│                                 │shift+tab  staged or unstaged                                 │                                 │
+│                                 │v          select lines of the diff                           │                                 │
+└─────────────────────────────────│                                                              │                                 │
+┌─ Staged ────────────────────────│line select                                                   │                                 │
+│› M src/components/diff.rs       │J/K        extend                                             │                                 │
+│  M src/components/syntax_text.rs│a          the whole hunk                                     │                                 │
+│  A src/popups/goto_line.rs      │enter      stage the range                                    │                                 │
+│                                 │                                                              │                                 │
+│                                 │everywhere                                                    │                                 │
+│                                 │space      every popup                                        │                                 │
+│                                 │?          this                                               │                                 │
+│                                 │esc        close one popup                                    │                                 │
+│                                 │q          quit                                               │                                 │
+│                                 └──────────────────────────────────────────────────────────────┘                                 │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                       19/19 │
+└──────────────────────────────────────────────────┘ └─────────────────────────────────────────────────────────────────────────────┘
+  esc close one of 1 · ? keys · q quit

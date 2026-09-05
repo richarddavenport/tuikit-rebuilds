@@ -1,0 +1,37 @@
+‹ Status(8) · Log · Files · Stashing ›
+┌─ Unstaged ───────────────────────────────────────┐ ┌─ Diff ──────────────────────────────────────────────────────────────────────┐
+│› M src/app.rs                                    │ │diff --git a/src/components/diff.rs b/src/components/diff.rs                 │
+│  M src/keys/key_config.rs                        │ │index 7c1a4f2..2b90e13 100644                                                │
+│  M asyncgit/src/sync/diff.rs                     │ │@@ -204,11 +204,9 @@ impl DiffComponent {                                    │
+│  M CHANGELOG.md                                  │ │     fn get_selection(&self) -> Selection {                                  │
+│  D src/tabs/revlog.rs                            │ │-        if let Some(start) = self.selection_start {                         │
+│                                                  │ │-            Selection::Multiple(start, self.selected_line)                  │
+│                                                  │ │-        } else {                                                            │
+│                                                  │ │-            Selection::Single(self.selected_line)                           │
+│                                     ┌─ gitui ──────────────────────────────────────────────┐                                     │
+│                                     │>   type to search 10 commands                        │                                     │
+│                                     │──────────────────────────────────────────────────────│::Multiple(lo, hi),                  │
+│                                     │ popups                         gitui has 32 of these │elf.list.cursor()),                  │
+│                                     │  branches                    b                       │                                     │
+│                                     │  commit                      c                       │                                     │
+│                                     │  push                        p                       │                                     │
+│                                     │  fetch                       f                       │                                     │
+└─────────────────────────────────────│  pull                        P                       │                                     │
+┌─ Staged ────────────────────────────│  tag                         t                       │                                     │
+│› M src/components/diff.rs           │  blame this file             B                       │                                     │
+│  M src/components/syntax_text.rs    │  log search                  L                       │                                     │
+│  A src/popups/goto_line.rs          │                                                 9/11 │                                     │
+│                                     │──────────────────────────────────────────────────────│                                     │
+│                                     │                                                      │                                     │
+│                                     └──────────────────────────────────────────────────────┘                                     │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                       19/19 │
+└──────────────────────────────────────────────────┘ └─────────────────────────────────────────────────────────────────────────────┘
+  esc close one of 1 · ? keys · q quit

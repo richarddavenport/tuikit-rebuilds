@@ -1,0 +1,23 @@
+‹ Status(8) · Log · Files · Stashing ›
+┌─ Commit ─────────────────────────────────────────────────────────────────────┐
+│› a4f19c2  popups: a modal stack, not a screen stack  (HEAD -> extrawurst  40m│
+│  77b0e51  diff: keep syntax colour under the selection         extrawurst  5h│
+│  1d9a3f8  status_tree: collapse by path                        cruessler  27h│
+│  9e2c7b4  asyncgit: cancel a diff that nobody is waiting for  (extrawurst  2d│
+│  5c81d0a  textinput: undo stack                                 cruessler  4d│
+│  b2704ef  keys: make the config file the source of truth       extrawurst  6d│
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+  1-4 tab · space popups · ? keys · q quit

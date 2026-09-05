@@ -1,0 +1,23 @@
+‹ Status┌──────────────────────────────────────────────────────────────┐
+┌─ Unsta│gitui, rebuilt                                                │───────┐
+│› M src│                                                              │src/co…│
+│  M src│tabs                                                          │       │
+│  M asy│1-4        jump to a tab                                      │t {    │
+│  M CHA│tab        next tab                                           │ion {  │
+│  D src│                                                              │ection…│
+│       │status                                                        │, self…│
+│       │j/k        move                                               │       │
+│       │shift+tab  staged or unstaged                                 │lected…│
+│       │v          select lines of the diff                           │       │
+└───────│                                                              │       │
+┌─ Stage│line select                                                   │on::Mu…│
+│› M src│J/K        extend                                             │(self.…│
+│  M src│a          the whole hunk                                     │       │
+│  A src│enter      stage the range                                    │       │
+│       │                                                              │ {     │
+│       │everywhere                                                    │       │
+│       │space      every popup                                        │       │
+│       │?          this                                               │       │
+│       │esc        close one popup                                    │ 18/19 │
+└───────│q          quit                                               │───────┘
+  esc cl└──────────────────────────────────────────────────────────────┘

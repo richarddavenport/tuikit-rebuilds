@@ -1,0 +1,37 @@
+‹ Status(8) · Log · Files · Stashing ›
+┌─ Unstaged ───────────────────────────────────────┐ ┌─ Diff — line select ────────────────────────────────────────────────────────┐
+│› M src/app.rs                                    │ │diff --git a/src/components/diff.rs b/src/components/diff.rs                 │
+│  M src/keys/key_config.rs                        │ │index 7c1a4f2..2b90e13 100644                                                │
+│  M asyncgit/src/sync/diff.rs                     │ │@@ -204,11 +204,9 @@ impl DiffComponent {                                    │
+│  M CHANGELOG.md                                  │ │     fn get_selection(&self) -> Selection {                                  │
+│  D src/tabs/revlog.rs                            │ │-        if let Some(start) = self.selection_start {                         │
+│                                                  │ │-            Selection::Multiple(start, self.selected_line)                  │
+│                                                  │ │-        } else {                                                            │
+│                                                  │ │-            Selection::Single(self.selected_line)                           │
+│                                                  │ │-        }                                                                   │
+│                                                  │ │+        match self.list.range() {                                           │
+│                                                  │ │+            Some((lo, hi)) => Selection::Multiple(lo, hi),                  │
+│                                                  │ │+            None => Selection::Single(self.list.cursor()),                  │
+│                                                  │ │+        }                                                                   │
+│                                                  │ │     }                                                                       │
+│                                                  │ │@@ -311,6 +309,4 @@ impl DiffComponent {                                     │
+│                                                  │ │     fn reset_selection(&mut self) {                                         │
+└──────────────────────────────────────────────────┘ │-        self.selection_start = None;                                        │
+┌─ Staged ─────────────────────────────────────────┐ │+        self.list.clear_range();                                            │
+│› M src/components/diff.rs                        │ │     }                                                                       │
+│  M src/components/syntax_text.rs                 │ │                                                                             │
+│  A src/popups/goto_line.rs                       │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                             │
+│                                                  │ │                                                                       19/19 │
+└──────────────────────────────────────────────────┘ └─────────────────────────────────────────────────────────────────────────────┘
+  J/K extend · a hunk · enter stage · esc leave · ? keys · q quit
