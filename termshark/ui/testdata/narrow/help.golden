@@ -1,0 +1,23 @@
+termshark                                                             10 packets
+┌─ Packe┌──────────────────────────────────────────────────────────────┐───────┐
+│›     1│termshark, rebuilt                                            │ S…    │
+│      2│                                                              │ A…    │
+│      3│moving                                                        │ S…    │
+│      4│tab    next pane                                              │=a…    │
+└───────│j/k    move                                                   │───────┘
+┌─ Packe│space  fold a field                                           │───────┐
+│› ▾ Fra│                                                              │       │
+│      A│selecting                                                     │       │
+│      F│m      mark this packet                                       │       │
+│  ▾ Eth│M      fill from the nearest mark                             │       │
+│      D│                                                              │       │
+│      S│finding                                                       │       │
+│      T│/      display filter                                         │       │
+└───────│                                                              │───────┘
+┌─ Bytes│everywhere                                                    │───────┐
+│00b0  0│?      this                                                   │       │
+│00c0  7│esc    back                                                   │       │
+│00d0  2│q      quit                                                   │       │
+│       └──────────────────────────────────────────────────────────────┘ 14/14 │
+└──────────────────────────────────────────────────────────────────────────────┘
+  tab pane · space fold · m mark · / filter · ? keys · q quit
