@@ -1,0 +1,23 @@
+gcpeasy ┌──────────────────────────────────────────────────────────────┐ttention
+────────│gcpeasy                                                       │────────
+┌─ proje│                                                              │───────┐
+│    acm│moving                                                        │       │
+│› ● acm│tab        next pane                                          │       │
+└───────│shift+tab  previous pane                                      │       │
+┌─ clust│j/k        move the cursor                                    │       │
+│· ● app│pgup/pgdn  move ten                                           │       │
+│  ◐ bat│/          filter this pane                                   │       │
+└───────│                                                              │       │
+┌─ pods │pods                                                          │       │
+│· ◐ mig│enter      describe, or use the cluster                       │       │
+│  ● web│l          logs                                               │       │
+│  ▲ web│d          describe                                           │       │
+│  ▲ wor│c          rails console, in your terminal                    │       │
+│  ✗ rep│s          shell, in your terminal                            │       │
+│       │                                                              │       │
+│       │everywhere                                                    │       │
+│       │space      everything gcpeasy can do                          │       │
+│       │r          read the world again                               │       │
+│       │?          this                                               │       │
+└───────│↓ 2 more                                                      │───────┘
+  tab pa└──────────────────────────────────────────────────────────────┘

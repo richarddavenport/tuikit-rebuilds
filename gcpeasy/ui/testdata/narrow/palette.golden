@@ -1,0 +1,23 @@
+gcpeasy  acme-staging                                            needs attention
+────────────────────────────────────────────────────────────────────────────────
+┌─ proje┌─ do ─────────────────────────────────────────────────────────┐───────┐
+│    acm│>   type to search 15 commands                                │       │
+│› ● acm│──────────────────────────────────────────────────────────────│       │
+└───────│ moving                                                       │       │
+┌─ clust│  next pane                   tab                             │       │
+│· ● app│  previous pane               shif…                           │       │
+│  ◐ bat│  move the cursor             j/k                             │       │
+└───────│  move ten                    pgup…                           │       │
+┌─ pods │  filter this pane            /                               │       │
+│· ◐ mig│ pods                                                         │       │
+│  ● web│  describe, or use the clusterenter                           │       │
+│  ▲ web│  logs                        l                               │       │
+│  ▲ wor│  describe                    d                               │       │
+│  ✗ rep│  rails console, in your term…c                               │       │
+│       │  shell, in your terminal     s                               │       │
+│       │                                                        12/18 │       │
+│       │──────────────────────────────────────────────────────────────│       │
+│       │                                                              │       │
+│       └──────────────────────────────────────────────────────────────┘       │
+└──────────────────────────────┘ └─────────────────────────────────────────────┘
+  tab pane · / filter · space all · ? keys · q quit
