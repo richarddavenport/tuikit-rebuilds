@@ -1,0 +1,37 @@
+┌─ 1 Status ───────────────────────────────┐ ┌─ Patch ─────────────────────────────────────────────────────────────────────────────┐
+│ tuikit → main                            │ │diff --git a/internal/gui/patch_exploring.go b/internal/gui/patch_exploring.go       │
+│                                          │ │index 4b2c1a9..9f3e7d2 100644                                                        │
+└──────────────────────────────────────────┘ │--- a/internal/gui/patch_exploring.go                                                │
+┌─ 2 Files ────────────────────────────────┐ │+++ b/internal/gui/patch_exploring.go                                                │
+│› M ▸ internal                            │ │@@ -12,9 +12,7 @@ func (s *State) SelectedRange() (int, int) {                       │
+│  M ▾ pkg                                 │ │ func (s *State) SelectedRange() (int, int) {                                        │
+│  M     theme.go                          │ │-   if s.rangeStartIdx == nil {                                                      │
+│  M   README.md                           │ │-       return s.selectedLineIdx, s.selectedLineIdx                                  │
+│  D   go.sum                              │ │-   }                                                                                │
+│                                          │ │+   lo, hi, ok := s.list.Range()                                                     │
+│                                          │ │+   if !ok {                                                                         │
+│                                          │ │+       return s.list.Cursor(), s.list.Cursor()                                      │
+│                                          │ │+   }                                                                                │
+│                                          │ │    return lo, hi                                                                    │
+└──────────────────────────────────────────┘ │ }                                                                                   │
+┌─ 3 Branches ─────────────────────────────┐ │@@ -48,6 +46,4 @@ func (s *State) SetLineSelectMode() {                              │
+│›* main                                 ↑2│ │ func (s *State) SetLineSelectMode() {                                               │
+│   range-selection                   ↑7 ↓1│ │-   s.rangeStartIdx = nil                                                            │
+│   tree-component                       ↑1│ │-   s.selectMode = LINE                                                              │
+│   viewer                               ↓4│ │+   s.list.ClearRange()                                                              │
+│                                          │ │ }                                                                                   │
+│                                          │ │                                                                                     │
+└──────────────────────────────────────────┘ │                                                                                     │
+┌─ 4 Commits ──────────────────────────────┐ │                                                                                     │
+│›9192dc9 Rebuild yazi, and correct the tre│ │                                                                                     │
+│ 6c97ce0 comp.Viewer: the document seven t│ │                                                                                     │
+│ 1c93993 comp.Tree and List range selectio│ │                                                                                     │
+│ cde4b75 Widen the scope: state you act on│ │                                                                                     │
+│ f87da4b Rebuilds: could tuikit build the │ │                                                                                     │
+│ 56b4bdc Start a list of the other TUIs   │ │                                                                                     │
+└──────────────────────────────────────────┘ │                                                                                     │
+┌─ 5 Stash ────────────────────────────────┐ │                                                                                     │
+│›0 WIP on main: half a scrollbar          │ │                                                                                     │
+│ 1 the layout experiment that did not work│ │                                                                               21/21 │
+└──────────────────────────────────────────┘ └─────────────────────────────────────────────────────────────────────────────────────┘
+  1-5 panel · space fold · v line select · ? keys · q quit

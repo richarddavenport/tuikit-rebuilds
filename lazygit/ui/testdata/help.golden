@@ -1,0 +1,37 @@
+┌─ 1 Status ───────────────────────────────┐ ┌─ Patch ─────────────────────────────────────────────────────────────────────────────┐
+│ tuikit → main                            │ │diff --git a/internal/gui/patch_exploring.go b/internal/gui/patch_exploring.go       │
+│                                          │ │index 4b2c1a9..9f3e7d2 100644                                                        │
+└──────────────────────────────────────────┘ │--- a/internal/gui/patch_exploring.go                                                │
+┌─ 2 Files ────────────────────────────────┐ │+++ b/internal/gui/patch_exploring.go                                                │
+│› M ▾ internal                            │ │@@ -12,9 +12,7 @@ func (s *State) SelectedRange() (int, int) {                       │
+│  M   ▾ gui                               │ │ func (s *State) SelectedRange() (int, int) {                                        │
+│ M        filetree.go                     │ │-   if s.rangeStartIdx == nil {                                                      │
+│  M       patch_exploring.go     ┌──────────────────────────────────────────────────────────────┐                                 │
+│  M       view.go                │lazygit, rebuilt                                              │                                 │
+│ A    ▾ commands                 │                                                              │                                 │
+│ A        stash.go               │panels                                                        │                                 │
+│  M ▾ pkg                        │1-5    jump to a panel                                        │                                 │
+│  M     theme.go                 │tab    next panel                                             │                                 │
+│  M   README.md                  │j/k    move the cursor                                        │                                 │
+└─────────────────────────────────│                                                              │                                 │
+┌─ 3 Branches ────────────────────│files                                                         │) {                              │
+│›* main                          │space  open or shut a directory                               │                                 │
+│   range-selection               │v      select lines of the diff                               │                                 │
+│   tree-component                │                                                              │                                 │
+│   viewer                        │line select                                                   │                                 │
+│                                 │J/K    extend the range                                       │                                 │
+│                                 │a      the whole hunk                                         │                                 │
+└─────────────────────────────────│esc    leave line select                                      │                                 │
+┌─ 4 Commits ─────────────────────│                                                              │                                 │
+│›9192dc9 Rebuild yazi, and correc│everywhere                                                    │                                 │
+│ 6c97ce0 comp.Viewer: the documen│?      this                                                   │                                 │
+│ 1c93993 comp.Tree and List range│q      quit                                                   │                                 │
+│ cde4b75 Widen the scope: state y└──────────────────────────────────────────────────────────────┘                                 │
+│ f87da4b Rebuilds: could tuikit build the │ │                                                                                     │
+│ 56b4bdc Start a list of the other TUIs   │ │                                                                                     │
+└──────────────────────────────────────────┘ │                                                                                     │
+┌─ 5 Stash ────────────────────────────────┐ │                                                                                     │
+│›0 WIP on main: half a scrollbar          │ │                                                                                     │
+│ 1 the layout experiment that did not work│ │                                                                               21/21 │
+└──────────────────────────────────────────┘ └─────────────────────────────────────────────────────────────────────────────────────┘
+  1-5 panel · space fold · v line select · ? keys · q quit

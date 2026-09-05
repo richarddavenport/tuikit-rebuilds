@@ -1,0 +1,23 @@
+┌─ 1 Status ─────────────┐ ┌─ Patch ───────────────────────────────────────────┐
+│ tuikit┌──────────────────────────────────────────────────────────────┐ b/int…│
+│       │lazygit, rebuilt                                              │       │
+└───────│                                                              │       │
+┌─ 2 Fil│panels                                                        │       │
+│› M ▾ i│1-5    jump to a panel                                        │nge() …│
+│  M   ▾│tab    next panel                                             │{      │
+│ M     │j/k    move the cursor                                        │       │
+│  M    │                                                              │LineIdx│
+└───────│files                                                         │       │
+┌─ 3 Bra│space  open or shut a directory                               │       │
+│›* main│v      select lines of the diff                               │       │
+│   rang│                                                              │r()    │
+└───────│line select                                                   │       │
+┌─ 4 Com│J/K    extend the range                                       │       │
+│›9192dc│a      the whole hunk                                         │       │
+│ 6c97ce│esc    leave line select                                      │ectMod…│
+└───────│                                                              │       │
+┌─ 5 Sta│everywhere                                                    │       │
+│›0 WIP │?      this                                                   │       │
+│ 1 the │q      quit                                                   │ 19/21 │
+└───────└──────────────────────────────────────────────────────────────┘───────┘
+  1-5 panel · space fold · v line select · ? keys · q quit

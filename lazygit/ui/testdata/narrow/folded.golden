@@ -1,0 +1,23 @@
+┌─ 1 Status ─────────────┐ ┌─ Patch ───────────────────────────────────────────┐
+│ tuikit → main          │ │diff --git a/internal/gui/patch_exploring.go b/int…│
+│                        │ │index 4b2c1a9..9f3e7d2 100644                      │
+└────────────────────────┘ │--- a/internal/gui/patch_exploring.go              │
+┌─ 2 Files ──────────────┐ │+++ b/internal/gui/patch_exploring.go              │
+│› M ▸ internal          │ │@@ -12,9 +12,7 @@ func (s *State) SelectedRange() …│
+│  M ▾ pkg               │ │ func (s *State) SelectedRange() (int, int) {      │
+│  M     theme.go        │ │-   if s.rangeStartIdx == nil {                    │
+│  M   README.md         │ │-       return s.selectedLineIdx, s.selectedLineIdx│
+└────────────────────────┘ │-   }                                              │
+┌─ 3 Branches ───────────┐ │+   lo, hi, ok := s.list.Range()                   │
+│›* main               ↑2│ │+   if !ok {                                       │
+│   range-selection ↑7 ↓1│ │+       return s.list.Cursor(), s.list.Cursor()    │
+└────────────────────────┘ │+   }                                              │
+┌─ 4 Commits ────────────┐ │    return lo, hi                                  │
+│›9192dc9 Rebuild yazi, a│ │ }                                                 │
+│ 6c97ce0 comp.Viewer: th│ │@@ -48,6 +46,4 @@ func (s *State) SetLineSelectMod…│
+└────────────────────────┘ │ func (s *State) SetLineSelectMode() {             │
+┌─ 5 Stash ──────────────┐ │-   s.rangeStartIdx = nil                          │
+│›0 WIP on main: half a s│ │-   s.selectMode = LINE                            │
+│ 1 the layout experiment│ │                                             19/21 │
+└────────────────────────┘ └───────────────────────────────────────────────────┘
+  1-5 panel · space fold · v line select · ? keys · q quit
