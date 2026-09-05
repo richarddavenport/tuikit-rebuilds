@@ -1,0 +1,23 @@
+k9s  pod┌──────────────────────────────────────────────────────────────┐  8 pods
+────────│k9s, rebuilt                                                  │────────
+    NAME│                                                              │MEM  AGE
+›   acme│moving                                                        │0Mi  12h
+    acme│j/k         move                                              │2Mi  12h
+    acme│:           switch resource                                   │6Mi   3h
+    acme│/           filter                                            │0Mi   2m
+    acme│                                                              │1Mi  45h
+    acme│acting                                                        │0Mi  22h
+    ingr│space       mark this one                                     │8Mi   9d
+    ingr│ctrl+space  fill from the nearest mark                        │4Mi   9d
+        │d           describe                                          │
+        │ctrl+d      delete the marked, or this one                    │
+        │                                                              │
+        │ordering                                                      │
+        │s           sort by the next column                           │
+        │S           reverse                                           │
+        │                                                              │
+        │everywhere                                                    │
+        │?           this                                              │
+        │esc         back                                              │
+        │q           quit                                              │    8/8
+  : reso└──────────────────────────────────────────────────────────────┘quit

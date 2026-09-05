@@ -1,0 +1,23 @@
+k9s  pods                                                                 8 pods
+────────────────────────────────────────────────────────────────────────────────
+    NAMESPACE  NAME         READY  STATUS            RESTARTS↑   CPU    MEM  AGE
+›   acme       web-7d9f4c…  1/1    Running                   0  142m  310Mi  12h
+    acme       migrate-20…  0/1    Pending                   0    0m    0Mi   2m
+    acme-jobs  nightly-20…  0/1    Completed                 0    0m    0Mi  22h
+    ingress    traefik-9c…  1/1    Running                   0   61m  128Mi   9d
+    ingress    cert-manag…  1/1    Running                   0    8m   64Mi   9d
+    acme       web-7d9f4c…  1/1    Running                   3  388m  512Mi  12h
+    acme       worker-6b8…  1/2    Running                  11   12m   96Mi   3h
+    acme-jobs  reporting-…  0/1    CrashLoopBackOff         94    4m   41Mi  45h
+
+
+
+
+
+
+
+
+
+
+                                                                            8/8
+  : resource · / filter · space mark · s sort · d describe · ? keys · q quit

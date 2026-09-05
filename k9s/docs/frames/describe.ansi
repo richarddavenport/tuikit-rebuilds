@@ -1,0 +1,37 @@
+k9s  pods                                                                                                                     8 pods
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+┌─ describe acme/web-7d9f4c8b5-2xk9p ──────────────────────────────────────────────────────────────────────────────────────────────┐
+│1  Name:             web-7d9f4c8b5-2xk9p                                                                                          │
+│2  Namespace:        acme                                                                                                         │
+│3  Priority:         0                                                                                                            │
+│4  Node:             pool-1-a/10.132.0.14                                                                                         │
+│5  Status:           Running                                                                                                      │
+│6  IP:               10.4.1.23                                                                                                    │
+│7  Controlled By:    ReplicaSet/web-7d9f4c8b5-2xk9p                                                                               │
+│8  Containers:                                                                                                                    │
+│9    app:                                                                                                                         │
+│10     Image:          eu.gcr.io/acme/app:2026.9.1                                                                                │
+│11     Port:           3000/TCP                                                                                                   │
+│12     State:          Running                                                                                                    │
+│13     Ready:          1/1                                                                                                        │
+│14     Limits:                                                                                                                    │
+│15       cpu:     1                                                                                                               │
+│16       memory:  1Gi                                                                                                             │
+│17 Conditions:                                                                                                                    │
+│18   Type              Status                                                                                                     │
+│19   Initialized       True                                                                                                       │
+│20   Ready             True                                                                                                       │
+│21 Events:                                                                                                                        │
+│22   Type     Reason     Age   From      Message                                                                                  │
+│23   Normal   Scheduled  12h   default   Successfully assigned                                                                    │
+│24   Warning  BackOff    3m    kubelet   Back-off restarting failed container                                                     │
+│                                                                                                                                  │
+│                                                                                                                                  │
+│                                                                                                                                  │
+│                                                                                                                                  │
+│                                                                                                                                  │
+│                                                                                                                                  │
+│                                                                                                                                  │
+│                                                                                                                            24/24 │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+  j/k scroll · esc back

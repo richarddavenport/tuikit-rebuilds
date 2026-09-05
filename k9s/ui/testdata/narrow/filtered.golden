@@ -1,0 +1,23 @@
+k9s  pods  /jobs                                                        2 marked
+────────────────────────────────────────────────────────────────────────────────
+    NAMESPACE  NAME            READY  STATUS            RESTARTS  CPU   MEM  AGE
+›   acme-jobs  reporting-5f7…  0/1    CrashLoopBackOff        94   4m  41Mi  45h
+    acme-jobs  nightly-20260…  0/1    Completed                0   0m   0Mi  22h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                            2/2
+  : resource · / filter · space mark · s sort · d describe · ? keys · q quit

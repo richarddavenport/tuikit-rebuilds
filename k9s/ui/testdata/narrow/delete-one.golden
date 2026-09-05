@@ -1,0 +1,23 @@
+k9s  pods                                                                 8 pods
+────────────────────────────────────────────────────────────────────────────────
+    NAMESPACE  NAME          READY  STATUS            RESTARTS   CPU    MEM  AGE
+    acme       web-7d9f4c8…  1/1    Running                  0  142m  310Mi  12h
+    acme       web-7d9f4c8…  1/1    Running                  3  388m  512Mi  12h
+›   acme       worker-6b8c…  1/2    Running                 11   12m   96Mi   3h
+    acme       migrate-202…  0/1    Pending                  0    0m    0Mi   2m
+    acme-jobs  reporting-5…  0/1    CrashLoopBackOff        94    4m   41Mi  45h
+    acme┌──────────────────────────────────────────────────────────────┐0Mi  22h
+    ingr│delete?                                                       │8Mi   9d
+    ingr│                                                              │4Mi   9d
+        │delete acme/worker-6b8c9d7f4-lm3nq                            │
+        │                                                              │
+        │enter this rebuild deletes nothing · esc cancel               │
+        └──────────────────────────────────────────────────────────────┘
+
+
+
+
+
+
+                                                                            8/8
+  : resource · / filter · space mark · s sort · d describe · ? keys · q quit

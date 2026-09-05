@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1057.6" height="625.25" viewBox="0 0 1057.6 625.25" font-family="ui-monospace, &#39;SF Mono&#39;, SFMono-Regular, Menlo, Consolas, &#39;DejaVu Sans Mono&#39;, monospace" font-size="13" role="img">
+<title>terminal frame, 132 columns by 37 rows</title>
+<rect width="1057.6" height="625.25" rx="7" fill="#0c0c0e"/>
+<text x="14" y="24.68" textLength="1029.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">k9s  pods                                                                                                                     8 pods</text>
+<text x="14" y="40.92" textLength="1029.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</text>
+<text x="14" y="57.17" textLength="1029.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">    NAMESPACE  NAME                                                              READY  STATUS            RESTARTS   CPU    MEM  AGE</text>
+<text x="14" y="73.42" textLength="1029.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">    acme       web-7d9f4c8b5-2xk9p                                               1/1    Running                  0  142m  310Mi  12h</text>
+<text x="14" y="89.67" textLength="1029.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">    acme       web-7d9f4c8b5-p4m2q                                               1/1    Running                  3  388m  512Mi  12h</text>
+<text x="14" y="105.92" textLength="1029.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">›   acme       worker-6b8c9d7f4-lm3nq                                            1/2    Running                 11   12m   96Mi   3h</text>
+<text x="14" y="122.17" textLength="1029.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">    acme       migrate-2026090501-nn8ck                                          0/1    Pending                  0    0m    0Mi   2m</text>
+<text x="14" y="138.43" textLength="1029.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">    acme-jobs  reporting-5f7a2c1d9-t8wz4                                         0/1    CrashLoopBackOff        94    4m   41Mi  45h</text>
+<text x="14" y="154.68" textLength="1029.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">    acme-jobs  nightly-2026090400-qq21x                                          0/1    Completed                0    0m    0Mi  22h</text>
+<text x="14" y="170.93" textLength="1029.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">    ingress    traefik-9c4b7f1a2-hh8kd                                           1/1    Running                  0   61m  128Mi   9d</text>
+<text x="14" y="187.18" textLength="1029.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">    ingress    cert-manager-7b1d2e3f4-mm5rt                                      1/1    Running                  0    8m   64Mi   9d</text>
+<text x="14" y="268.43" textLength="764.4" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">                                  ┌──────────────────────────────────────────────────────────────┐</text>
+<text x="14" y="284.68" textLength="764.4" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">                                  │delete?                                                       │</text>
+<text x="14" y="300.93" textLength="764.4" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">                                  │                                                              │</text>
+<text x="14" y="317.18" textLength="764.4" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">                                  │delete acme/worker-6b8c9d7f4-lm3nq                            │</text>
+<text x="14" y="333.43" textLength="764.4" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">                                  │                                                              │</text>
+<text x="14" y="349.68" textLength="764.4" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">                                  │enter this rebuild deletes nothing · esc cancel               │</text>
+<text x="14" y="365.93" textLength="764.4" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">                                  └──────────────────────────────────────────────────────────────┘</text>
+<text x="14" y="593.42" textLength="1021.8" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">                                                                                                                                8/8</text>
+<text x="14" y="609.67" textLength="592.8" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  : resource · / filter · space mark · s sort · d describe · ? keys · q quit</text>
+</svg>
