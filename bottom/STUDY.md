@@ -96,3 +96,49 @@ guards do when the arrangement is not in the source. See the issue.
 **Could tuikit rebuild bottom today? No — the charts are the tool.** A system
 monitor without a time series is not a system monitor, and that is now a hole
 with two implementations behind it rather than a taste question.
+
+## Would it have been easier in tuikit?
+
+**No, and not close. The charts are the tool and tuikit has none.**
+
+### What you would not have written
+
+`scroll_bar.rs`, `search_input.rs`, the two dialogs, and the widget grid —
+`comp.Scrollbar`, `comp.Input`, `comp.Confirm`, `comp.Keys`, `comp.Layout`.
+Real, and a small fraction.
+
+### What you would have written anyway
+
+`src/collection/` — every platform's way of reading CPU, memory, temperature,
+GPU and process tables. Plus `process_table/query.rs` and its parser, 59 kB
+between them, which is a filter language.
+
+### Where tuikit would have got in the way
+
+There is no time series in `comp`
+([tuikit#58](https://github.com/richarddavenport/tuikit/issues/58)). You would
+write one, and bottom's experience says that is harder than it sounds.
+
+`data_table/sortable.rs` is 15 kB. `comp.Table` has no sort state
+([tuikit#61](https://github.com/richarddavenport/tuikit/issues/61)), so that
+too.
+
+### Where bottom's approach is better
+
+**It forked its framework's chart rather than use it, and was right to.**
+`time_series/vendored.rs` is 55 kB copied out of ratatui with a note saying to
+keep it in sync. The reason is specific: a metric over time is right-aligned
+against *now*, with a ragged left edge, and a general chart centred on its data
+gets that wrong.
+
+That is a framework being *worse* than the fork, and bottom paid a real
+maintenance cost knowingly. Any chart tuikit ships has to answer it.
+
+**Its layout is a TOML file.** `Row { ratio, child }` deserialized — users
+arrange their own dashboard. tuikit's `Layout` takes the same shape as values
+and cannot be loaded from data
+([tuikit#60](https://github.com/richarddavenport/tuikit/issues/60)).
+
+### The call
+
+**The original is better today.** Come back when there is a chart.

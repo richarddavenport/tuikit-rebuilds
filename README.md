@@ -24,6 +24,42 @@ the interface — against a fixture, not a real backend.
 | [fx](fx/) | ✓ | | No. It **is** the `Viewer` hole, undiluted |
 | [bottom](bottom/) | ✓ | | No. The charts are the tool |
 
+## Would it have been easier in tuikit?
+
+Each study ends with this, and it is a different question from "could tuikit
+draw it". **Three of the ten say no.**
+
+| | easier in tuikit? | because |
+| --- | --- | --- |
+| [gcpeasy](gcpeasy/) | **yes, by the most** | 291 lines of drawing against 624, and four tests stop being writable |
+| [gitui](gitui/) | **yes** | 32 popup files, and the generic half of them is four components |
+| [dive](dive/) | **yes** | its interface is one tree, one list, a detail pane and a filter |
+| [gh-dash](gh-dash/) | **yes, on `app`** | a single 741-line `Update` is what `app.Keys`/`Stack`/`Gen` are shaped like |
+| [k9s](k9s/) | yes, once #55 lands | the closest one-to-one component mapping in the survey |
+| [lazygit](lazygit/) | about even | saves a style system, costs a focus manager |
+| [yazi](yazi/) | even, depends on your users | quicker to write, and it loses the Lua its users extend |
+| [fx](fx/) | **no** | its linked-list tree is faster than `comp.Tree` at scale |
+| [termshark](termshark/) | **no** | gowid has a real focus system; tuikit has an open issue |
+| [bottom](bottom/) | **no** | the charts are the tool, and `comp` has none |
+
+Every verdict has four parts: what you would not write, what you would write
+anyway, where tuikit gets in the way, and **where the original is better**.
+
+That last part is required to be non-empty. A verdict that cannot name one
+thing the original does better has not been written carefully enough — and in
+practice every one of them could, including the tools tuikit clearly wins on.
+Some of what came out of it:
+
+- fx's tree is a linked list, so folding is a pointer hop and drawing never
+  touches what is hidden. `comp.Tree` walks every node, every frame.
+- bottom forked its framework's chart because the framework's was wrong about
+  right-aligning a time series. That is a framework being worse than the fork.
+- termshark's toolkit makes focus a property of the widget tree. Ours makes it
+  a bool you remember to set.
+- k9s got a tree from `tview` for free. tuikit is immediate mode and never will.
+- gcpeasy's task pane runs commands under a PTY and renders the output. The
+  rebuild lost that, and decision 27 says we will not help.
+
 ## What this repository is careful about
 
 The obvious thing to write here is that tuikit is better. Two claims of exactly

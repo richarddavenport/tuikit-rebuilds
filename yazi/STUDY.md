@@ -170,3 +170,47 @@ completion popup are each one tool so far.
 The Lua question is the more interesting one and it is not a hole. It is a
 different bet about who owns the drawing, and yazi is the strongest evidence in
 the field that the other bet works.
+
+## Would it have been easier in tuikit?
+
+**Easier to write, harder to extend. That is the whole trade.**
+
+### What you would not have written
+
+The overlay stack: `confirm/`, `pick/`, `help/`, `notify/`, `tasks/`, `spot/`,
+`which/`'s pane. `comp.Confirm`, `comp.Menu`, `comp.Keys`, `comp.Toast`,
+`comp.StepList`, `comp.Detail`. That is nine files in `yazi-fm/src/` and it is
+the majority of the Rust UI, because the main surface is Lua.
+
+### What you would have written anyway
+
+`yazi-scheduler`, `yazi-watcher`, `yazi-vfs`, `yazi-dds` — the file manager. And
+`tab/selected.rs`, because tuikit still has no selection set
+([tuikit#55](https://github.com/richarddavenport/tuikit/issues/55)).
+
+### Where tuikit would have got in the way
+
+No key sequences, so the whole which-key feature has to be built under
+`app.Keys` as a capture
+([tuikit#56](https://github.com/richarddavenport/tuikit/issues/56)). No
+completion popup over an input. And `yazi-widgets/src/input/` — 30-odd files of
+vi-mode editing with an undo stack — is outside decision 27's line, so tuikit
+would refuse to help and you would write all of it.
+
+### Where yazi's approach is better
+
+**Its users can replace the interface.** `root.lua`, `current.lua`,
+`preview.lua`, `status.lua` and the rest live in
+`yazi-plugin/preset/components/` and can be overridden at runtime. That is a
+real capability tuikit does not have and has declined
+([decision 44](https://github.com/richarddavenport/tuikit/blob/main/design/decisions.md)),
+because a surface drawn by a user's script cannot be checked by reading the
+program — and the guards are the property tuikit exists for.
+
+Both bets are defensible. yazi's is better for a tool with a plugin community.
+tuikit's is better for a tool that has to be correct.
+
+### The call
+
+**Even, and it depends on who your users are.** yazi would have been quicker to
+write on tuikit and would have lost the thing 42k people like about it.

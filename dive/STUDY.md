@@ -67,3 +67,46 @@ It is worth noticing why, and the reason is about dive rather than about us. Its
 interface is small: one tree, one list, a detail pane and a filter. The tree is
 the part that took 35 kB to write, and `comp.Tree` is the component that
 answers it.
+
+## Would it have been easier in tuikit?
+
+**Yes, and it is the largest single saving in the survey — but read what it is.**
+
+### What you would not have written
+
+`ui/v1/view/filetree.go` (13.2 kB) and `ui/v1/viewmodel/filetree.go` (13.7 kB)
+are the *drawing and view-model* halves of dive's tree. `comp.Tree` plus
+`comp.List` with `Row.Depth` covers the visibility question and the drawing.
+
+Also `ui/v1/layout/manager.go` (263 lines) — `comp.Layout`.
+
+### What you would have written anyway
+
+`dive/filetree/file_tree.go` and `file_node.go` — building a tree from a docker
+image's layers, and diffing one layer against the next. That is the program, and
+it is why dive exists.
+
+`dive/image/docker/` — reading image archives.
+
+### Where tuikit would have got in the way
+
+Four panes, one focused, tab to cycle: `ui/v1/app/controller.go` does it and
+tuikit has no answer
+([tuikit#59](https://github.com/richarddavenport/tuikit/issues/59)).
+
+### Where dive's approach is better
+
+This is the hardest one to answer honestly, and the fair answer is **nothing
+much** — which is itself worth recording, because it is the only study where
+that is true.
+
+The closest candidate: dive keys its collapse state by node pointer rather than
+by path. That is *faster* than `comp.Tree`'s map lookup on a string key, and it
+is fine for dive because its tree is rebuilt wholesale when the layer changes
+rather than filtered in place. It would be a bug in a tool that filters, which
+is why `comp.Tree` does not do it — but for dive it is the better choice.
+
+### The call
+
+**tuikit, clearly.** dive's interface is one tree, one list, a detail pane and a
+filter, and `comp` supplies all four.

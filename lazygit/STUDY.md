@@ -157,3 +157,59 @@ What it does have is four lists, a split, and a diff view with a great deal of
 care in it. The components that matter here are few and deep. That is an
 argument for `comp` staying small and making each entry thorough, rather than
 growing a catalogue.
+
+## Would it have been easier in tuikit?
+
+**Yes for the chrome, no for the tree, and it is close.**
+
+### What you would not have written
+
+| | lines |
+| --- | ---: |
+| `pkg/gui/style/` — a palette and a style system | 571 |
+| `pkg/gui/filetree/collapsed_paths.go` | 43 |
+| the panel borders, the footer, the help sheet, the menu | — |
+
+### What you would have written anyway
+
+`pkg/gui/filetree/build_tree.go` is 190 lines that turn a list of git paths
+into a hierarchy. `comp.Tree` does not help with any of it: it takes a
+flattened list with depths and decides which rows are visible, and building the
+flattened list is yours.
+
+The same is true of `presentation/` (1,725 lines turning commits and branches
+into rows) and of every one of the twenty-odd commands.
+
+**Most of lazygit is git.** That is the correct answer and it is why the saving
+is smaller than the component list suggests.
+
+### Where tuikit would have got in the way
+
+`Row.Lead` replaces `List.Marker` rather than sitting beside it
+([tuikit#64](https://github.com/richarddavenport/tuikit/issues/64)). lazygit's
+file rows lead with git status letters, so every row needs a cursor marker
+prefixed by hand. The rebuild does exactly that, in `view.go`.
+
+`guard.Tokens` would reject `presentation/icons/file_icons.go` — 743 colour
+literals that are file-type brand colours and should not come from a palette.
+The guard is wrong here and the tool would need an exemption.
+
+### Where lazygit's approach is better
+
+**Its file tree keys collapse by path.** So does `comp.Tree`, now — but lazygit
+got there first and is the reason the component is shaped that way.
+
+**gocui gives it view-based focus.** Each panel is a view that owns its keys,
+and focus is a property of the view rather than something the model tracks.
+tuikit has no focus manager at all
+([tuikit#59](https://github.com/richarddavenport/tuikit/issues/59)), so the
+rebuild carries a `panel` enum and sets `Focused` on five lists by hand. That is
+worse, and it is worse in the exact tool that needs it most.
+
+### The call
+
+For a new git client, tuikit would save the style system and the chrome and
+would cost you a focus manager. Call it even.
+
+lazygit is nine years old and predates every framework in this survey. Nothing
+here is an argument that it should have waited.

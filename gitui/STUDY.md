@@ -67,3 +67,50 @@ Same as lazygit's `patch_exploring/`: stage by hunk or by line, with a range.
 That is the result. Two teams, two substrates, two codebases, one missing
 component — and no hole here that lazygit did not already produce. A rebuild
 that finds nothing new is the one that tells you the earlier list was right.
+
+## Would it have been easier in tuikit?
+
+**Yes, and this is the clearest yes in the survey.**
+
+### What you would not have written
+
+`src/popups/` is **32 files**. Confirm, help, fuzzy find, goto line, options,
+msg, and twenty-odd git-specific dialogs. The generic half of those is
+`comp.Confirm`, `comp.Menu`, `comp.Palette`, `comp.Keys` and `comp.Input`.
+
+Plus `components/commitlist.rs` (24 kB), `changes.rs`, `command.rs` — `comp.List`
+and `comp.Bar`.
+
+### What you would have written anyway
+
+`asyncgit/` — the entire background git layer. And the *content* of those 32
+popups: what a branch dialog asks is a git question, even when the box around it
+is not.
+
+### Where tuikit would have got in the way
+
+`components/textinput.rs` is 18 kB of text-area editing. Decision 27 refuses it,
+so you write all of it and get no help.
+
+The same focus problem as lazygit: five panels, no focus manager.
+
+### Where gitui's approach is better
+
+**Its popup stack.** 32 popups with a consistent open/close/stack discipline is
+a real system. `app.Stack` is about *screens* — where you are and how you got
+there — not about a stack of things layered over the current screen. tuikit
+draws overlays as an ordered if-chain in `Draw`, which is fine for three and
+would not be fine for thirty-two.
+
+That is a gap this study found and nothing else has: **a modal stack is not a
+screen stack**, and tuikit only has the second.
+
+**ratatui's constraint solver.** gitui gets Cassowary layout from its framework.
+tuikit's `Layout` is a single linear pass, which reaches the same answer for
+these shapes — decision 27 was amended to say so after `comp.Layout` was built —
+but "the same answer for these shapes" is a weaker guarantee than a solver.
+
+### The call
+
+**tuikit, comfortably**, on component count alone. It would owe gitui a modal
+stack.

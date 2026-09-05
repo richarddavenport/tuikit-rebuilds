@@ -154,3 +154,52 @@ The more useful result is that k9s changed the *shape* of #55 rather than just
 adding a vote to it. Two tools disagree about whether the set or the range is
 primary, and the cursor-fallback rule is not in either of the other two
 implementations but is the thing that makes the feature worth having.
+
+## Would it have been easier in tuikit?
+
+**Yes, once #55 lands. Today it is a wash.**
+
+### What you would not have written
+
+| | lines |
+| --- | ---: |
+| `ui/table.go` — alignment and widths | part of 16 kB |
+| `ui/crumbs.go`, `ui/flash.go`, `ui/menu.go`, `ui/indicator.go` | — |
+| `ui/pages.go` — a page stack | — |
+| `view/log.go` | 13.5 kB |
+
+`comp.Table`, `comp.Breadcrumb`, `comp.Toast`, `comp.Keys`, `comp.Bar`,
+`app.Stack`, `comp.LogPane`. This is the closest one-to-one mapping in the
+survey.
+
+### What you would have written anyway
+
+`internal/dao/`, `client/`, `watch/`, `vul/` — the Kubernetes API layer. The
+port forwards, the exec, the scaling. Most of k9s.
+
+### Where tuikit would have got in the way
+
+`ui/select_table.go`'s `marks` set has no equivalent
+([tuikit#55](https://github.com/richarddavenport/tuikit/issues/55)), and it is
+central: `d` deletes the marked pods *or* the one under the cursor, through one
+code path. You would write it.
+
+`view/live_view.go` needs `comp.Viewer`, which now exists. `internal/tchart/`
+needs a chart, which does not.
+
+### Where k9s's approach is better
+
+**It got a tree for free.** `ui/tree.go` is 127 lines wrapping
+`tview.TreeView`. lazygit's equivalent is eleven files. tview ships a retained
+tree widget and tuikit will never have one, because `comp` is immediate mode —
+so a tuikit k9s writes the flattening itself.
+
+**Its deltas.** `ui/deltas.go` marks every cell that changed since the last
+refresh with `↑`, `↓` or `Δ`. For a tool watching live state that is genuinely
+good, and nothing in tuikit or in any of the four private tools does it.
+
+### The call
+
+**tuikit wins on the chrome and loses on the tree.** For a tool that is mostly
+one table, the chrome is most of the interface, so it comes out ahead — but not
+until the selection set exists.

@@ -85,3 +85,46 @@ should not be a field on `List`.
 Its value is not the verdict. It is that a tool which sorted its own generic
 widgets into a folder produced a list that agrees with this survey, including
 on the one thing this survey had underweighted.
+
+## Would it have been easier in tuikit?
+
+**No. termshark's toolkit gives it the one thing tuikit is missing.**
+
+### What you would not have written
+
+`resizable/` (a draggable split), `minibuffer/` (a command palette),
+`filter/`, `withscrollbar/`, `appkeys/`, `mapkeys/`, `expander/`, `number/`.
+Eight of its twenty-six widgets map onto `comp.Split`, `comp.Palette`,
+`comp.Input`, `comp.Scrollbar` and `app.Keys`.
+
+### What you would have written anyway
+
+`hexdumper/` and `hexdumper2/`, `streamwidget/`, `ifwidget/`, `pdmltree/` —
+packet bytes, TCP reassembly, interface selection, and the dissection tree.
+
+### Where tuikit would have got in the way
+
+`scrollabletext` and `fileviewer` want `comp.Viewer`, which now exists. But
+`copymodetable` and `copymodetree` are a selection mode over a **table** and
+over a **tree**, and tuikit's range lives on `comp.List` — so a selection over
+anything else is yours. That is the argument in
+[tuikit#55](https://github.com/richarddavenport/tuikit/issues/55) for the set
+being its own type, made by a tool rather than by us.
+
+### Where termshark's approach is better
+
+**gowid has a real focus system and tuikit has an open issue.**
+
+Five widgets: `framefocus`, `trackfocus`, `renderfocused`, `keepselected`,
+`enableselected`. Focus is a property of the widget tree, so a container knows
+which child has it and a frame is drawn around whatever that is. In tuikit,
+`Focused` is a bool you set on each component and the answer lives in your
+model ([tuikit#59](https://github.com/richarddavenport/tuikit/issues/59)).
+
+termshark is a multi-pane tool and this is exactly what a multi-pane tool needs.
+Its toolkit supplies it; ours does not.
+
+### The call
+
+**The original is better for this shape of program.** termshark would gain a
+palette and a split and would lose its focus system.

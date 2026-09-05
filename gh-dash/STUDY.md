@@ -104,3 +104,51 @@ Note the contrast with the gcpeasy rebuild. gcpeasy's weight is in drawing;
 gh-dash's is in `Update`, and its drawing is only 275 lines. Two competent tools
 on our substrate, two different halves gone wrong. That is a better argument for
 `app` and `comp` being separate packages than either tool alone.
+
+## Would it have been easier in tuikit?
+
+**Yes, and the saving is in `app` rather than in `comp`.**
+
+### What you would not have written
+
+The measurement from the study: `internal/tui/ui.go` is 1,917 lines and
+**`Update` alone is 741** — 39% of the file. That single function is message
+dispatch, key routing, which section is current, what each has fetched, and
+which is loading.
+
+`app.Keys` orders capture → screen → global. `app.Stack` records where you are.
+`app.Screens` maps a screen to what draws it. `app.Gen` drops results from work
+you walked away from. Between them they are the shape that 741 lines is trying
+to be.
+
+Its drawing is only 275 lines, and `comp` would not save much of that.
+
+### What you would have written anyway
+
+`internal/data/prapi.go` and `notificationapi.go` — the GitHub GraphQL layer.
+The merge, close, comment and assign actions.
+
+### Where tuikit would have got in the way
+
+`components/prview/` needs `comp.Viewer` for a PR body, which now exists.
+Nothing else obvious, which is unsurprising: gh-dash is on the same substrate.
+
+### Where gh-dash's approach is better
+
+**Its dashboard is a YAML file.** `internal/config/parser.go` is 881 lines and
+lets a user define their own sections, and per-column `Width` and `Hidden`.
+
+tuikit cannot do this
+([tuikit#60](https://github.com/richarddavenport/tuikit/issues/60)). `comp.Table`
+already has a `Width` per column, so hiding and sizing columns from config is
+the cheap half and is not blocked by the guards. The section definitions are the
+harder half.
+
+For a dashboard, "the user arranges it" is a large part of the product, and
+gh-dash has it.
+
+### The call
+
+**tuikit, on `app`.** This is the best evidence in the survey that the `app`
+package earns its place, because the four private tools it was extracted from
+cannot make that argument about themselves.

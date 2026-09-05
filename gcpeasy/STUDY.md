@@ -242,3 +242,67 @@ the result.
 Kept as a note rather than deleted, because `other-tuis.md` exists for exactly
 this: a record of the claims that did not survive being checked is more useful
 than a record of the ones that did.
+
+## Would it have been easier in tuikit?
+
+**Yes — and this is the only study where the rebuild was actually built, so it
+is the only verdict that is not on paper.** See
+[the rebuilt tool](https://github.com/richarddavenport/gcpeasy).
+
+### What you would not have written
+
+Measured on both sides. The original's drawing is 624 lines across 31 `render*`
+functions. The rebuild's is **291 lines** in one `view.go`.
+
+`renderPanel` → `comp.Pane`. `renderRow` → `comp.List` with `Row.Lead` and
+`Row.Right`. `renderFooter`, `padFooter`, `footerHint` → `comp.Bar`.
+`renderCommandModal` → `comp.Palette`. `renderHelpModal` → `comp.Keys`. The
+boot-screen gradient — `mixRGB`, `logoGradientColor`, `tuiRGB.hex` →
+`paint.Ramp`.
+
+**Four of its tests stop being writable.** `TestLeftAndRightPanelsMatchHeight`,
+`TestPanelsRenderAtRequestedWidth`, `TestSelectedRowsFillPanelInterior`,
+`TestLongPodRowsDoNotWrap` all assert that two rendered *strings* have
+compatible shapes. On a cell grid those failures cannot happen.
+
+### What you would have written anyway
+
+1,715 of the original's 2,972 lines are the program: task orchestration, state
+caching, preferences, auth, and the gcloud and kubectl calls. tuikit has no
+opinion about any of it, and the rebuild has the same code.
+
+### Where tuikit would have got in the way
+
+Two gaps, both found by building rather than by reading, and both filed:
+
+- [tuikit#64](https://github.com/richarddavenport/tuikit/issues/64) — `Row.Lead`
+  replaces `List.Marker`, so all three lists needed a cursor marker by hand.
+- [tuikit#65](https://github.com/richarddavenport/tuikit/issues/65) — a model
+  that loads in `Init` captures an empty screen.
+
+And no ANSI parsing
+([tuikit#63](https://github.com/richarddavenport/tuikit/issues/63)), so the
+rebuild shows `kubectl` output without its colour.
+
+### Where gcpeasy's approach is better
+
+**Its task pane runs commands under a PTY and renders the result.**
+`pty.StartWithSize` plus `applyCSI` means a long `gcloud` operation shows its
+real progress output, carriage returns and all, inside the interface.
+
+The rebuild cannot do that. It reads output once and shows it plainly. That is a
+genuine capability the original has and the rebuild lost, and decision 27 says
+tuikit will not help — hosting a terminal is out of scope.
+
+**Its engine is simpler to call from a CLI.** `SelectCluster` prompts on stdin
+and returns a choice. For a one-shot command that is less code than the
+rebuild's "return the list, let the caller choose". It is only wrong once there
+is a second surface — which is the whole point, but it is not wrong on day one.
+
+### The call
+
+**tuikit, and by the largest margin in the survey**: 291 lines of drawing
+against 624, four tests that stop existing, and a second implementation of pod
+selection that never has to be written.
+
+The price is the PTY task pane.

@@ -58,6 +58,45 @@ So a comparison in this repo must be one of these, and nothing else:
 Anything that cannot be put in one of those four forms is an opinion, and it
 does not go in a README.
 
+## The verdict: would it have been easier in tuikit?
+
+Every study ends with this, and it is a different question from the coverage
+test above. Coverage asks whether tuikit *could* draw the interface. This asks
+whether anyone should have wanted it to.
+
+It has four parts, in this order, and the order matters.
+
+**1. What you would not have written.** Components the tool built that `comp`
+supplies. Cite the file and the line count.
+
+**2. What you would have written anyway.** Usually most of it. A framework does
+not write your domain, and in every tool here the domain is the majority of the
+code. Saying so first is what keeps the third part honest.
+
+**3. Where tuikit would have got in the way.** Things the tool does that tuikit
+makes harder, or refuses.
+
+**4. Where the original's approach is better.** Not "different" — better.
+
+### The rule that makes this worth reading
+
+**Part 4 must not be empty.**
+
+If a verdict cannot name one thing the original does better, it has not been
+written carefully enough. Every tool here was built by people solving a real
+problem, most of them for longer than tuikit has existed, and several made
+choices tuikit has no answer to:
+
+- fx's tree is a linked list and is faster than `comp.Tree` at scale
+- bottom forked its framework's chart because the framework's was wrong, and
+  tuikit has no chart at all
+- yazi's whole UI is a script its users can replace
+- termshark has a real focus system; tuikit has an open issue
+- k9s got a tree from its substrate for free
+
+A verdict that reads as an advertisement is a verdict nobody outside this
+repository will believe, including in the places where it happens to be right.
+
 ## What a rebuild is allowed to conclude
 
 That tuikit could or could not draw this interface, and what was missing.

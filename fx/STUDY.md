@@ -74,3 +74,56 @@ express fx, it is wrong.
 **Could tuikit rebuild fx today? No — it is the hole, undiluted.** And it is
 the one whose API should be designed against, because it has no chrome to hide
 behind.
+
+## Would it have been easier in tuikit?
+
+**No. fx is the one rebuild where the original's core data structure is better
+than ours.**
+
+### What you would not have written
+
+`help.go` (a key sheet), the status line, and the search highlighting —
+`comp.Keys`, `comp.Bar` and `comp.Highlight`. Perhaps 200 of its 1,900 lines.
+
+### What you would have written anyway
+
+`internal/jsonx` — a JSON parser that keeps line numbers and can re-emit. That
+is the program.
+
+### Where tuikit would have got in the way
+
+**`comp.Tree.Visible` is O(total) per frame and fx's traversal is O(visible).**
+
+fx holds its document as a doubly-linked list of lines. A collapsed node hands
+back a `Collapsed` pointer to the node *after* its subtree, so folding is a
+pointer hop and drawing never touches what is hidden:
+
+```go
+} else if node.Collapsed != nil {
+    node = node.Collapsed
+} else {
+    node = node.Next
+}
+```
+
+`comp.Tree.Visible` walks every node and returns the visible indices, with a map
+lookup on `Key` for each one. For a 40 MB JSON file mostly folded, that is the
+difference between a usable viewer and an unusable one.
+
+This is written into `comp/tree.go`'s own doc rather than filed, because no tool
+in the survey has a million-node tree today — and returning indices is what lets
+`comp.List` draw without copying. It is a real trade and fx is on the right side
+of it for fx.
+
+### Where fx's approach is better
+
+The linked list, per above. Also its `:` command mode, which takes a line number
+and jumps — `comp.Palette` is a fuzzy action list and is not that, though
+`Viewer.Goto` is the half tuikit does have.
+
+### The call
+
+**The original is better.** fx would gain a key sheet and lose its data
+structure. `comp.Viewer` is genuinely the component fx needed and does not
+exist elsewhere — but fx already built one, and the rest of tuikit has little
+to offer a program that is one viewer and a parser.
