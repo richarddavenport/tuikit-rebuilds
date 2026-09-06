@@ -59,23 +59,26 @@ invisible from the outside:
 | no sort state | `comp.Sort`, [#61](https://github.com/richarddavenport/tuikit/issues/61) |
 | `Row.Depth` indents `Row.Lead`, so a status column and a tree indent cannot coexist | open, [#66](https://github.com/richarddavenport/tuikit/issues/66) |
 
-And three that are written down in the rebuild that hit them rather than filed,
-because one tool is an anecdote:
+And four more, filed on 2026-09-05 after a sweep of every study for gaps that
+had been named but never written down:
 
-- **`comp.Tree` cannot fold a closing bracket** (fx). A `}` sits at the *same*
-  depth as its `{`, so it is a sibling rather than a child. Not a gap in the
-  component — a tree of files or packets has no closing row — and the fix is six
-  lines in the tool.
-- **`Viewer.NoCursor` disables the range too** (termshark), so a *derived*
-  highlight cannot exist without a cursor to anchor it.
-- **There is no column equivalent of `List.Overhead`** (k9s), so a table header
-  aligned with List rows counts the marker width itself.
+| found | filed |
+| --- | --- |
+| `comp.Tree` cannot fold a closing bracket — a `}` is a sibling of its `{` | [#74](https://github.com/richarddavenport/tuikit/issues/74) |
+| `Viewer.NoCursor` disables the range too, so a *derived* highlight cannot exist | [#75](https://github.com/richarddavenport/tuikit/issues/75) |
+| no column equivalent of `List.Overhead`, whose name invites the bug | [#76](https://github.com/richarddavenport/tuikit/issues/76) |
+| a dragged range must be derived, not accumulated — `List.Move` is deferred | [#77](https://github.com/richarddavenport/tuikit/issues/77) |
 
-One is a bug I made twice and the component's own doc warns about:
+Reading the studies again found five more that no rebuild had hit, because they
+are things the originals have and the rebuilds simply did without:
 
-- **A dragged range must be derived, not accumulated** (yazi). `List.Move` is
-  deferred, so a far end updated in a key handler is always one row behind what
-  the reader sees.
+| the original has | filed |
+| --- | --- |
+| gitui's popup stack — 32 popups, and `app.Stack` is about screens | [#69](https://github.com/richarddavenport/tuikit/issues/69) |
+| lazygit's 743 file-icon brand colours, which `guard.Tokens` would wrongly reject | [#70](https://github.com/richarddavenport/tuikit/issues/70) |
+| k9s's deltas — ↑ ↓ Δ on every cell that changed since the last refresh | [#71](https://github.com/richarddavenport/tuikit/issues/71) |
+| termshark's copy mode over a **table** and a **tree**, not just a list | [#72](https://github.com/richarddavenport/tuikit/issues/72) |
+| yazi's completion popup over an input | [#73](https://github.com/richarddavenport/tuikit/issues/73) |
 
 ## Would it have been easier in tuikit?
 
