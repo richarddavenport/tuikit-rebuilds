@@ -12,15 +12,26 @@ It does not run tshark. See [`fake/`](fake/).
 Every screen: **[docs/screens.md](docs/screens.md)**. The analysis:
 **[STUDY.md](STUDY.md)**.
 
-## The study said no because of focus. That is now `comp.Focus`.
+## Two questions, and they have different answers
 
-termshark's verdict was **"No — gowid has a real focus system and tuikit has an
-open issue"**. It has *five* widgets for it: `framefocus`, `trackfocus`,
+**Could tuikit draw termshark?** When the study was written, no. tuikit had no
+way to say which pane the keyboard is in, and termshark is three panes you move
+between. That study is why `comp.Focus` was built, so the answer is now yes.
+
+**Would termshark have been easier to write in tuikit?** No. It would gain a
+palette and a split, and it would lose a focus system better than ours. The
+full reasoning is in
+[the verdict](STUDY.md#would-it-have-been-easier-in-tuikit).
+
+The rest of this page is about the first question.
+
+## What `comp.Focus` took from gowid, and what it left
+
+termshark has *five* widgets for focus: `framefocus`, `trackfocus`,
 `renderfocused`, `keepselected`, `enableselected`.
 
-`comp.Focus` exists because of that, and it is the third pane here that makes
-the case: `tab` moves the keyboard through packets → structure → bytes, by
-**region name** rather than by index.
+`comp.Focus` is the third pane here making the case. `tab` moves the keyboard
+through packets → structure → bytes, by **region name** rather than by index.
 
 ```go
 m.focus.Ring = []comp.Name{regList, regFields, regHex}

@@ -68,6 +68,8 @@ That is the result. Two teams, two substrates, two codebases, one missing
 component — and no hole here that lazygit did not already produce. A rebuild
 that finds nothing new is the one that tells you the earlier list was right.
 
+**Since this was written.** `comp.Viewer` ([#57](https://github.com/richarddavenport/tuikit/issues/57)) was built, which is the one thing both this and lazygit were short of. tuikit can draw gitui now.
+
 ## Would it have been easier in tuikit?
 
 **Yes, and this is the clearest yes in the survey.**

@@ -75,6 +75,8 @@ express fx, it is wrong.
 the one whose API should be designed against, because it has no chrome to hide
 behind.
 
+**Since this was written.** `comp.Viewer` ([#57](https://github.com/richarddavenport/tuikit/issues/57)) and `comp.Tree` ([#20](https://github.com/richarddavenport/tuikit/issues/20)) were built, so tuikit can draw fx now. The verdict below is the separate question, and it has not changed: fx's linked list is still the better data structure.
+
 ## Would it have been easier in tuikit?
 
 **No. fx is the one rebuild where the original's core data structure is better

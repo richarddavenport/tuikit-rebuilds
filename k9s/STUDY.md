@@ -155,6 +155,8 @@ adding a vote to it. Two tools disagree about whether the set or the range is
 primary, and the cursor-fallback rule is not in either of the other two
 implementations but is the thing that makes the feature worth having.
 
+**Since this was written.** `comp.Marks` ([#55](https://github.com/richarddavenport/tuikit/issues/55)) and `comp.Viewer` ([#57](https://github.com/richarddavenport/tuikit/issues/57)) were both built, and the cursor-fallback rule this study found is what `Marks.Acting` does. tuikit can draw k9s now.
+
 ## Would it have been easier in tuikit?
 
 **Yes, once #55 lands. Today it is a wash.**

@@ -12,15 +12,25 @@ It does not read this machine. See [`fake/`](fake/).
 Every screen: **[docs/screens.md](docs/screens.md)**. The analysis:
 **[STUDY.md](STUDY.md)**.
 
-## The study said no. This is why it now says yes.
+## Two questions, and they have different answers
 
-bottom's verdict was **"No, and not close — the charts are the tool"**. A system
-monitor without a time series is not a system monitor.
+**Could tuikit draw bottom?** When the study was written, no. There was no way
+to draw a number over time, and a system monitor without a time series is not a
+system monitor. That study is why `comp.Sparkline` was built. The answer is now
+yes, and the screenshot above is what yes looks like.
 
-`comp.Sparkline` exists because of this study, and it is built around the thing
-bottom told us. It **vendored 55 kB of ratatui's own `Chart`** rather than use
-it, with a note saying to keep it in sync. So the question was never whether to
-have a chart. It was what bottom forked *for*:
+**Would bottom have been easier to write in tuikit?** Still no, and the front
+page says so. bottom's layout is a TOML file its users edit, and tuikit cannot
+load a layout from data. The full reasoning is in
+[the verdict](STUDY.md#would-it-have-been-easier-in-tuikit).
+
+The rest of this page is about the first question.
+
+## The sparkline is shaped by what bottom told us
+
+bottom **vendored 55 kB of ratatui's own `Chart`** rather than use it, with a
+note saying to keep it in sync. So the question was never whether to have a
+chart. It was what bottom forked *for*:
 
 > A metric over time has a fixed right edge and a ragged left one.
 

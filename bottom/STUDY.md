@@ -97,6 +97,8 @@ guards do when the arrangement is not in the source. See the issue.
 monitor without a time series is not a system monitor, and that is now a hole
 with two implementations behind it rather than a taste question.
 
+**Since this was written.** `comp.Sparkline` ([#58](https://github.com/richarddavenport/tuikit/issues/58)) and `comp.Sort` ([#61](https://github.com/richarddavenport/tuikit/issues/61)) were built out of this study, and both issues are closed. tuikit can draw bottom now, and the rebuild in this directory is the proof. The verdict below is the separate question, and it has not changed.
+
 ## Would it have been easier in tuikit?
 
 **No, and not close. The charts are the tool and tuikit has none.**
@@ -141,4 +143,7 @@ and cannot be loaded from data
 
 ### The call
 
-**The original is better today.** Come back when there is a chart.
+**The original is better today**, and the chart is no longer the reason.
+`comp.Sparkline` was built out of this study and draws bottom's grid. What
+is left is layout-as-data: bottom's users arrange their own dashboard in a
+TOML file, and tuikit's `Layout` cannot be loaded from data.

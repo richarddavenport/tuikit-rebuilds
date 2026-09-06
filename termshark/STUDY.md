@@ -86,6 +86,8 @@ Its value is not the verdict. It is that a tool which sorted its own generic
 widgets into a folder produced a list that agrees with this survey, including
 on the one thing this survey had underweighted.
 
+**Since this was written.** `comp.Viewer` ([#57](https://github.com/richarddavenport/tuikit/issues/57)) and `comp.Focus` ([#59](https://github.com/richarddavenport/tuikit/issues/59)) were built out of this study, and both issues are closed. tuikit can draw termshark now. The verdict below is the separate question, and it has not changed.
+
 ## Would it have been easier in tuikit?
 
 **No. termshark's toolkit gives it the one thing tuikit is missing.**

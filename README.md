@@ -7,6 +7,18 @@ Ten of them were read from source, worked out on paper, and then **built**.
 Each has a `STUDY.md` saying what the original does and what tuikit was missing,
 and a working program that draws its interface against a fixture.
 
+**Two questions run through this repository, and they are not the same one.**
+
+1. **Could tuikit draw it?** That is the coverage test, at the top of each
+   `STUDY.md`. All ten now answer yes. Six of them only answer yes because the
+   study made us go and build something first.
+2. **Would it have been easier in tuikit?** That is the verdict, at the bottom
+   of each `STUDY.md` and in the last column of the table below. It says *no*
+   for three of the ten.
+
+A tool can be perfectly drawable and still have been better off written the way
+it was. bottom is the clearest case of both at once.
+
 ![lazygit rebuilt](lazygit/docs/frames/range.svg)
 
 ## The ten
@@ -14,7 +26,7 @@ and a working program that draws its interface against a fixture.
 All ten are **built**. Each runs, is screenshotted, and has its screens held to
 a golden at two terminal sizes.
 
-| | run it | study | screens | verdict |
+| | run it | study | screens | easier in tuikit? |
 | --- | --- | :---: | :---: | --- |
 | [lazygit](lazygit/) | `go run ./lazygit` | [✓](lazygit/STUDY.md) | [7](lazygit/docs/screens.md) | about even |
 | [gcpeasy](gcpeasy/) | `go run ./gcpeasy -fixture` | [✓](gcpeasy/STUDY.md) | [9](gcpeasy/docs/screens.md) | **tuikit, by the most** |

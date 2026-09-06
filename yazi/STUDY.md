@@ -171,6 +171,8 @@ The Lua question is the more interesting one and it is not a hole. It is a
 different bet about who owns the drawing, and yazi is the strongest evidence in
 the field that the other bet works.
 
+**Since this was written.** `comp.Marks` ([#55](https://github.com/richarddavenport/tuikit/issues/55)) was built, and it carries both gestures because this study and k9s disagreed about which one is primary. tuikit can draw yazi now. Key sequences ([#56](https://github.com/richarddavenport/tuikit/issues/56)) are still one tool and still open.
+
 ## Would it have been easier in tuikit?
 
 **Easier to write, harder to extend. That is the whole trade.**
