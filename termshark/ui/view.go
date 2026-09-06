@@ -141,9 +141,8 @@ func (m *Model) hexPane(c *comp.Canvas, r comp.Rect) {
 	// Which rows the selected field touches. A Viewer range is over LINES, and
 	// a byte span becomes a line span here — the tool's arithmetic, because
 	// only the tool knows how many bytes a row holds.
-	lo, hi := -1, -1
 	if f, ok := m.field(); ok && f.Len > 0 {
-		lo, hi = f.Off/bytesPerRow, (f.Off+f.Len-1)/bytesPerRow
+		lo, hi := f.Off/bytesPerRow, (f.Off+f.Len-1)/bytesPerRow
 		m.hex.Goto(lo)
 		m.hex.Extend(hi - lo)
 	} else {

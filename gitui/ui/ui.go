@@ -65,9 +65,8 @@ type Model struct {
 	stash    comp.List
 	focus    comp.Focus
 
-	diff     comp.Viewer
-	staging  bool
-	diffKeys comp.Name
+	diff    comp.Viewer
+	staging bool
 
 	// stack is the popups that are open, innermost last. Esc pops one.
 	stack []popup

@@ -72,11 +72,12 @@ func (m *Model) layerRow(i int) comp.Row {
 func (m *Model) detail(c *comp.Canvas, r comp.Rect) {
 	l := m.layer()
 	score, wasted := fake.Efficiency()
-	blocks := []comp.Block{{Facts: []comp.Fact{
+	blocks := make([]comp.Block, 0, 2)
+	blocks = append(blocks, comp.Block{Facts: []comp.Fact{
 		{Label: "id", Value: l.ID},
 		{Label: "size", Value: size(l.Size)},
 		{Label: "command", Value: comp.Truncate(l.Command, r.W-14)},
-	}}}
+	}})
 	if l.Wasted > 0 {
 		blocks[0].Facts = append(blocks[0].Facts,
 			comp.Fact{Label: "wasted", Value: size(l.Wasted), Style: &m.sty.wasted})

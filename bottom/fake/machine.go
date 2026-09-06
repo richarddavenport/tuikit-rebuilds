@@ -77,7 +77,7 @@ func Processes() []Process {
 // Columns is the process table's header. The index is what comp.Sort orders by.
 func Columns() []string { return []string{"PID", "NAME", "USER", "CPU%", "MEM%", "S"} }
 
-// Disks is the disk table.
+// Disk is one mounted filesystem.
 type Disk struct {
 	Mount string
 	Used  float64
@@ -93,7 +93,7 @@ func Disks() []Disk {
 	}
 }
 
-// Temps is the temperature list.
+// Temp is one sensor reading.
 type Temp struct {
 	Sensor  string
 	Celsius float64

@@ -14,7 +14,21 @@ start actually looks like.
 ![gcpeasy](docs/frames/pod-detail.svg)
 
 Every screen: **[docs/screens.md](docs/screens.md)**. The analysis:
-**[STUDY.md](STUDY.md)**. The decisions: **[DESIGN.md](DESIGN.md)**.
+**[STUDY.md](STUDY.md)**. The decisions: **[DESIGN.md](DESIGN.md)** and
+**[DECISIONS.md](DECISIONS.md)**. The domain vocabulary:
+**[CONTEXT.md](CONTEXT.md)**.
+
+## It keeps its guards
+
+Unlike the other nine rebuilds, this one is a real tool, so it is held to the
+rules a real tuikit tool is held to. Three test files, and they run in `make
+check` with everything else:
+
+| | |
+| --- | --- |
+| `engine/guard_test.go` | the engine has never heard of a terminal |
+| `ui/guard_test.go` | no colour outside the palette, no character outside the glyph set, no chrome typed by hand |
+| `cli/guard_test.go` | every action reachable by mouse has a keyboard path, and nothing has taken a reserved key |
 
 ## Measured on both sides
 

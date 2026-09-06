@@ -145,7 +145,7 @@ func Diff() []DiffLine {
 		{DiffAdded, "+\ts.list.ClearRange()"},
 		{DiffContext, " }"},
 	}
-	var out []DiffLine
+	out := make([]DiffLine, 0, len(raw))
 	hunk := 0
 	for _, r := range raw {
 		if r.k == DiffHunk {
