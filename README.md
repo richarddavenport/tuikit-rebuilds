@@ -3,27 +3,27 @@
 Could [tuikit](https://github.com/richarddavenport/tuikit) build the terminal
 interfaces people actually use?
 
-Ten of them were read from source, worked out on paper, and then **built**.
+Eleven of them were read from source, worked out on paper, and then **built**.
 Each has a `STUDY.md` saying what the original does and what tuikit was missing,
 and a working program that draws its interface against a fixture.
 
 **Two questions run through this repository, and they are not the same one.**
 
 1. **Could tuikit draw it?** That is the coverage test, at the top of each
-   `STUDY.md`. All ten now answer yes. Six of them only answer yes because the
-   study made us go and build something first.
+   `STUDY.md`. All eleven now answer yes. Six of them only answer yes because
+   the study made us go and build something first.
 2. **Would it have been easier in tuikit?** That is the verdict, at the bottom
    of each `STUDY.md` and in the last column of the table below. It says *no*
-   for three of the ten.
+   for three of the eleven.
 
 A tool can be perfectly drawable and still have been better off written the way
 it was. bottom is the clearest case of both at once.
 
 ![lazygit rebuilt](lazygit/docs/frames/range.svg)
 
-## The ten
+## The eleven
 
-All ten are **built**. Each runs, is screenshotted, and has its screens held to
+All eleven are **built**. Each runs, is screenshotted, and has its screens held to
 a golden at two terminal sizes.
 
 | | run it | study | screens | easier in tuikit? |
@@ -38,12 +38,22 @@ a golden at two terminal sizes.
 | [dive](dive/) | `go run ./dive` | [✓](dive/STUDY.md) | [7](dive/docs/screens.md) | **tuikit** |
 | [fx](fx/) | `go run ./fx` | [✓](fx/STUDY.md) | [7](fx/docs/screens.md) | the original, at scale |
 | [gh-dash](gh-dash/) | `go run ./gh-dash` | [✓](gh-dash/STUDY.md) | [9](gh-dash/docs/screens.md) | **tuikit, on `app`** |
+| [htop](htop/) | `go run ./htop` | [✓](htop/STUDY.md) | [12](htop/docs/screens.md) | **tuikit**, on a small half |
 
-**88 screens**, all generated from fixtures. None is a screenshot anybody took,
+**100 screens**, all generated from fixtures. None is a screenshot anybody took,
 and none can go stale without a test failing first.
 
-**6,568 lines of interface across ten tools.** The largest single `view.go` is
-under 300.
+**7,157 lines of interface across eleven tools**, counting every non-blank,
+non-comment line of Go outside the fixtures and the tests. The largest single
+`view.go` is 289.
+
+```
+$ find . -name '*.go' ! -name '*_test.go' ! -path '*/fake/*' \
+    | xargs cat | grep -vE '^\s*(//|$)' | wc -l
+```
+
+gcpeasy is 1,730 of that and is not comparable to the rest: it is the one built
+as a real tool, with an engine and a CLI behind the interface.
 
 ## What building them found
 
@@ -68,6 +78,7 @@ had been named but never written down:
 | `Viewer.NoCursor` disables the range too, so a *derived* highlight cannot exist | [#75](https://github.com/richarddavenport/tuikit/issues/75) |
 | no column equivalent of `List.Overhead`, whose name invites the bug | [#76](https://github.com/richarddavenport/tuikit/issues/76) |
 | a dragged range must be derived, not accumulated — `List.Move` is deferred | [#77](https://github.com/richarddavenport/tuikit/issues/77) |
+| `comp.Tree` indents but draws no branches, and depth cannot say which connector | [#78](https://github.com/richarddavenport/tuikit/issues/78) |
 
 Reading the studies again found five more that no rebuild had hit, because they
 are things the originals have and the rebuilds simply did without:

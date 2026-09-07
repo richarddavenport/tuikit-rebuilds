@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1057.6" height="625.25" viewBox="0 0 1057.6 625.25" font-family="ui-monospace, &#39;SF Mono&#39;, SFMono-Regular, Menlo, Consolas, &#39;DejaVu Sans Mono&#39;, monospace" font-size="13" role="img">
+<title>terminal frame, 132 columns by 37 rows</title>
+<rect width="1057.6" height="625.25" rx="7" fill="#0c0c0e"/>
+<text x="14" y="24.68" textLength="748.8" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">CPU [||||||||||||||||||||||||||||                          48.8%] Tasks: 214, 863 thr; 3 running</text>
+<text x="14" y="40.92" textLength="670.8" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">Mem [|||||||||||||||||||||||||||||||||||||||||||||||   12.8G/16G] Load: 2.34 1.87 1.42</text>
+<text x="14" y="57.17" textLength="702" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">Swp [|||||||||||||||||                                   1.2G/4G] Uptime: 6 days, 04:12:38</text>
+<text x="14" y="89.67" textLength="585" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">   PID USER       PRI   NI    VIRT      RES S  CPU%  MEM%     TIME+ Command</text>
+<text x="14" y="105.92" textLength="702" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1990 postgres    20    0   0.42G   128.4M S   0.8   0.8   3:18.02 postgres: checkpointer</text>
+<text x="14" y="122.17" textLength="678.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1991 postgres    20    0   0.40G    64.2M S   0.2   0.4   0:48.31 postgres: walwriter</text>
+<text x="14" y="138.43" textLength="756.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1992 postgres    20    0   0.40G    58.7M S   0.1   0.3   0:31.09 postgres: autovacuum launcher</text>
+<text x="14" y="593.42" textLength="93.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">Filter: post</text>
+<text x="14" y="609.67" textLength="663" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  F1 Help · F2 Setup · F3 Search · F4 Filter · F5 Tree · F6 SortBy · F9 Kill · q Quit</text>
+</svg>

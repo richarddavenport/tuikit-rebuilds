@@ -1,0 +1,37 @@
+CPU [||||||||||||||||||||||||||||                          48.8%] Tasks: 214, 863 thr; 3 running
+Mem [|||||||||||||||||||||||||||||||||||||||||||||||   12.8G/16G] Load: 2.34 1.87 1.42
+Swp [|||||||||||||||||                                   1.2G/4G] Uptime: 6 days, 04:12:38
+
+   PID USER       PRI   NI    VIRT      RES S  CPU%  MEM%     TIME+ Command
+  1990 postgres    20    0   0.42G   128.4M S   0.8   0.8   3:18.02 postgres: checkpointer                                          
+  1991 postgres    20    0   0.40G    64.2M S   0.2   0.4   0:48.31 postgres: walwriter
+  1992 postgres    20    0   0.40G    58.7M S   0.1   0.3   0:31.09 postgres: autovacuum launcher
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Filter: post
+  F1 Help · F2 Setup · F3 Search · F4 Filter · F5 Tree · F6 SortBy · F9 Kill · q Quit

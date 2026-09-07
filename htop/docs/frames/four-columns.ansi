@@ -1,0 +1,37 @@
+CPU [||||||||||||         48.8%] Mem [|||||||||||||||||12.8G/16G] Tasks: 214, 863 thr; 3 running   Uptime: 6 days, 04:12:38
+                                 Swp [|||||||            1.2G/4G] Load: 2.34 1.87 1.42             Disk: 18M read, 4M write
+
+   PID USER       PRI   NI    VIRT      RES S  CPU%  MEM%     TIME+ Command
+     1 root        20    0   0.17G    12.4M S   0.0   0.1   0:14.02 /sbin/init                                                      
+   412 root        20    0   0.09G     8.1M S   0.0   0.0   0:02.11 /usr/lib/systemd/systemd-journald
+   588 root        20    0   0.24G    18.6M S   0.3   0.1   0:41.87 /usr/sbin/sshd -D
+  1204 richard     20    0   0.26G    21.2M S   0.1   0.1   0:03.44 sshd: richard@pts/0
+  1207 richard     20    0   0.02G     5.8M S   0.0   0.0   0:00.31 -zsh
+  1583 richard     20    0   1.84G   412.6M R  96.2   2.5   4:12.90 go build ./...                                                  
+  1601 richard     20    0   0.94G   208.4M R  64.8   1.3   1:58.03 compile -p github.com/richarddavenport/tuikit/comp              
+  1602 richard     20    0   0.88G   194.1M R  58.1   1.2   1:44.62 compile -p github.com/richarddavenport/tuikit/app               
+  1618 richard     20    0   0.31G    44.9M D   2.4   0.3   0:11.20 link -o /tmp/go-build/b001/exe/a.out
+  1744 richard     20    0   0.41G    96.3M S   1.1   0.6   0:22.75 nvim design/decisions.md
+  1802 richard     20    0   3.12G   884.7M S  12.6   5.4  21:07.44 /usr/lib/firefox/firefox
+  1849 richard     20    0   2.08G   512.2M S   8.3   3.1   9:41.16 firefox -contentproc -childID 4
+  1851 richard     20    0   1.76G   388.9M S   4.1   2.4   6:12.88 firefox -contentproc -childID 7
+  1990 postgres    20    0   0.42G   128.4M S   0.8   0.8   3:18.02 postgres: checkpointer
+  1991 postgres    20    0   0.40G    64.2M S   0.2   0.4   0:48.31 postgres: walwriter
+  1992 postgres    20    0   0.40G    58.7M S   0.1   0.3   0:31.09 postgres: autovacuum launcher
+  2140 root        20   -5   0.68G   142.8M S   2.2   0.9   1:02.55 /usr/bin/containerd
+  2201 root        20    0   0.52G    88.1M S   0.6   0.5   0:19.74 containerd-shim -namespace moby -id 9f2a
+  2388 richard     20    0   0.14G    22.6M S   0.4   0.1   0:07.62 /usr/bin/pipewire
+  2401 richard     20    0   0.11G    16.9M S   0.0   0.1   0:01.88 /usr/bin/wireplumber
+  3002 richard     20    0   0.06G     9.4M R   0.9   0.0   0:00.04 htop
+
+
+
+
+
+
+
+
+
+
+
+  F1 Help · F2 Setup · F3 Search · F4 Filter · F5 Tree · F6 SortBy · F9 Kill · q Quit

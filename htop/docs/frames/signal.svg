@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1057.6" height="625.25" viewBox="0 0 1057.6 625.25" font-family="ui-monospace, &#39;SF Mono&#39;, SFMono-Regular, Menlo, Consolas, &#39;DejaVu Sans Mono&#39;, monospace" font-size="13" role="img">
+<title>terminal frame, 132 columns by 37 rows</title>
+<rect width="1057.6" height="625.25" rx="7" fill="#0c0c0e"/>
+<text x="14" y="24.68" textLength="748.8" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">CPU [||||||||||||||||||||||||||||                          48.8%] Tasks: 214, 863 thr; 3 running</text>
+<text x="14" y="40.92" textLength="670.8" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">Mem [|||||||||||||||||||||||||||||||||||||||||||||||   12.8G/16G] Load: 2.34 1.87 1.42</text>
+<text x="14" y="57.17" textLength="702" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">Swp [|||||||||||||||||                                   1.2G/4G] Uptime: 6 days, 04:12:38</text>
+<text x="14" y="89.67" textLength="585" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">   PID USER       PRI   NI    VIRT      RES S  CPU%  MEM%     TIME+ Command</text>
+<text x="14" y="105.92" textLength="608.4" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">     1 root        20    0   0.17G    12.4M S   0.0   0.1   0:14.02 /sbin/init</text>
+<text x="14" y="122.17" textLength="787.8" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">   412 root        20    0   0.09G     8.1M S   0.0   0.0   0:02.11 /usr/lib/systemd/systemd-journald</text>
+<text x="14" y="138.43" textLength="663" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">   588 root        20    0   0.24G    18.6M S   0.3   0.1   0:41.87 /usr/sbin/sshd -D</text>
+<text x="14" y="154.68" textLength="678.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1204 richard     20    0   0.26G    21.2M S   0.1   0.1┌─ Send signal ─┐richard@pts/0</text>
+<text x="14" y="170.93" textLength="577.2" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1207 richard     20    0   0.02G     5.8M S   0.0   0.0│&gt; SIGTERM 15   │</text>
+<text x="14" y="187.18" textLength="639.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1583 richard     20    0   1.84G   412.6M R  96.2   2.5│  SIGKILL 9    │ld ./...</text>
+<text x="14" y="203.43" textLength="920.4" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1601 richard     20    0   0.94G   208.4M R  64.8   1.3│  SIGHUP 1     │e -p github.com/richarddavenport/tuikit/comp</text>
+<text x="14" y="219.68" textLength="912.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1602 richard     20    0   0.88G   194.1M R  58.1   1.2│  SIGINT 2     │e -p github.com/richarddavenport/tuikit/app</text>
+<text x="14" y="235.93" textLength="811.2" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1618 richard     20    0   0.31G    44.9M D   2.4   0.3│  SIGQUIT 3    │o /tmp/go-build/b001/exe/a.out</text>
+<text x="14" y="252.18" textLength="717.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1744 richard     20    0   0.41G    96.3M S   1.1   0.6│  SIGSTOP 19   │esign/decisions.md</text>
+<text x="14" y="268.43" textLength="717.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1802 richard     20    0   3.12G   884.7M S  12.6   5.4│  SIGCONT 18   │ib/firefox/firefox</text>
+<text x="14" y="284.68" textLength="772.2" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1849 richard     20    0   2.08G   512.2M S   8.3   3.1│  SIGUSR1 10   │x -contentproc -childID 4</text>
+<text x="14" y="300.93" textLength="772.2" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1851 richard     20    0   1.76G   388.9M S   4.1   2.4│  SIGUSR2 12   │x -contentproc -childID 7</text>
+<text x="14" y="317.18" textLength="702" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1990 postgres    20    0   0.42G   128.4M S   0.8   0.8└───────────────┘es: checkpointer</text>
+<text x="14" y="333.43" textLength="678.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1991 postgres    20    0   0.40G    64.2M S   0.2   0.4   0:48.31 postgres: walwriter</text>
+<text x="14" y="349.68" textLength="756.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  1992 postgres    20    0   0.40G    58.7M S   0.1   0.3   0:31.09 postgres: autovacuum launcher</text>
+<text x="14" y="365.93" textLength="678.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  2140 root        20   -5   0.68G   142.8M S   2.2   0.9   1:02.55 /usr/bin/containerd</text>
+<text x="14" y="382.18" textLength="842.4" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  2201 root        20    0   0.52G    88.1M S   0.6   0.5   0:19.74 containerd-shim -namespace moby -id 9f2a</text>
+<text x="14" y="398.43" textLength="663" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  2388 richard     20    0   0.14G    22.6M S   0.4   0.1   0:07.62 /usr/bin/pipewire</text>
+<text x="14" y="414.68" textLength="686.4" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  2401 richard     20    0   0.11G    16.9M S   0.0   0.1   0:01.88 /usr/bin/wireplumber</text>
+<text x="14" y="430.93" textLength="561.6" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  3002 richard     20    0   0.06G     9.4M R   0.9   0.0   0:00.04 htop</text>
+<text x="14" y="609.67" textLength="663" lengthAdjust="spacing" fill="#d0d0d0" xml:space="preserve">  F1 Help · F2 Setup · F3 Search · F4 Filter · F5 Tree · F6 SortBy · F9 Kill · q Quit</text>
+</svg>

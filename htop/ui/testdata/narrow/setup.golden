@@ -1,0 +1,23 @@
+Setup  layout: two_50_50   —   the header is data, and this is the editor for …
+────────────────────────────────────────────────────────────────────────────────
+┌─ Header meters ─────────────────────┐ ┌─ Available meters ──────────────────┐
+│> CPU                          [Bar] │ │  CPU                                │
+│  Memory                       [Bar] │ │  Memory                             │
+│  Swap                         [Bar] │ │  Swap                               │
+│                                     │ │  Load average                       │
+│                                     │ │  Uptime                             │
+│                                     │ │  Tasks                              │
+│                                     │ │  Battery                            │
+│                                     │ │  Hostname                           │
+│                                     │ │  Disk IO                            │
+│                                     │ │  Network IO                         │
+│                                     │ │  Date and time                      │
+│                                     │ │  Blank                              │
+│                                     │ │                                     │
+│                                     │ │                                     │
+│                                     │ │                                     │
+│                                     │ │                                     │
+│                                     │ │                                     │
+│                                     │ │                                     │
+└─────────────────────────────────────┘ └─────────────────────────────────────┘
+  space Cycle mode · enter Add · d Remove · L Layout · tab Pane · esc Done

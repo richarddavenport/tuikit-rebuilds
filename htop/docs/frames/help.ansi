@@ -1,0 +1,37 @@
+CPU [||||||||||||||||||||||||||||                          48.8%] Tasks: 214, 863 thr; 3 running
+Mem [|||||||||||||||||||||||||||||||||||||||||||||||   12.8G/16G] Load: 2.34 1.87 1.42
+Swp [|||||||||||||||||                                   1.2G/4G] Uptime: 6 days, 04:12:38
+
+   PID USER       PRI   NI    VIRT      RES S  CPU%  MEM%     TIME+ Command
+     1 root        20    0   0.17G    12.4M S   0.0   0.1   0:14.02 /sbin/init                                                      
+   412 root        20    0   0.09G     8.1M S   0.0   0.0   0:02.11 /usr/lib/systemd/systemd-journald
+   588 root        20    0   0.24G    18.6M S   0.3   0.1   0:41.87 /usr/sbin/sshd -D
+  1204 richard     20    0   0.26G┌──────────────────────────────────────────────────────────────┐
+  1207 richard     20    0   0.02G│htop, rebuilt                                                 │
+  1583 richard     20    0   1.84G│                                                              │                                  
+  1601 richard     20    0   0.94G│moving                                                        │avenport/tuikit/comp              
+  1602 richard     20    0   0.88G│j/k    move                                                   │avenport/tuikit/app               
+  1618 richard     20    0   0.31G│t      tree view                                              │/a.out
+  1744 richard     20    0   0.41G│space  fold a subtree                                         │
+  1802 richard     20    0   3.12G│                                                              │
+  1849 richard     20    0   2.08G│finding                                                       │4
+  1851 richard     20    0   1.76G│F3     search — jump to a match                               │7
+  1990 postgres    20    0   0.42G│F4     filter — hide the rest                                 │
+  1991 postgres    20    0   0.40G│F6     sort by a column                                       │
+  1992 postgres    20    0   0.40G│                                                              │
+  2140 root        20   -5   0.68G│doing                                                         │
+  2201 root        20    0   0.52G│F2     setup — arrange the meters                             │y -id 9f2a
+  2388 richard     20    0   0.14G│F9     send a signal                                          │
+  2401 richard     20    0   0.11G│                                                              │
+  3002 richard     20    0   0.06G│everywhere                                                    │
+                                  │F1/?   this                                                   │
+                                  │q      quit                                                   │
+                                  └──────────────────────────────────────────────────────────────┘
+
+
+
+
+
+
+
+  F1 Help · F2 Setup · F3 Search · F4 Filter · F5 Tree · F6 SortBy · F9 Kill · q Quit
