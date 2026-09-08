@@ -13,7 +13,7 @@ type Packet struct {
 	Proto    string
 	Length   int
 	Info     string
-	// Bad marks a packet termshark would colour as a problem.
+	// Bad marks a packet termshark would color as a problem.
 	Bad bool
 }
 

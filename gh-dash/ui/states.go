@@ -10,7 +10,7 @@ import (
 // States is every distinct thing this rebuild can show.
 func States() []shot.State {
 	return []shot.State{
-		{Name: "browsing", Note: "Sections as `comp.Tabs` with a count each, a table of pull requests, and a sidebar. CI's answer is a CHARACTER in the first column, so it survives the colour being stripped.",
+		{Name: "browsing", Note: "Sections as `comp.Tabs` with a count each, a table of pull requests, and a sidebar. CI's answer is a CHARACTER in the first column, so it survives the color being stripped.",
 			Build: build()},
 		{Name: "body", Note: "The sidebar shows the description in a `comp.Viewer` — the one component gh-dash's study said it was missing.",
 			Build: build()},

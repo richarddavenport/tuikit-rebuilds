@@ -10,7 +10,7 @@ import (
 // States is every distinct thing this rebuild can show.
 func States() []shot.State {
 	return []shot.State{
-		{Name: "browsing", Note: "One `comp.Viewer`. Each line is spans, so the cursor's background goes under the syntax colours rather than over them.",
+		{Name: "browsing", Note: "One `comp.Viewer`. Each line is spans, so the cursor's background goes under the syntax colors rather than over them.",
 			Build: build()},
 		{Name: "folded", Note: "`space` on a container. `comp.Tree` holds the state; the ▸ and the `{ … }` preview are the tool's.",
 			Build: build("j", "j", "j", "j", "j", "j", "j", " ")},

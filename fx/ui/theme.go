@@ -8,7 +8,7 @@ import (
 
 // styles is every style this rebuild draws with, from tuikit's nine roles.
 //
-// JSON needs a colour per scalar type, which is four of the nine, and that is
+// JSON needs a color per scalar type, which is four of the nine, and that is
 // worth noticing: a syntax highlighter usually wants more roles than an
 // operator tool. theme.Palette.Extra is the escape hatch if it ever needs a
 // fifth, and it is not needed here.
@@ -25,7 +25,7 @@ func newStyles() styles {
 		muted:  lipgloss.NewStyle().Foreground(p.Muted),
 		border: lipgloss.NewStyle().Foreground(p.Border),
 		// A background only, so a folded line under the cursor keeps the
-		// colours that say what its values are. That is the rule comp.Viewer
+		// colors that say what its values are. That is the rule comp.Viewer
 		// exists for.
 		selected: lipgloss.NewStyle().Background(p.SelectionBG),
 		key:      lipgloss.NewStyle().Foreground(p.Accent),

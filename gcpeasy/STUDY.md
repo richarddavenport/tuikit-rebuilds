@@ -33,7 +33,7 @@ Named against the actual functions, so the claim can be checked.
 
 | gcpeasy wrote | comp gives |
 | --- | --- |
-| `renderPanel` — border, title, focus colour, inner clip | `Pane` |
+| `renderPanel` — border, title, focus color, inner clip | `Pane` |
 | `renderRow` — cursor glyph, marker, primary, secondary, padding | `List` + `Row.Lead`, `Row.Right` |
 | four `render*Panel` funcs, one per pane | one `List` each |
 | `renderLeft`, `panelInnerWidth`, `maxInt`, `minInt` | `Layout.Rows`, `Rect` |
@@ -110,7 +110,7 @@ sequences via `parseTerminalEscape` and `applyCSI`, `\r` moving the column back,
 `\b` and `\x7f`, tabs to a stop of four, and a 2,000-line cap.
 
 `comp.LogPane` and `comp.Viewer` both take plain text or `Segment`s. **Nothing
-in tuikit turns a subprocess's coloured output into `Segment`s** — and every
+in tuikit turns a subprocess's colored output into `Segment`s** — and every
 operator tool shells out to something.
 
 The logic exists, on the wrong side of the fence: `harness.Strip` and
@@ -144,7 +144,7 @@ scrollback, because the TUI suspends rather than emulating.
 
 What actually needs the emulator is the **non-interactive task pane**.
 `startTask` runs background commands under a PTY (`pty.StartWithSize`,
-`tui.go:2725`) so that `gcloud` and `kubectl` emit colour and progress, and then
+`tui.go:2725`) so that `gcloud` and `kubectl` emit color and progress, and then
 `appendOutput` and `applyCSI` have to interpret what comes back — SGR, but also
 `\r` moving the column, `\b`, and tabs.
 
@@ -282,7 +282,7 @@ Two gaps, both found by building rather than by reading, and both filed:
 
 And no ANSI parsing
 ([tuikit#63](https://github.com/richarddavenport/tuikit/issues/63)), so the
-rebuild shows `kubectl` output without its colour.
+rebuild shows `kubectl` output without its color.
 
 ### Where gcpeasy's approach is better
 

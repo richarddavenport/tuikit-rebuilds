@@ -111,11 +111,11 @@ func shots(name string, states []State) error {
 }
 
 // Goldens holds every state to a recorded frame, at both sizes, and checks the
-// shape survives the colour being stripped.
+// shape survives the color being stripped.
 func Goldens(t harness.T, dir string, states []State) {
 	for _, s := range states {
 		harness.Golden(t, dir, s.Name, Frame(s, Width, Height))
 		harness.Golden(t, filepath.Join(dir, "narrow"), s.Name, Frame(s, NarrowWidth, NarrowHeight))
-		harness.ShapeSurvivesColour(t, s.Name, func() string { return Frame(s, Width, Height) })
+		harness.ShapeSurvivesColor(t, s.Name, func() string { return Frame(s, Width, Height) })
 	}
 }

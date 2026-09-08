@@ -12,15 +12,15 @@ terms go, and it is the first thing to fill in.
 ## Inherited from tuikit
 
 **Engine** — gcpeasy's domain, in `internal/engine`. It has no terminal
-concepts at all: no colour, no width, no keys, no framework. The UI never calls
+concepts at all: no color, no width, no keys, no framework. The UI never calls
 the backend directly, and the CLI is a peer of the TUI over the same engine
 rather than a wrapper around it.
 
-**Role** — a named colour in the palette. Named by *role*, never by hue:
+**Role** — a named color in the palette. Named by *role*, never by hue:
 `Accent` survives someone deciding the interface should be blue; `pink` does
-not. A raw ANSI index says what a colour IS instead of what it is FOR.
+not. A raw ANSI index says what a color IS instead of what it is FOR.
 
-**Palette** — the closed set of colour roles, valued as the terminal's own
+**Palette** — the closed set of color roles, valued as the terminal's own
 sixteen ANSI indices, so Gcpeasy is themed by whatever themed the terminal.
 It takes `theme.Default` and overrides what it disagrees with; it does not build
 one from scratch, and an override overrides the reader.
@@ -40,7 +40,7 @@ component that returns a string cannot be clicked.
 an index, never a coordinate. A region's index is its position in the LIST, not
 on the screen; those differ the moment a viewport scrolls.
 
-**Golden** — a captured frame, colour stripped, held in `internal/tui/testdata`.
+**Golden** — a captured frame, color stripped, held in `internal/tui/testdata`.
 A golden holds the SHAPE, which is what a diff in a pull request can show.
 
 **Fixture** — the fixed world the goldens are rendered from. It is what makes a

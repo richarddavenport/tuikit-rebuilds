@@ -16,7 +16,7 @@ func States() []shot.State {
 			Build: build("shift+tab")},
 		{Name: "line-select", Note: "`v`. The diff is a `comp.Viewer` — it opens at the top and follows nothing.",
 			Build: build("v")},
-		{Name: "range", Note: "`J` three times. The range is a background only, so every line keeps its added or removed colour.",
+		{Name: "range", Note: "`J` three times. The range is a background only, so every line keeps its added or removed color.",
 			Build: build("v", "J", "J", "J")},
 		{Name: "whole-hunk", Note: "`a` snaps to the hunk boundaries.",
 			Build: build("v", "j", "j", "a")},

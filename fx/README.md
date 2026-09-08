@@ -21,7 +21,7 @@ is hidden. `comp.Tree` walks every node on every frame.
 This rebuild is where that claim is checked instead of asserted. What it shows:
 
 - **`comp.Viewer` and `comp.Tree` do draw fx's screen.** Folding, searching,
-  line numbers, syntax colour and a cursor, in about 400 lines.
+  line numbers, syntax color and a cursor, in about 400 lines.
 - **It cannot show the problem the study names.** The fixture is 25 lines and
   fx's difficulty starts at a million. A rebuild against a fixture cannot
   disprove a claim about scale, and this one does not pretend to.
@@ -54,7 +54,7 @@ out = append(out, comp.Segment{Text: `"` + l.Key + `"`, Style: &m.sty.key})
 ```
 
 `comp.Viewer` puts the cursor's style *underneath* those, so the line you are
-reading keeps its syntax colours. A `comp.List` would repaint the cursor row in
-one colour and you would lose the highlighting exactly where you are looking.
+reading keeps its syntax colors. A `comp.List` would repaint the cursor row in
+one color and you would lose the highlighting exactly where you are looking.
 
 That rule came out of the lazygit study and fx is where it matters most.

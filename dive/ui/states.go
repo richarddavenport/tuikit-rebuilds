@@ -14,7 +14,7 @@ func States() []shot.State {
 			Build: build()},
 		{Name: "wasted-layer", Note: "`go mod download` adds 64 MB and `rm -rf` deletes it. `comp.Detail` says so in facts.",
 			Build: build("j", "j", "j", "j")},
-		{Name: "tree-focused", Note: "`tab`. `comp.Focus` holds which pane has the keyboard; the cursor is a different CHARACTER, not just a different colour.",
+		{Name: "tree-focused", Note: "`tab`. `comp.Focus` holds which pane has the keyboard; the cursor is a different CHARACTER, not just a different color.",
 			Build: build("tab")},
 		{Name: "folded", Note: "`space` on a directory. `comp.Tree` decides which rows exist; the ▸ is the tool's.",
 			Build: build("tab", "j", "j", " ")},

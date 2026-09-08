@@ -23,7 +23,7 @@ import (
 //
 // bottom and gh-dash let a user arrange the interface in a file, read once at
 // startup. htop lets a user arrange it in the interface, and that needs the
-// arrangement to be a value the program can MUTATE and then serialise —
+// arrangement to be a value the program can MUTATE and then serialize —
 // not just one it can parse.
 //
 // # And why the guards survive it

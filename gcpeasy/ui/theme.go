@@ -8,18 +8,18 @@ import (
 
 // Palette, Glyphs and Chrome are gcpeasy's vocabulary.
 //
-// tuikit's defaults unchanged, which is the right place to start: nine colour
+// tuikit's defaults unchanged, which is the right place to start: nine color
 // roles named by what they are FOR, an allow-list of the non-ASCII characters
 // the interface may print, and the box it draws with.
 //
-// The roles are the terminal's own sixteen ANSI indices — the only colours a
+// The roles are the terminal's own sixteen ANSI indices — the only colors a
 // theme can redefine — so Gcpeasy is themed by whatever themed the terminal,
 // with nothing to configure and nothing to reload. Override a role and you are
 // overriding the reader's choice, so do it deliberately. Override what you
 // disagree with; do not build one from scratch, because the point of a closed
 // set is that nine decisions is the whole vocabulary.
 //
-// guard_test.go holds all three closed. A raw colour or an unlisted glyph is a
+// guard_test.go holds all three closed. A raw color or an unlisted glyph is a
 // test failure, not something to notice in review.
 var (
 	Palette = theme.Default
@@ -34,9 +34,9 @@ var (
 // should. Both are in the Geometric Shapes block, which every font shipped with
 // a terminal has had for twenty years — the same block ● already comes from.
 //
-// The alternative was to reuse ● for every state and let colour carry the
-// difference. That is refused for the reason harness.ShapeSurvivesColour
-// exists: a distinction only colour makes is a distinction lost in a pipe, in a
+// The alternative was to reuse ● for every state and let color carry the
+// difference. That is refused for the reason harness.ShapeSurvivesColor
+// exists: a distinction only color makes is a distinction lost in a pipe, in a
 // golden, and to a reader who cannot see it.
 func stateGlyphs() theme.GlyphSet {
 	g := theme.GlyphSet{}

@@ -16,7 +16,7 @@ Layers left, the filesystem they produced right. The `!` marks a layer whose byt
 
 ### tree-focused
 
-`tab`. `comp.Focus` holds which pane has the keyboard; the cursor is a different CHARACTER, not just a different colour.
+`tab`. `comp.Focus` holds which pane has the keyboard; the cursor is a different CHARACTER, not just a different color.
 
 ![tree-focused](frames/tree-focused.svg)
 

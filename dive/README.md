@@ -76,7 +76,7 @@ indent built into `Text`.
 
 ## The rule worth stealing
 
-**dive's four change states are characters, not colours.**
+**dive's four change states are characters, not colors.**
 
 ```go
 func changeMark(c fake.Change) string {
@@ -89,7 +89,7 @@ func changeMark(c fake.Change) string {
 }
 ```
 
-`harness.ShapeSurvivesColour` would not catch the alternative. Strip the colour
+`harness.ShapeSurvivesColor` would not catch the alternative. Strip the color
 from a frame where change is carried by hue and the shape is unchanged — the
 information is what goes missing. There is a test here that asserts the marks
 survive.

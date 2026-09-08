@@ -57,11 +57,11 @@ with an opinion about git.
 
 ### A guard that would fire — and would be wrong
 
-`guard.Tokens` rejects a colour literal. lazygit has 743 of them in `pkg/gui`
+`guard.Tokens` rejects a color literal. lazygit has 743 of them in `pkg/gui`
 outside tests.
 
 **All 743 are in one file**: `pkg/gui/presentation/icons/file_icons.go`, a
-table mapping file types to their brand colours — Ruby's red, Go's blue. Those
+table mapping file types to their brand colors — Ruby's red, Go's blue. Those
 are not theme decisions and they should not come from a palette.
 
 So the honest result is that the guard fires and the guard is wrong here. A
@@ -96,7 +96,7 @@ numbers above are the only comparisons narrow enough to survive that.
 `comp.Viewer` puts the cursor and range style **underneath** the line's own
 spans, so a diff keeps its added-green and removed-red while you drag a
 selection across it. Most list components repaint the selected row in one
-colour, which in a diff trades the content for the pointer.
+color, which in a diff trades the content for the pointer.
 
 That rule came out of this rebuild's study and is the reason `Viewer` is not
 `List`.

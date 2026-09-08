@@ -7,7 +7,7 @@ import (
 )
 
 // The whole of what gcpeasy has to write to keep its interface in its
-// vocabulary: a colour that did not come from the palette, a character the
+// vocabulary: a color that did not come from the palette, a character the
 // glyph set does not cover, or chrome the glyph set cannot print, is a test
 // failure rather than something to notice in review.
 func TestTheInterfaceStaysInItsVocabulary(t *testing.T) {

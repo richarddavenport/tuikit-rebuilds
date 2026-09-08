@@ -53,12 +53,12 @@ down rather than filed.
 ## What it confirmed about `app.Keys`
 
 A popup takes every key, whether or not it does anything with it. That is the
-contract — *"an unrecognised key inside a filter box is a character, not a
+contract — *"an unrecognized key inside a filter box is a character, not a
 chance for the screen underneath to act"* — and it means `?` inside a confirm
 **closes the confirm** rather than stacking help on top of it.
 
 The first version of this rebuild expected the other thing. There is now a test
-named for the rule, because it is the sort of behaviour that reads as a bug
+named for the rule, because it is the sort of behavior that reads as a bug
 until you know why.
 
 ## Also here

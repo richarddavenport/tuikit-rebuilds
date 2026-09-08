@@ -35,7 +35,7 @@ func TestEscClosesOnePopup(t *testing.T) {
 // does anything with it.
 //
 // So `?` inside a confirm closes the confirm rather than opening help on top of
-// it. That is app.Keys' contract working — "an unrecognised key inside a filter
+// it. That is app.Keys' contract working — "an unrecognized key inside a filter
 // box is a character, not a chance for the screen underneath to act" — and it
 // is worth a test because the first version of this rebuild expected the other
 // thing.
@@ -57,7 +57,7 @@ func TestTheFooterCountsTheStack(t *testing.T) {
 	}
 }
 
-// A range grows from the anchor and keeps each line's own colour.
+// A range grows from the anchor and keeps each line's own color.
 func TestExtendingSelectsARange(t *testing.T) {
 	m := build("v", "J", "J")().(*Model)
 	lo, hi, ok := m.diff.Range()

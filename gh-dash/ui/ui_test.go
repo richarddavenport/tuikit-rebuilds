@@ -33,11 +33,11 @@ func TestUpdateIsSmall(t *testing.T) {
 	t.Logf("Update is %d lines", lines)
 }
 
-// CI's answer is a character, so it survives the colour being stripped.
-func TestCheckStateReadsWithoutColour(t *testing.T) {
+// CI's answer is a character, so it survives the color being stripped.
+func TestCheckStateReadsWithoutColor(t *testing.T) {
 	frame := harnessStrip(shot.Frame(States()[3], shot.Width, shot.Height))
 	if !strings.Contains(frame, "✗") {
-		t.Error("a failing check is not visible without colour")
+		t.Error("a failing check is not visible without color")
 	}
 }
 

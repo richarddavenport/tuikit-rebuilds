@@ -115,7 +115,7 @@ func (m *Model) treePane(c *comp.Canvas, r comp.Rect) {
 
 // fileRow is a diff mark, a fold marker, and the name — indented by depth.
 //
-// The diff mark keeps its own colour under the selection. Row.LeadStyle is for
+// The diff mark keeps its own color under the selection. Row.LeadStyle is for
 // exactly this: the row a reader is looking at was otherwise the one row whose
 // state they could not read.
 func (m *Model) fileRow(n fake.Node) comp.Row {
@@ -154,10 +154,10 @@ func (m *Model) fileRow(n fake.Node) comp.Row {
 	return row
 }
 
-// changeMark is dive's four states as characters rather than as colours.
+// changeMark is dive's four states as characters rather than as colors.
 //
-// A character, because a distinction only colour makes is one lost in a pipe
-// and to a reader who cannot see it — which harness.ShapeSurvivesColour will
+// A character, because a distinction only color makes is one lost in a pipe
+// and to a reader who cannot see it — which harness.ShapeSurvivesColor will
 // not catch, since the shape is unchanged and the information is what goes
 // missing.
 func changeMark(c fake.Change) string {

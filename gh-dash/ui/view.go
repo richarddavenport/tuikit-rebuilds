@@ -98,7 +98,7 @@ func (m *Model) rowStyle(p fake.PR) *lipgloss.Style {
 	return nil
 }
 
-// checkMark is CI's answer as a CHARACTER, so it survives the colour being
+// checkMark is CI's answer as a CHARACTER, so it survives the color being
 // stripped.
 func checkMark(s fake.CheckState) string {
 	switch s {

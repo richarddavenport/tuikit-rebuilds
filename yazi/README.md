@@ -64,8 +64,8 @@ Worth knowing because the bug is invisible until you count the rows in a frame.
 
 ## One thing this does that yazi does not
 
-**A marked row carries a character**, not only a colour. yazi marks with colour
-alone; strip that and the selection is gone. `harness.ShapeSurvivesColour` would
+**A marked row carries a character**, not only a color. yazi marks with color
+alone; strip that and the selection is gone. `harness.ShapeSurvivesColor` would
 not catch it, because the shape is unchanged and the information is what goes
 missing.
 

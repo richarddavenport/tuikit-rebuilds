@@ -52,7 +52,7 @@ survey has a million-node tree today.
 ### The viewer, in its purest form
 
 fx **is** the `Viewer` hole and nothing else. A scrollable buffer of styled
-spans, syntax-coloured, searchable, with a cursor over lines and no tailing.
+spans, syntax-colored, searchable, with a cursor over lines and no tailing.
 Strip the JSON and what is left is the component seven tools now want.
 
 That makes fx the best test case for `Viewer`'s API: if the design cannot

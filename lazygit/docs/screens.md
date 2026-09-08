@@ -22,7 +22,7 @@ Four panels and a diff. The file panel is a `comp.List` whose rows a `comp.Tree`
 
 ### range
 
-`J` extends. The range is a background only, so every line keeps its own added or removed colour.
+`J` extends. The range is a background only, so every line keeps its own added or removed color.
 
 ![range](frames/range.svg)
 

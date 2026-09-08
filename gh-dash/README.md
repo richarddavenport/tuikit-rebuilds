@@ -52,9 +52,9 @@ choosing `✓` would be choosing a character the tool's own guard has to allow.
 
 ## One rule this adds
 
-**CI's answer is a character, not a colour.** `✓ ✗ ◐ ·` in the first column, so
+**CI's answer is a character, not a color.** `✓ ✗ ◐ ·` in the first column, so
 a red build is visible in a pipe and to a reader who cannot see red. There is a
-test that strips the colour and looks for the `✗`.
+test that strips the color and looks for the `✗`.
 
 ## What is still theirs, and it is the better half
 

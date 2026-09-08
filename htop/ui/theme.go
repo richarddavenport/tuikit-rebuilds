@@ -8,7 +8,7 @@ import (
 
 // The vocabulary this interface is allowed to draw in, checked by guard_test.go.
 //
-// htop's equivalent is CRT.c, 1,531 lines, which holds eight colour schemes and
+// htop's equivalent is CRT.c, 1,531 lines, which holds eight color schemes and
 // two glyph sets — one UTF-8 and one ASCII, picked at runtime from the locale.
 // This is the same decision expressed as an allow-list instead of a table.
 var (
@@ -67,7 +67,7 @@ func newStyles(p theme.Palette) styles {
 	}
 }
 
-// heat is the one place a number becomes a colour, so every meter and every
+// heat is the one place a number becomes a color, so every meter and every
 // row agrees about what busy looks like.
 func (m *Model) heat(v float64) *lipgloss.Style {
 	switch {

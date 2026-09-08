@@ -74,7 +74,7 @@ func (m *Model) statusRow(int) comp.Row {
 //
 // The marker is the TOOL's: comp.Tree reports whether a key is shut and draws
 // nothing, so ▸ and ▾ are chosen here. Row.LeadStyle keeps the status letters
-// their own colour under the selection, which is the one row whose status
+// their own color under the selection, which is the one row whose status
 // would otherwise become unreadable exactly when you are looking at it.
 func (m *Model) fileRow(i int) comp.Row {
 	changes := fake.Changes()
@@ -102,7 +102,7 @@ func (m *Model) fileRow(i int) comp.Row {
 	//
 	// The cursor marker is prefixed by hand because Row.Lead REPLACES
 	// List.Marker rather than sitting beside it (tuikit issue 64). Without it
-	// there is no cursor at all once the colour is stripped.
+	// there is no cursor at all once the color is stripped.
 	return comp.Row{
 		Lead:      m.cursorMark(panelFiles, i) + status + " ",
 		LeadStyle: style,

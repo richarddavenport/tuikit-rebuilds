@@ -31,7 +31,7 @@ func Layers() []Layer {
 // Change is what a layer did to a path.
 type Change int
 
-// The four states dive colours.
+// The four states dive colors.
 const (
 	Same Change = iota
 	Added

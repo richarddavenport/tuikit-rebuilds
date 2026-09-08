@@ -353,9 +353,9 @@ func (m *Model) Update(msg tea.Msg) (app.Model, tea.Cmd) {
 // setOutput puts text in the right-hand pane, one comp.Line per line.
 //
 // Plain lines for now. The engine's output arrives with ANSI in it when the
-// underlying tool feels like colouring — tuikit issue 63 is the component that
+// underlying tool feels like coloring — tuikit issue 63 is the component that
 // would turn that into spans, and until it exists this shows the text and
-// loses the colour rather than printing the escapes.
+// loses the color rather than printing the escapes.
 func (m *Model) setOutput(body string) {
 	m.outLines = nil
 	for _, line := range strings.Split(strings.TrimRight(body, "\n"), "\n") {
@@ -368,7 +368,7 @@ func (m *Model) setOutput(body string) {
 //
 // This is the whole answer to "how does a TUI open a Rails console", and it is
 // why gcpeasy needs no terminal emulator. tea.Exec suspends the program, the
-// child gets the actual TTY — real line editing, real colour, Ctrl-C reaching
+// child gets the actual TTY — real line editing, real color, Ctrl-C reaching
 // Ruby rather than us — and the interface is restored on exit.
 //
 // The engine decides WHAT to run and hands back an *exec.Cmd. This decides HOW,

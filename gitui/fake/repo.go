@@ -62,7 +62,7 @@ type Commit struct {
 func Commits() []Commit {
 	return []Commit{
 		{SHA: "a4f19c2", Subject: "popups: a modal stack, not a screen stack", Author: "extrawurst", When: 40 * time.Minute, Refs: []string{"HEAD -> master"}},
-		{SHA: "77b0e51", Subject: "diff: keep syntax colour under the selection", Author: "extrawurst", When: 5 * time.Hour},
+		{SHA: "77b0e51", Subject: "diff: keep syntax color under the selection", Author: "extrawurst", When: 5 * time.Hour},
 		{SHA: "1d9a3f8", Subject: "status_tree: collapse by path", Author: "cruessler", When: 27 * time.Hour},
 		{SHA: "9e2c7b4", Subject: "asyncgit: cancel a diff that nobody is waiting for", Author: "extrawurst", When: 2 * 24 * time.Hour, Refs: []string{"v0.27.0"}},
 		{SHA: "5c81d0a", Subject: "textinput: undo stack", Author: "cruessler", When: 4 * 24 * time.Hour},

@@ -35,7 +35,7 @@ chart. It was what bottom forked *for*:
 > A metric over time has a fixed right edge and a ragged left one.
 
 The newest sample is always the last column. A short series leaves the **left**
-blank; a long one drops its oldest. A general chart centres or stretches its
+blank; a long one drops its oldest. A general chart centers or stretches its
 data, and then the bar under your cursor moves when a sample arrives, and two
 sparklines of different lengths stop being comparable.
 

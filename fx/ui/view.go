@@ -42,11 +42,11 @@ func (m *Model) count() string {
 	return itoa(len(m.visible())) + " of " + itoa(len(fake.Doc()))
 }
 
-// spans is one line of JSON, coloured by what its parts are.
+// spans is one line of JSON, colored by what its parts are.
 //
 // Built as spans rather than as a string, which is the whole reason the viewer
 // is not a list: the cursor's style goes UNDER these, so the line you are
-// reading keeps its syntax colours.
+// reading keeps its syntax colors.
 func (m *Model) spans(l fake.Line) []comp.Segment {
 	out := []comp.Segment{{Text: strings.Repeat("  ", l.Depth)}}
 

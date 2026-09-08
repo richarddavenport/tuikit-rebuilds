@@ -27,7 +27,7 @@ check` with everything else:
 | | |
 | --- | --- |
 | `engine/guard_test.go` | the engine has never heard of a terminal |
-| `ui/guard_test.go` | no colour outside the palette, no character outside the glyph set, no chrome typed by hand |
+| `ui/guard_test.go` | no color outside the palette, no character outside the glyph set, no chrome typed by hand |
 | `cli/guard_test.go` | every action reachable by mouse has a keyboard path, and nothing has taken a reserved key |
 
 ## Measured on both sides
@@ -58,8 +58,8 @@ fixed now, and this rebuild is what argued for them:
 
 One is still open:
 **[tuikit#63](https://github.com/richarddavenport/tuikit/issues/63)** — `kubectl`
-colours its output and nothing turns ANSI into `Segment`s, so the logs pane
-shows the text and drops the colour.
+colors its output and nothing turns ANSI into `Segment`s, so the logs pane
+shows the text and drops the color.
 
 ## The console
 

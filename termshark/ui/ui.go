@@ -74,7 +74,7 @@ func newStyles() styles {
 		field:    lipgloss.NewStyle().Foreground(p.Accent),
 		value:    lipgloss.NewStyle().Foreground(p.Muted),
 		// The bytes a selected field covers. A background, so the hex digits
-		// keep their own colour underneath — which is comp.Viewer's rule.
+		// keep their own color underneath — which is comp.Viewer's rule.
 		hit:    lipgloss.NewStyle().Background(p.SelectionBG),
 		marked: lipgloss.NewStyle().Foreground(p.Pending).Bold(true),
 	}

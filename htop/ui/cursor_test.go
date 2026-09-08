@@ -42,7 +42,7 @@ func TestTheCursorCannotLeaveTheList(t *testing.T) {
 
 // dive#468 and #543, fixed rather than reproduced.
 //
-// This test used to assert the WRONG behaviour on purpose and fail loudly when
+// This test used to assert the WRONG behavior on purpose and fail loudly when
 // tuikit#80 was fixed. It fired, so here is what it always wanted to say:
 // filter to a few processes, move onto one, clear the filter, and the cursor is
 // still on that process.

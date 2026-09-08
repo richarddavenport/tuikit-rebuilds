@@ -21,13 +21,13 @@ func TestFoldingHidesOnlyThatSubtree(t *testing.T) {
 	}
 }
 
-// dive's four states are characters, not only colours, so the frame still says
-// what changed once the colour is stripped.
-func TestChangesReadWithoutColour(t *testing.T) {
+// dive's four states are characters, not only colors, so the frame still says
+// what changed once the color is stripped.
+func TestChangesReadWithoutColor(t *testing.T) {
 	frame := harnessStrip(shot.Frame(States()[2], shot.Width, shot.Height))
 	for _, mark := range []string{"+", "~", "-"} {
 		if !strings.Contains(frame, mark+" ") {
-			t.Errorf("no %q mark in a colourless frame", mark)
+			t.Errorf("no %q mark in a colorless frame", mark)
 		}
 	}
 }

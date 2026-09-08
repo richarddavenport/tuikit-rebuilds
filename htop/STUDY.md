@@ -45,7 +45,7 @@ platform directories.
 | the sort-by panel and its state | `Sort` |
 | `GraphMeterMode_draw` in `Meter.c` | `Sparkline` |
 | `Table_buildTree`'s collapse state | `Tree` |
-| `CRT.c`'s eight colour schemes and two glyph sets | `theme.Palette`, `theme.GlyphSet` |
+| `CRT.c`'s eight color schemes and two glyph sets | `theme.Palette`, `theme.GlyphSet` |
 
 `Panel.c` is the interesting row. htop wrote one selectable list and got nine
 panels out of it, which is the same trade `comp.List` makes and the reason both
@@ -169,7 +169,7 @@ because both are the same control with different contents.
 
 **The 17,622 lines of platform code**, which is the larger half and the reason
 htop exists. Plus `Process.c`'s comparison and formatting, and `Settings.c`'s
-serialisation.
+serialization.
 
 A framework that saves you the interface has saved you 1,800 lines of 40,756.
 
@@ -183,13 +183,13 @@ tree sits inside a table column.
 **The four meter modes.** `comp.Meter` is one shape, so three of the four are
 the tool's. The rebuild writes 130 lines in `meters.go`.
 
-**The colour schemes.** htop ships eight. tuikit ships one palette on ANSI 0–15,
+**The color schemes.** htop ships eight. tuikit ships one palette on ANSI 0–15,
 by decision 28, so the reader's terminal theme decides. That is a deliberate
 trade and it is the next section.
 
 ### Where htop's approach is better
 
-**Eight colour schemes beat one palette, for this tool.**
+**Eight color schemes beat one palette, for this tool.**
 
 `CRT.c` carries Default, Monochrome, Black-on-White, Light Terminal, Midnight,
 Black Night, Broken Gray and Nord. Decision 28's argument is that a tool should
@@ -198,7 +198,7 @@ tool you open for thirty seconds.
 
 htop is not that. It runs on a server you SSH into, in someone else's terminal,
 over a link where the theme is whatever the last person set. **Monochrome exists
-because some terminals have no colour, and Black-on-White because some people
+because some terminals have no color, and Black-on-White because some people
 have a white background and ANSI 0–15 does not save you there.** htop cannot
 assume the reader's palette is good, so it ships its own and lets them pick.
 
@@ -244,5 +244,5 @@ What survives both caveats: htop is **40,756 lines**, and **43% of it is reading
 eight operating systems**. tuikit would have made htop's interface several times
 smaller and htop itself a few percent smaller.
 
-And the eight colour schemes are a place where htop is simply right and tuikit
+And the eight color schemes are a place where htop is simply right and tuikit
 has nothing.

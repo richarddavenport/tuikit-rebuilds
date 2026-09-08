@@ -85,7 +85,7 @@ func (m *Model) body(c *comp.Canvas, r comp.Rect) {
 	body := comp.Rect{X: r.X, Y: r.Y + 1, W: r.W, H: r.H - 1}
 	m.list.DrawFunc(c, body, len(rows), func(i int) comp.Row {
 		// The mark is a character in the lead column, so it survives the
-		// selection AND the colour being stripped.
+		// selection AND the color being stripped.
 		lead, style := blankMark, &m.sty.muted
 		if m.marks.Has(rows[i].Key()) {
 			lead, style = markGlyph, &m.sty.marked

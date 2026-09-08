@@ -130,7 +130,7 @@ too.
 **It forked its framework's chart rather than use it, and was right to.**
 `time_series/vendored.rs` is 55 kB copied out of ratatui with a note saying to
 keep it in sync. The reason is specific: a metric over time is right-aligned
-against *now*, with a ragged left edge, and a general chart centred on its data
+against *now*, with a ragged left edge, and a general chart centered on its data
 gets that wrong.
 
 That is a framework being *worse* than the fork, and bottom paid a real

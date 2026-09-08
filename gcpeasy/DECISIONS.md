@@ -11,7 +11,7 @@ Write one when you would otherwise write a comment beginning "we tried".
 ## 1. The engine has never heard of a terminal
 
 `internal/engine` holds gcpeasy's domain and imports nothing terminal-shaped:
-no colour, no width, no keys, no framework. The UI never calls the backend
+no color, no width, no keys, no framework. The UI never calls the backend
 directly, and the CLI is a peer of the TUI over the same engine rather than a
 wrapper around it.
 

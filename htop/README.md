@@ -36,7 +36,7 @@ next time. It spends 1,412 lines on this across five files.
 **This is [tuikit#60](https://github.com/richarddavenport/tuikit/issues/60) from
 the far end.** bottom and gh-dash read an arrangement from a file once, at
 startup. htop lets a reader build one with the keyboard, which needs the
-arrangement to be a value the program can *mutate and serialise* — not just one
+arrangement to be a value the program can *mutate and serialize* — not just one
 it can parse.
 
 And it does not cost the guards anything. **The available list is closed.** A
@@ -128,13 +128,13 @@ That is 43% of htop and no framework supplies a line of it.
 
 ## Where htop is better
 
-**Eight colour schemes.** Default, Monochrome, Black-on-White, Light Terminal,
+**Eight color schemes.** Default, Monochrome, Black-on-White, Light Terminal,
 Midnight, Black Night, Broken Gray, Nord.
 
 Decision 28 puts tuikit on ANSI 0–15 so the reader's theme wins, and that is
 right for a tool you open for thirty seconds. htop is not that tool. It runs on
 a server you SSH into, in a terminal whose theme is whatever the last person
-set. **Monochrome exists because some terminals have no colour, and
+set. **Monochrome exists because some terminals have no color, and
 Black-on-White because ANSI 0–15 does not save you on a white background.**
 
 tuikit has no answer. A tool *could* ship eight palettes, but nothing in `comp`

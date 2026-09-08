@@ -226,7 +226,7 @@ func (m *Model) pane(c *comp.Canvas, r comp.Rect, name comp.Name, title string, 
 	}.Draw(c, r, comp.Region(name))
 }
 
-// heat is the one place a number becomes a colour, so every widget agrees about
+// heat is the one place a number becomes a color, so every widget agrees about
 // what "hot" looks like.
 func (m *Model) heat(v float64) *lipgloss.Style {
 	switch {

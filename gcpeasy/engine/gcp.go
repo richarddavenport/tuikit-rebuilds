@@ -1,6 +1,6 @@
 // Package engine is gcpeasy's domain, and it has NO TERMINAL CONCEPTS AT ALL.
 //
-// No colour, no width, no keys, no framework, no tuikit import. guard.Engine
+// No color, no width, no keys, no framework, no tuikit import. guard.Engine
 // holds that closed.
 //
 // # It also does not talk to the person
@@ -62,9 +62,9 @@ type Pod struct {
 	Images    []string
 }
 
-// State is what a thing is doing, in the four terms the interface colours.
+// State is what a thing is doing, in the four terms the interface colors.
 //
-// A domain type rather than a colour, because "degraded" is a fact about a pod
+// A domain type rather than a color, because "degraded" is a fact about a pod
 // and "yellow" is a decision about a screen.
 type State int
 
@@ -336,7 +336,7 @@ func Describe(ctx context.Context, p Pod) ([]byte, error) {
 // Console is the command that opens a Rails console in a pod.
 //
 // Returned rather than run, which is the whole point. A console needs a real
-// terminal — line editing, history, colour, Ctrl-C reaching Ruby rather than
+// terminal — line editing, history, color, Ctrl-C reaching Ruby rather than
 // gcpeasy — and only the caller knows how to give it one. The TUI suspends
 // itself with tea.Exec; the CLI is already at a terminal and just runs it.
 //

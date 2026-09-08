@@ -37,7 +37,7 @@ Neither decision belongs in the engine, and putting it there would force one of
 the two surfaces to work around it.
 
 This is also why gcpeasy contains no terminal emulator. A Rails console needs
-line editing, history, colour and a working Ctrl-C — and the simplest way to
+line editing, history, color and a working Ctrl-C — and the simplest way to
 provide all four is to hand over the terminal that already has them.
 
 ## 3. Which pane has focus is the tool's problem, for now
@@ -87,17 +87,17 @@ ever renders a screen.
 a character reaches the screen only after somebody decides it should. Both are
 declared in `internal/tui/theme.go` with a reason.
 
-The alternative was to use `●` for every state and let colour carry the
-difference. Refused, for the reason `harness.ShapeSurvivesColour` exists: a
-distinction only colour makes is a distinction lost in a pipe, in a golden, and
+The alternative was to use `●` for every state and let color carry the
+difference. Refused, for the reason `harness.ShapeSurvivesColor` exists: a
+distinction only color makes is a distinction lost in a pipe, in a golden, and
 to a reader who cannot see it.
 
 ## 7. What was left out
 
-- **No ANSI in the output pane.** `kubectl` and `gcloud` colour their output
+- **No ANSI in the output pane.** `kubectl` and `gcloud` color their output
   when they think they are at a terminal. gcpeasy shows the text and drops the
-  colour. Turning a subprocess's escape sequences into styled spans is tuikit
-  issue 63; until that exists, dropping the colour beats printing the escapes.
+  color. Turning a subprocess's escape sequences into styled spans is tuikit
+  issue 63; until that exists, dropping the color beats printing the escapes.
 - **No streaming logs.** `l` reads the last 200 lines once. Following a live
   stream is `comp.LogPane`'s job and is a different pane from this one.
 - **No project or cluster creation.** gcpeasy shows you what is there and lets
@@ -111,7 +111,7 @@ around here in a way that says so.
 
 **`Row.Lead` replaces `List.Marker` rather than sitting beside it**
 ([tuikit#64](https://github.com/richarddavenport/tuikit/issues/64)). A list with
-a status glyph therefore has no visible cursor once the colour is stripped. All
+a status glyph therefore has no visible cursor once the color is stripped. All
 three lists here have one, so `Model.mark` prefixes `›` onto every lead by hand.
 
 **A model that loads in `Init` captures an empty screen**

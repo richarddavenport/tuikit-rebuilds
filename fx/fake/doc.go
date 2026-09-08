@@ -19,7 +19,7 @@ type Line struct {
 	// Path is the line's identity, and comp.Tree's key. A path rather than an
 	// index because folding a node must survive a filter moving the rows.
 	Path string
-	// Kind colours the value.
+	// Kind colors the value.
 	Kind Kind
 	// Comma says the line is followed by one, which JSON needs and a viewer
 	// has to draw even though nothing depends on it.

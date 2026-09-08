@@ -13,8 +13,8 @@ README — and mark each feature:
 | **have** | `comp` already supplies it |
 | **hole** | several tools each built this alone, and we should have supplied it |
 | **theirs** | it belongs to the tool, and a framework supplying it would be wrong |
-| **outside the line** | general behaviour tuikit refuses on purpose (decision 27) |
-| **our floor** | general behaviour tuikit supports less of, by choice |
+| **outside the line** | general behavior tuikit refuses on purpose (decision 27) |
+| **our floor** | general behavior tuikit supports less of, by choice |
 
 Those last three are different, and collapsing them hides things. "Theirs"
 never moves. "Outside the line" moves only if decision 27 changes. "Our floor"

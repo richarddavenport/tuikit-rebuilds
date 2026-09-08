@@ -190,8 +190,8 @@ is smaller than the component list suggests.
 file rows lead with git status letters, so every row needs a cursor marker
 prefixed by hand. The rebuild does exactly that, in `view.go`.
 
-`guard.Tokens` would reject `presentation/icons/file_icons.go` — 743 colour
-literals that are file-type brand colours and should not come from a palette.
+`guard.Tokens` would reject `presentation/icons/file_icons.go` — 743 color
+literals that are file-type brand colors and should not come from a palette.
 The guard is wrong here and the tool would need an exemption.
 
 ### Where lazygit's approach is better

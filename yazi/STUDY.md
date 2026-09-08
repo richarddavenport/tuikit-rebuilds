@@ -39,7 +39,7 @@ Rust keeps the overlays and the engine. Everything you look at is a script.
 
 That is a second, serious answer to "get out of the developer's way", and it is
 not tuikit's. tuikit's answer is headless components with injected styles: the
-behaviour is fixed and correct, the look is yours. yazi's is that the drawing
+behavior is fixed and correct, the look is yours. yazi's is that the drawing
 itself is replaceable at runtime, and the cost is an embedded interpreter, a
 binding layer (`yazi-binding/`), and errors that surface as
 `Failed to redraw the 'Root' component`.
@@ -48,7 +48,7 @@ binding layer (`yazi-binding/`), and errors that surface as
 out to be a claim with a competitor.
 
 The honest version of ours is narrower: *out of your way on style and data,
-opinionated about behaviour.*
+opinionated about behavior.*
 
 ## What tuikit already supplies
 

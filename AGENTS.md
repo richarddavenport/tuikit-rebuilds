@@ -87,7 +87,7 @@ implementations** before anything is extracted into `comp`.
 - Two or more tools need it → file it on
   [tuikit](https://github.com/richarddavenport/tuikit/issues) with the file and
   line in each.
-- One tool needs it → file it anyway, labelled `second-tool`, and say which tool
+- One tool needs it → file it anyway, labeled `second-tool`, and say which tool
   and what would promote it. One tool is an anecdote.
 - The tool's own domain → it goes under *theirs* in the study and nowhere else.
 
@@ -101,7 +101,7 @@ That tuikit could or could not draw this interface, and what was missing.
 **Not** that the original should have used tuikit. lazygit predates it by nine
 years, most of these are not Go, and every one of them works.
 
-## Licences
+## Licenses
 
 This repository is MIT. The tools it studies are not included and are not ours —
 nine are MIT, k9s is Apache 2.0, and **htop is GPLv2**. Nothing may be copied

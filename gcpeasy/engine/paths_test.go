@@ -51,7 +51,7 @@ func TestXDGWins(t *testing.T) {
 	}
 }
 
-// A relative XDG value is invalid per the spec and must be ignored. Honouring
+// A relative XDG value is invalid per the spec and must be ignored. Honoring
 // one resolves the config against whatever directory gcpeasy started in,
 // which makes the config depend on where it was run from.
 func TestARelativeXDGValueIsIgnored(t *testing.T) {
@@ -63,7 +63,7 @@ func TestARelativeXDGValueIsIgnored(t *testing.T) {
 		t.Fatal(err)
 	}
 	if want := filepath.Join("/home/someone", ".config", "gcpeasy"); got != want {
-		t.Errorf("a relative XDG_CONFIG_HOME was honoured: %s", got)
+		t.Errorf("a relative XDG_CONFIG_HOME was honored: %s", got)
 	}
 }
 

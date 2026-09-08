@@ -91,7 +91,7 @@ func (m *Model) currentCol(c *comp.Canvas, r comp.Rect) {
 	m.current.DrawFunc(c, inner, len(rows), func(i int) comp.Row {
 		e := rows[i]
 		// A marked row carries a character, so the selection survives the
-		// colour being stripped. yazi uses a colour alone; this does not.
+		// color being stripped. yazi uses a color alone; this does not.
 		lead, leadStyle := "  ", &m.sty.muted
 		switch {
 		case m.marks.Has(m.path(e)):

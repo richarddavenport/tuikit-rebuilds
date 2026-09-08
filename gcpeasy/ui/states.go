@@ -12,7 +12,7 @@ import (
 
 // States is every distinct thing gcpeasy can be showing.
 //
-// ONE list, walked by the goldens, the narrow-terminal run, the colour check
+// ONE list, walked by the goldens, the narrow-terminal run, the color check
 // and the capture. A screen added without a frame is a screen added without any
 // of them.
 func States() []shot.State {

@@ -13,7 +13,7 @@ import (
 func TestScreens(t *testing.T) { shot.Goldens(t, "testdata", States()) }
 
 // The branch lines say which process spawned which, and they have to survive
-// the colour being stripped — a tree drawn only in colour is not a tree.
+// the color being stripped — a tree drawn only in color is not a tree.
 func TestTheTreeDrawsBranchesNotIndentation(t *testing.T) {
 	frame := shot.Frame(States()[1], shot.Width, shot.Height)
 	for _, want := range []string{"├─", "└─", "│  "} {

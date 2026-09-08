@@ -35,7 +35,7 @@ func newStyles() styles {
 		border:   lipgloss.NewStyle().Foreground(p.Border),
 		selected: lipgloss.NewStyle().Foreground(p.SelectionFG).Background(p.SelectionBG).Bold(true),
 		// The range is a background only, so a diff line inside it keeps its
-		// own added/removed colour. comp.Viewer puts the line style UNDER the
+		// own added/removed color. comp.Viewer puts the line style UNDER the
 		// spans for exactly this.
 		ranged:  lipgloss.NewStyle().Background(p.SelectionBG),
 		added:   lipgloss.NewStyle().Foreground(p.Success),

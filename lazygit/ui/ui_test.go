@@ -8,7 +8,7 @@ import (
 )
 
 // Every screen, at 132x38 and at 80x24, with the shape checked after the
-// colour is stripped.
+// color is stripped.
 func TestScreens(t *testing.T) {
 	shot.Goldens(t, "testdata", States())
 }
@@ -31,7 +31,7 @@ func TestFoldingADirectoryHidesItsChildren(t *testing.T) {
 	}
 }
 
-// A range grows from the anchor and keeps every line's own colour, which is the
+// A range grows from the anchor and keeps every line's own color, which is the
 // rule comp.Viewer exists for.
 func TestExtendingSelectsARange(t *testing.T) {
 	m := build("v", "J", "J")().(*Model)

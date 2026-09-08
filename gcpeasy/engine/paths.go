@@ -7,7 +7,7 @@ import (
 
 // Where gcpeasy keeps its files, and why it is not os.UserConfigDir().
 //
-// tuikit decision 33. The standard library's UserConfigDir honours
+// tuikit decision 33. The standard library's UserConfigDir honors
 // $XDG_CONFIG_HOME on Linux and ignores it on macOS, where it answers
 // ~/Library/Application Support — right for an application with a bundle
 // identifier, wrong for a command-line tool. A developer's ~/.config holds gh,
@@ -80,7 +80,7 @@ func FindConfig(explicit string) (path string, tried []string, ok bool) {
 
 // under resolves one XDG variable, falling back to a path under the home
 // directory. The variable wins only when it is absolute: XDG says a relative
-// value is invalid and must be ignored, and honouring one would resolve the
+// value is invalid and must be ignored, and honoring one would resolve the
 // config against whatever directory gcpeasy happened to start in.
 func under(env string, fallback ...string) (string, error) {
 	if dir := os.Getenv(env); filepath.IsAbs(dir) {

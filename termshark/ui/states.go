@@ -10,7 +10,7 @@ import (
 // States is every distinct thing this rebuild can show.
 func States() []shot.State {
 	return []shot.State{
-		{Name: "browsing", Note: "Three panes. The selected field's bytes are highlighted in the dump — a `comp.Viewer` range, which is a background, so the hex digits keep their colour.",
+		{Name: "browsing", Note: "Three panes. The selected field's bytes are highlighted in the dump — a `comp.Viewer` range, which is a background, so the hex digits keep their color.",
 			Build: build()},
 		{Name: "field-selected", Note: "`tab` to the tree, then down to the source address. The highlight in the dump follows. That link is termshark's whole trick.",
 			Build: build("tab", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j", "j")},

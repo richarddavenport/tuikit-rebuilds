@@ -55,7 +55,7 @@ m.hex.Goto(lo)
 m.hex.Extend(hi - lo)
 ```
 
-The highlight is a **background**, so the hex digits keep their own colour
+The highlight is a **background**, so the hex digits keep their own color
 underneath — `comp.Viewer` puts the range style under the spans, which is the
 rule that came out of the lazygit study.
 

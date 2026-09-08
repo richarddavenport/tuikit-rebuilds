@@ -22,7 +22,7 @@ Unstaged and staged on the left, the diff on the right. `comp.Tabs` carries a co
 
 ### range
 
-`J` three times. The range is a background only, so every line keeps its added or removed colour.
+`J` three times. The range is a background only, so every line keeps its added or removed color.
 
 ![range](frames/range.svg)
 

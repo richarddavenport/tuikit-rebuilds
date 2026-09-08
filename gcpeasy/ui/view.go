@@ -108,8 +108,8 @@ func (m *Model) pane(c *comp.Canvas, r comp.Rect, p pane, n int, row func(int) c
 	// goes stale.
 	m.lists[p].Focused = m.focus.Is(p.region())
 	// The focused pane's cursor is ›, the others' is ·. A different CHARACTER
-	// rather than a different colour, because the border and the title already
-	// carry the focus in colour and a distinction only colour makes is one lost
+	// rather than a different color, because the border and the title already
+	// carry the focus in color and a distinction only color makes is one lost
 	// in a pipe and to a reader who cannot see it.
 	m.lists[p].Marker = "· "
 	if m.lists[p].Focused {
@@ -151,7 +151,7 @@ func (m *Model) clusterRow(i int) comp.Row {
 
 // podRow is a state glyph, the name, and the readiness on the right.
 //
-// The glyph keeps its own colour under the selection. Row.LeadStyle is there
+// The glyph keeps its own color under the selection. Row.LeadStyle is there
 // for exactly this: the row a reader is looking at was otherwise the one row
 // whose status they could not read.
 func (m *Model) podRow(i int) comp.Row {
@@ -168,7 +168,7 @@ func (m *Model) podRow(i int) comp.Row {
 	}
 }
 
-// stateLook is the one place a state becomes a glyph and a colour.
+// stateLook is the one place a state becomes a glyph and a color.
 //
 // One place, so the pod list, the detail pane and any future summary cannot
 // disagree about what "degraded" looks like. Every glyph is in the theme's

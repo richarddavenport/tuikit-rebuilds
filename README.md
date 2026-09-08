@@ -86,7 +86,7 @@ are things the originals have and the rebuilds simply did without:
 | the original has | filed |
 | --- | --- |
 | gitui's popup stack — 32 popups, and `app.Stack` is about screens | [#69](https://github.com/richarddavenport/tuikit/issues/69) |
-| lazygit's 743 file-icon brand colours, which `guard.Tokens` would wrongly reject | [#70](https://github.com/richarddavenport/tuikit/issues/70) |
+| lazygit's 743 file-icon brand colors, which `guard.Tokens` would wrongly reject | [#70](https://github.com/richarddavenport/tuikit/issues/70) |
 | k9s's deltas — ↑ ↓ Δ on every cell that changed since the last refresh | [#71](https://github.com/richarddavenport/tuikit/issues/71) |
 | termshark's copy mode over a **table** and a **tree**, not just a list | [#72](https://github.com/richarddavenport/tuikit/issues/72) |
 | yazi's completion popup over an input | [#73](https://github.com/richarddavenport/tuikit/issues/73) |
@@ -183,7 +183,7 @@ go test ./...             every screen against its golden, at two sizes
 ```
 
 Every rebuild is captured at 132×38 and at 80×24, and every frame is checked
-with the colour stripped — a distinction only colour makes is a distinction lost
+with the color stripped — a distinction only color makes is a distinction lost
 in a pipe.
 
 ## What a rebuild is allowed to conclude
@@ -256,12 +256,12 @@ one tool for real, against a live backend, found two gaps that reading nine
 others had not. Reading source tells you what people wrote. Building tells you
 what they could not.
 
-## Licence, and what is not ours
+## License, and what is not ours
 
 This repository is **MIT** (see [LICENSE](LICENSE)). Every rebuild is original
 code written against a fixture; none of it is a port.
 
-The tools it studies are not ours and are not included. Their licences, checked
+The tools it studies are not ours and are not included. Their licenses, checked
 2026-09-08: **MIT** for lazygit, dive, bottom, gitui, yazi, fx, termshark and
 gh-dash; **Apache 2.0** for k9s; **GPLv2** for htop.
 
@@ -272,6 +272,6 @@ encoding instead, which is a fact about seven-segment displays rather than
 anybody's work. The visible difference is that our `1` is a bare stroke where
 htop draws a little flag on it.
 
-Line counts, file paths and behaviour described in the studies are observations
+Line counts, file paths and behavior described in the studies are observations
 about published source, read on the dates each `STUDY.md` records.
 

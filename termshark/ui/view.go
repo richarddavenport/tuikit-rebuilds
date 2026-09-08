@@ -127,7 +127,7 @@ func (m *Model) fieldPane(c *comp.Canvas, r comp.Rect) {
 //
 // The link between the tree and the dump is termshark's whole trick, and here
 // it is comp.Viewer's range: the highlight is a BACKGROUND, so the hex digits
-// keep their own colour underneath.
+// keep their own color underneath.
 func (m *Model) hexPane(c *comp.Canvas, r comp.Rect) {
 	inner := comp.Pane{
 		Title: "Bytes", Focused: m.focus.Is(regHex),

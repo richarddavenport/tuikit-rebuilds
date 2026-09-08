@@ -186,7 +186,7 @@ func labelsOf() []string {
 	return out
 }
 
-// drawPicker is the small centred list htop uses for both F6 and F9.
+// drawPicker is the small centered list htop uses for both F6 and F9.
 //
 // One function for both, because they are the same control with different
 // contents — which is what htop's Panel is, and what makes its 577 lines pay
