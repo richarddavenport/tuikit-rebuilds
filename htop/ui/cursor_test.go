@@ -40,13 +40,16 @@ func TestTheCursorCannotLeaveTheList(t *testing.T) {
 	}
 }
 
-// dive#468 and #543, reproduced here rather than claimed.
+// dive#468 and #543, fixed rather than reproduced.
 //
-// This test asserts the WRONG behaviour on purpose, because it is the current
-// behaviour and it should fail loudly when tuikit#80 is fixed. The cursor keeps
-// its index while the rows change, so it ends up on a different process and
-// nothing errors.
-func TestTheCursorKeepsItsIndexAndLosesItsRow(t *testing.T) {
+// This test used to assert the WRONG behaviour on purpose and fail loudly when
+// tuikit#80 was fixed. It fired, so here is what it always wanted to say:
+// filter to a few processes, move onto one, clear the filter, and the cursor is
+// still on that process.
+//
+// The only change in the rebuild is `Key: itoa(rows[i].PID)` on the row.
+// dive has this bug reported twice, five years apart, and still has it.
+func TestTheCursorFollowsItsProcess(t *testing.T) {
 	m := New()
 	m.SetSize(shot.Width, shot.Height)
 	r := app.New(m, app.WithSize(shot.Width, shot.Height))
@@ -56,15 +59,13 @@ func TestTheCursorKeepsItsIndexAndLosesItsRow(t *testing.T) {
 	if len(rows) == 0 {
 		t.Fatal("filter matched nothing")
 	}
-	before := rows[m.procs.Cursor()].Command
+	before := rows[m.procs.Cursor()]
 
 	harness.Press(r, "f4", "esc")
-	after := m.rows()[m.procs.Cursor()].Command
+	after := m.rows()[m.procs.Cursor()]
 
-	if before == after {
-		t.Fatalf("the cursor now follows its row — tuikit#80 is fixed, "+
-			"and this test should become the assertion it always wanted to be "+
-			"(want %q to survive)", before)
+	if after.PID != before.PID {
+		t.Errorf("the cursor left its process when the filter cleared:\n  was %d %q\n  now %d %q",
+			before.PID, before.Command, after.PID, after.Command)
 	}
-	t.Logf("tuikit#80, still open: cursor was on %q, is now on %q", before, after)
 }

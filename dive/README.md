@@ -46,12 +46,21 @@ first three cannot occur. The Korean one is a width bug and the canvas measures
 every cluster. The last two are `comp.Viewer` and `comp.Sort`, both extracted
 from other tools before anyone read this tracker.
 
-**And two are open in tuikit as well.** [#468](https://github.com/wagoodman/dive/issues/468)
-wants the cursor to stay on the same *node* when a filter clears, not the same
-*line*. Our htop rebuild has that bug too, with a test that proves it —
-[tuikit#80](https://github.com/richarddavenport/tuikit/issues/80).
+**Two were open in tuikit as well, and are now fixed.**
+[#468](https://github.com/wagoodman/dive/issues/468) wants the cursor to stay on
+the same *node* when a filter clears, not the same *line*. Our htop rebuild had
+that bug too, with a test that proved it.
 
-Everything in `comp` is keyed by identity except the cursor.
+[tuikit#80](https://github.com/richarddavenport/tuikit/issues/80) added an
+opt-in `Row.Key`, and the fix in the rebuild is one field:
+
+```go
+row := comp.Row{Key: itoa(rows[i].PID), Text: lines[i+1]}
+```
+
+`TestTheCursorFollowsItsProcess` is the same test, flipped from asserting the
+bug to asserting the fix. Everything in `comp` is now keyed by identity,
+including the cursor.
 
 ## What it found
 

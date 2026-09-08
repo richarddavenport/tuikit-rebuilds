@@ -112,7 +112,10 @@ func (m *Model) drawTable(c *comp.Canvas, r comp.Rect) {
 
 	body := comp.Rect{X: r.X, Y: r.Y + 1, W: r.W, H: r.H - 1}
 	m.procs.DrawFunc(c, body, len(rows), func(i int) comp.Row {
-		row := comp.Row{Text: lines[i+1]}
+		// Key is the PID, so the cursor follows the process through a filter
+		// being applied or cleared rather than staying on a line number
+		// (tuikit#80). dive reported the same bug twice and still has it.
+		row := comp.Row{Key: itoa(rows[i].PID), Text: lines[i+1]}
 		if rows[i].CPU >= 50 {
 			row.Style = m.heat(rows[i].CPU)
 		}
