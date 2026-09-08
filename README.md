@@ -255,3 +255,23 @@ the field chose Miller columns over a tree.*
 one tool for real, against a live backend, found two gaps that reading nine
 others had not. Reading source tells you what people wrote. Building tells you
 what they could not.
+
+## Licence, and what is not ours
+
+This repository is **MIT** (see [LICENSE](LICENSE)). Every rebuild is original
+code written against a fixture; none of it is a port.
+
+The tools it studies are not ours and are not included. Their licences, checked
+2026-09-08: **MIT** for lazygit, dive, bottom, gitui, yazi, fx, termshark and
+gh-dash; **Apache 2.0** for k9s; **GPLv2** for htop.
+
+htop is the one that shaped the code. Its LED meter draws seven-segment digits
+out of box characters, and its finished glyph table could not come across into
+an MIT repository — so `htop/ui/meters.go` derives the glyphs from the segment
+encoding instead, which is a fact about seven-segment displays rather than
+anybody's work. The visible difference is that our `1` is a bare stroke where
+htop draws a little flag on it.
+
+Line counts, file paths and behaviour described in the studies are observations
+about published source, read on the dates each `STUDY.md` records.
+

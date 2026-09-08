@@ -1,0 +1,44 @@
+name: CI
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      # Two checkouts, because go.mod has `replace ... => ../tuikit`. The
+      # rebuilds are built against the working copy of tuikit on purpose: the
+      # point of this repository is to find out what the framework is missing,
+      # and a version pinned to a release would only ever report gaps that had
+      # already been fixed.
+      - uses: actions/checkout@v4
+        with:
+          path: tuikit-rebuilds
+      - uses: actions/checkout@v4
+        with:
+          repository: richarddavenport/tuikit
+          path: tuikit
+          token: ${{ secrets.TUIKIT_TOKEN || github.token }}
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.25'
+      - name: gofmt
+        working-directory: tuikit-rebuilds
+        run: gofmt -l . | tee /dev/stderr | (! read)
+      - name: vet
+        working-directory: tuikit-rebuilds
+        run: go vet ./...
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v8
+        with:
+          version: v2.12
+          working-directory: tuikit-rebuilds
+      # The goldens are the point: every screen in docs/ is held to a recorded
+      # frame at two terminal sizes, so a change to a component that alters what
+      # eleven tools look like fails here rather than in a screenshot nobody
+      # regenerated.
+      - name: test
+        working-directory: tuikit-rebuilds
+        run: go test ./...
