@@ -68,7 +68,10 @@ that how a number looks is not the program's decision.
 - **Graph is `comp.Sparkline`, unchanged.** Right-aligned against now, which is
   the rule the [bottom study](../bottom/STUDY.md) produced.
 - **LED is htop's own** and nothing should supply it. Seven-segment digits built
-  out of box characters, copied because there is no other way to draw them.
+  out of box characters — **derived from the segment encoding, not copied**.
+  htop is GPLv2 and this repository is MIT, so its finished glyph table could
+  not come across. Our `1` is a bare stroke where htop draws a little flag on
+  it, which is htop's own idea and the nicer of the two.
 - **Bar and Text** are shapes `comp.Meter` could grow a `Mode` for.
 
 ## The gap this one found

@@ -179,15 +179,87 @@ func (m *Model) graphMeter(c *comp.Canvas, r comp.Rect, s Slot, id comp.ID) int 
 	return r.Y + chart.H
 }
 
-// ledDigits is htop's LEDMeterMode_digitsUtf8, three rows of ten.
+// segments is which of the seven bars each digit lights.
 //
-// Copied because there is no other way to draw a seven-segment digit out of box
-// characters, and because the point of including it is that tuikit should NOT
-// supply this. It is one tool's idea and a good one.
-var ledDigits = [3][10]string{
-	{"┌──┐", "  ┐ ", "╶──┐", "╶──┐", "╷  ╷", "┌──╴", "┌──╴", "╶──┐", "┌──┐", "┌──┐"},
-	{"│  │", "  │ ", "┌──┘", " ──┤", "└──┤", "└──┐", "├──┐", "   │", "├──┤", "└──┤"},
-	{"└──┘", "  ╵ ", "└──╴", "╶──┘", "   ╵", "╶──┘", "└──┘", "   ╵", "└──┘", "╶──┘"},
+//	 aaa
+//	f   b
+//	 ggg
+//	e   c
+//	 ddd
+//
+// DERIVED, not copied. htop ships this as a finished table of box characters
+// (`LEDMeterMode_digitsUtf8`) and htop is GPLv2, while this repository is MIT —
+// so the glyphs below are computed from the segment encoding instead, which is
+// a fact about seven-segment displays rather than anybody's code.
+//
+// The visible consequence is that our 1 is a bare stroke where htop draws a
+// little flag on it. That flag is htop's own idea and it is a nicer 1; it is
+// also exactly the kind of choice that makes a table someone's work rather
+// than a lookup.
+var segments = [10]string{
+	0: "abcdef",
+	1: "bc",
+	2: "abged",
+	3: "abgcd",
+	4: "fgbc",
+	5: "afgcd",
+	6: "afgecd",
+	7: "abc",
+	8: "abcdefg",
+	9: "abcdfg",
+}
+
+// ledRows renders one digit into three rows of four columns.
+//
+// Each corner is a junction: which box character goes there follows from which
+// of the segments meeting at that point are lit. Two lines meeting is an elbow,
+// three is a tee, one is a stub.
+func ledRows(d int) [3]string {
+	on := func(seg byte) bool { return strings.IndexByte(segments[d], seg) >= 0 }
+	bar := func(lit bool) string {
+		if lit {
+			return "──"
+		}
+		return "  "
+	}
+	return [3]string{
+		junction(false, on('f'), on('a'), false) + bar(on('a')) + junction(false, on('b'), false, on('a')),
+		junction(on('f'), on('e'), on('g'), false) + bar(on('g')) + junction(on('b'), on('c'), false, on('g')),
+		junction(on('e'), false, on('d'), false) + bar(on('d')) + junction(on('c'), false, false, on('d')),
+	}
+}
+
+// junction is the character where lines meet, given which directions continue.
+//
+// Sixteen combinations and only the ones a digit can produce are named; the
+// rest fall through to a space, which is what an unlit corner is.
+func junction(up, down, right, left bool) string {
+	switch {
+	case up && down && right:
+		return "├"
+	case up && down && left:
+		return "┤"
+	case up && right:
+		return "└"
+	case up && left:
+		return "┘"
+	case down && right:
+		return "┌"
+	case down && left:
+		return "┐"
+	case up && down:
+		return "│"
+	case up:
+		return "╵"
+	case down:
+		return "╷"
+	case right:
+		return "╶"
+	case left:
+		return "╴"
+	default:
+		return " "
+	}
 }
 
 // ledMeter draws the value as seven-segment digits, three rows tall.
@@ -204,8 +276,9 @@ func (m *Model) ledMeter(c *comp.Canvas, r comp.Rect, s Slot, text string, id co
 			break
 		}
 		if ch >= '0' && ch <= '9' {
+			glyphs := ledRows(int(ch - '0'))
 			for row := 0; row < 3; row++ {
-				c.Text(x, r.Y+row, ledDigits[row][ch-'0'], style, id)
+				c.Text(x, r.Y+row, glyphs[row], style, id)
 			}
 			x += 4
 			continue
