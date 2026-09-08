@@ -68,6 +68,100 @@ interface is small: one tree, one list, a detail pane and a filter. The tree is
 the part that took 35 kB to write, and `comp.Tree` is the component that
 answers it.
 
+## The issue audit
+
+dive has **170 open issues** and its last commit was 2025-12-15. Read on
+2026-09-08 and sorted by whether tuikit would have prevented, supplied or not
+touched each one.
+
+This is a different question from the rest of this study. Everywhere else asks
+what tuikit would have *cost*; this asks what it would have *stopped*.
+
+### Structurally impossible on `comp.List` — 4 issues
+
+`List.resolve(n, row)` is handed the row count **every frame** and clamps to it.
+A cursor stored between frames is never trusted, so a row set that changed
+underneath cannot leave it dangling.
+
+| | |
+| --- | --- |
+| [#295](https://github.com/wagoodman/dive/issues/295) | a **panic** — `index out of range [15] with length 15` in `SetCursor`, from holding ↓ at the end of the layer list |
+| [#259](https://github.com/wagoodman/dive/issues/259) | cursor goes below the end of a filtered tree |
+| [#308](https://github.com/wagoodman/dive/issues/308) | scrolling past the end, then "nothing happens for a second or two" while the cursor walks back |
+| [#647](https://github.com/wagoodman/dive/issues/647) | the details pane does not scroll to follow the cursor |
+
+Checked rather than asserted. `htop/ui/cursor_test.go`:
+
+```
+60 downs on a 3-row filter left the cursor at 2
+```
+
+#308's specific complaint — the delay before the cursor reappears — is what
+`step` prevents by **dropping the rest of an over-run move** rather than queueing
+it.
+
+#647 is `List.reveal`: `Move` sets it, and the next draw brings the cursor into
+view.
+
+### Components that already exist — 8 issues
+
+| | |
+| --- | --- |
+| [#525](https://github.com/wagoodman/dive/issues/525), [#336](https://github.com/wagoodman/dive/issues/336), [#224](https://github.com/wagoodman/dive/issues/224) | show the contents of the selected file → `comp.Viewer` |
+| [#341](https://github.com/wagoodman/dive/issues/341), [#323](https://github.com/wagoodman/dive/issues/323), [#89](https://github.com/wagoodman/dive/issues/89) | sort the tree by size → `comp.Sort` |
+| [#176](https://github.com/wagoodman/dive/issues/176), [#181](https://github.com/wagoodman/dive/issues/181) | scroll sideways to read long paths → `comp.Viewer.ScrollX` |
+
+Three tools asking for a file viewer and three asking for sort-by-size, in one
+tracker, over seven years. Both are components this survey extracted from other
+evidence entirely.
+
+### Made impossible by the canvas — 1 issue
+
+[#474](https://github.com/wagoodman/dive/issues/474) — the interface breaks
+under `LANG=ko_KR.UTF-8`, with a screenshot of columns sliding out of line.
+
+That is a width bug: Korean glyphs are two columns wide and something counted
+them as one. `comp.Canvas.Set` measures every cluster with `ansi.StringWidth`,
+writes a continuation cell for the second column, and blanks **both** halves
+when overwriting so a leftover half can never orphan.
+
+### Still open in tuikit too — 2 issues
+
+The honest half, and it produced a new issue.
+
+[#468](https://github.com/wagoodman/dive/issues/468) and
+[#543](https://github.com/wagoodman/dive/issues/543) both ask for the cursor to
+stay on the same *node* when the row set changes, not the same *line*.
+
+**Our htop rebuild has this bug too**, and there is a test that says so:
+
+```
+filtered to 3 rows, cursor on: postgres: autovacuum launcher
+filter cleared, 21 rows, cursor on: /usr/sbin/sshd -D
+```
+
+Everything in `comp` is keyed by identity — owner IDs, `Marks`, `Tree.Collapsed`
+— **except the cursor**, which is an `int`. Filed as
+[tuikit#80](https://github.com/richarddavenport/tuikit/issues/80).
+
+### Not tuikit's, and the large majority — around 155 issues
+
+Image formats, registries, podman, containerd, Windows paths, packaging,
+efficiency heuristics, CI report fields. `oci-interop` and `distribution` are
+dive's two biggest labels and neither is an interface concern.
+
+[#627](https://github.com/wagoodman/dive/issues/627) is a near miss worth
+naming: you cannot navigate the tree while a filter is active. That is key
+routing rather than a component, and `app.Keys`' capture contract is the shape
+that answers it — but a tool can still get it wrong, and **this rebuild did**.
+Its filter did not survive its input closing until the audit found it.
+
+### The count
+
+**13 of 170** are things tuikit prevents or supplies outright. **2 more** it
+shares. That is 8%, and it is the interface 8% — four of them are a crash or a
+cursor that lies.
+
 ## Would it have been easier in tuikit?
 
 **Yes, and it is the largest single saving in the survey — but read what it is.**

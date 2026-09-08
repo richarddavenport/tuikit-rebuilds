@@ -149,6 +149,10 @@ type Model struct {
 
 	inc      incMode
 	incQuery string
+	// filter is the COMMITTED query, which outlives the input being closed.
+	// htop's F4 applies while you navigate; dive cannot do that, which is its
+	// issue 627.
+	filter string
 
 	// setupCol is which of Setup's two panes has the keyboard, and setupSel
 	// the row inside each. A tiny two-pane focus, which comp.Focus holds.
@@ -266,11 +270,12 @@ func (m *Model) rows() []fake.Process {
 	return all
 }
 
+// filterQuery is the filter in force, whether or not its input is open.
 func (m *Model) filterQuery() string {
 	if m.inc == incFilter {
 		return m.incQuery
 	}
-	return ""
+	return m.filter
 }
 
 func keepMatching(in []fake.Process, q string) []fake.Process {
@@ -389,11 +394,16 @@ func (m *Model) signalKey(msg tea.KeyMsg) (tea.Cmd, bool) {
 func (m *Model) incKey(msg tea.KeyMsg) (tea.Cmd, bool) {
 	switch msg.String() {
 	case "esc":
-		m.inc, m.incQuery = incOff, ""
+		// Esc abandons: the input closes and the filter goes with it.
+		m.inc, m.incQuery, m.filter = incOff, "", ""
 	case "enter":
-		if m.inc == incSearch {
-			m.inc, m.incQuery = incOff, ""
+		// Enter commits. For a filter that means the rows stay narrowed while
+		// the keyboard goes back to the table, which is the whole point of
+		// having a filter rather than a search.
+		if m.inc == incFilter {
+			m.filter = m.incQuery
 		}
+		m.inc, m.incQuery = incOff, ""
 	case "backspace":
 		if m.incQuery != "" {
 			m.incQuery = m.incQuery[:len(m.incQuery)-1]
